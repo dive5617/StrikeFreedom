@@ -1,0 +1,54 @@
+# This is a standard pTop configure file
+# For help: mail to luolan@ict.ac.cn
+# Time: 2015/7/28 ÐÇÆÚ¶þ 16:28:13
+
+[Version]
+pTop_Version=EVA.1.0.0
+
+[spectrum]
+msmsnum=7
+msmspath1=L:\pTop\DICP_Ecoli_TP\20150415_ecoli_HD_iso50_Gelfree_1.raw
+msmspath2=L:\pTop\DICP_Ecoli_TP\20150415_ecoli_HD_iso50_Gelfree_2.raw
+msmspath3=L:\pTop\DICP_Ecoli_TP\20150415_ecoli_HD_iso50_Gelfree_3.raw
+msmspath4=L:\pTop\DICP_Ecoli_TP\20150415_ecoli_HD_iso50_Gelfree_4.raw
+msmspath5=L:\pTop\DICP_Ecoli_TP\20150415_ecoli_HD_iso50_Gelfree_5.raw
+msmspath6=L:\pTop\DICP_Ecoli_TP\20150415_ecoli_HD_iso50_Gelfree_6.raw
+msmspath7=L:\pTop\DICP_Ecoli_TP\20150415_ecoli_HD_iso50_Gelfree_7.raw
+input_format=RAW
+Activation=HCD
+Precursor_Tolerance=2.2
+Fragment_Tolerance=20
+
+[fixmodify]
+fixedModify_num=3
+fix_mod1=Carbamidomethyl[C]
+fix_mod2=Dimethyl[K]
+fix_mod3=Dimethyl[ProteinN-term]
+
+
+[modify]
+unexpected_mod=1
+Max_mod_num=5
+Max_mod_mass=500
+Modify_num=1
+var_mod1=Oxidation[M]
+
+
+[filter]
+threshold=0.01
+separate_filtering=1
+
+[file]
+Database=L:\pTop\Database\uniprot-ecoli4433.fasta
+pParseTD_cfg=L:\pTop\DICP_Ecoli_TP\pParseTD.cfg
+pQuant_cfg=L:\pTop\DICP_Ecoli_TP\pQuant.cfg
+outputpath=
+
+[quantify]
+# 1|none
+# 2|none|M:Dimethyl[ProteinN-term]{H,2H}M:Dimethyl[K]{H,2H}
+# 2|none|R:*{N,15N}M:Deamidated[N]{N,15N}M:Gln->pyro-Glu[AnyN-termQ]{N,15N}
+quant=1|none
+
+[system]
+log=LOG_INFO

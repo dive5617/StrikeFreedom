@@ -1,0 +1,20 @@
+﻿pConfig
+
+
+winexe
+C#
+.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\
+pConfig
+none
+false
+DEBUG;TRACE
+J:\pFind studio\pConfig_TD\pConfig\App.xaml
+14-1719267709
+
+34-2083163278
+13-1868018694
+Database_Add_Dialog.xaml;Amino_Acid_Edit_Dialog.xaml;Element_Add_Dialog.xaml;Enzymes_Add_Dialog.xaml;MainWindow.xaml;Modification_Add_Dialog.xaml;Modification_Element_Edit_Dialog.xaml;N_Count_window.xaml;Quantification_Add_Dialog.xaml;Database_Edit_Dialog.xaml;Modification_Edit_Dialog.xaml;Quantification_Edit_Dialog.xaml;Enzymes_Edit_Dialog.xaml;Element_Edit_Dialog.xaml;
+
+True
+

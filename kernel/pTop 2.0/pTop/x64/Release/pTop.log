@@ -1,0 +1,307 @@
+﻿  FragmentIndex.cpp
+FragmentIndex.cpp(50): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+FragmentIndex.cpp(70): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+FragmentIndex.cpp(100): warning C4477: “fprintf”: 格式字符串“%lu”需要类型“unsigned long”的参数，但可变参数 1 拥有了类型“std::size_t”
+  FragmentIndex.cpp(100): note: 请考虑在格式字符串中使用“%zu”
+FragmentIndex.cpp(116): warning C4477: “fprintf”: 格式字符串“%lu”需要类型“unsigned long”的参数，但可变参数 2 拥有了类型“unsigned __int64”
+  FragmentIndex.cpp(116): note: 请考虑在格式字符串中使用“%zu”
+FragmentIndex.cpp(131): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+FragmentIndex.cpp(212): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+FragmentIndex.cpp(213): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+FragmentIndex.cpp(233): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+FragmentIndex.cpp(234): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+FragmentIndex.cpp(253): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+FragmentIndex.cpp(254): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  linear.cpp
+  Rerank.cpp
+rerank\Rerank.cpp(47): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+rerank\Rerank.cpp(283): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+rerank\Rerank.cpp(422): warning C4244: “参数”: 从“double”转换到“unsigned __int64”，可能丢失数据
+rerank\Rerank.cpp(447): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+rerank\Rerank.cpp(465): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+rerank\Rerank.cpp(488): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  tron.cpp
+  util.cpp
+util.cpp(555): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  Config.cpp
+Config.cpp(91): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Config.cpp(495): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Config.cpp(519): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  Config.cpp(519): note: 请考虑在格式字符串中使用“%zd”
+Config.cpp(522): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  Config.cpp(522): note: 请考虑在格式字符串中使用“%zd”
+Config.cpp(526): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 3 拥有了类型“unsigned __int64”
+  Config.cpp(526): note: 请考虑在格式字符串中使用“%zd”
+Config.cpp(529): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  Config.cpp(529): note: 请考虑在格式字符串中使用“%zd”
+Config.cpp(557): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  Config.cpp(557): note: 请考虑在格式字符串中使用“%zd”
+Config.cpp(707): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Config.cpp(650): warning C4101: “eName”: 未引用的局部变量
+Config.cpp(1015): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Config.cpp(1047): warning C4477: “sprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 7 拥有了类型“unsigned __int64”
+  Config.cpp(1047): note: 请考虑在格式字符串中使用“%zd”
+  CreateIndex.cpp
+CreateIndex.cpp(248): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  file_utils.cpp
+file_utils.cpp(234): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+file_utils.cpp(320): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+file_utils.cpp(324): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+file_utils.cpp(517): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+file_utils.cpp(521): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  main.cpp
+  MainFlow.cpp
+MainFlow.cpp(466): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(535): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(764): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+MainFlow.cpp(781): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+MainFlow.cpp(923): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+  MapAAMass.cpp
+MapAAMass.cpp(150): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MapAAMass.cpp(182): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MapAAMass.cpp(264): warning C4267: “初始化”: 从“size_t”转换到“char”，可能丢失数据
+  PrePTMForm.cpp
+PrePTMForm.cpp(295): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+PrePTMForm.cpp(416): warning C4244: “=”: 从“unsigned __int64”转换到“int”，可能丢失数据
+PrePTMForm.cpp(530): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  Quantify.cpp
+quantify\Quantify.cpp(146): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+quantify\Quantify.cpp(170): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+quantify\Quantify.cpp(171): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  Filter.cpp
+report\Filter.cpp(45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(232): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(229): warning C4101: “matchedPeaks”: 未引用的局部变量
+report\Filter.cpp(227): warning C4101: “score”: 未引用的局部变量
+report\Filter.cpp(229): warning C4101: “charge”: 未引用的局部变量
+report\Filter.cpp(227): warning C4101: “proMass”: 未引用的局部变量
+report\Filter.cpp(227): warning C4101: “specMass”: 未引用的局部变量
+report\Filter.cpp(229): warning C4101: “isDecoy”: 未引用的局部变量
+report\Filter.cpp(229): warning C4101: “labeltype”: 未引用的局部变量
+report\Filter.cpp(229): warning C4101: “scan”: 未引用的局部变量
+report\Filter.cpp(227): warning C4101: “evalue”: 未引用的局部变量
+report\Filter.cpp(475): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(500): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(504): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(505): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(512): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(513): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(544): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  report\Filter.cpp(544): note: 请考虑在格式字符串中使用“%zd”
+report\Filter.cpp(547): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  report\Filter.cpp(547): note: 请考虑在格式字符串中使用“%zd”
+report\Filter.cpp(557): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  report\Filter.cpp(557): note: 请考虑在格式字符串中使用“%zd”
+report\Filter.cpp(682): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(718): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(814): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(1000): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(1062): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(1063): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(1099): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(1101): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+report\Filter.cpp(1103): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  sdk.cpp
+  Searcher.cpp
+Searcher.cpp(117): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(149): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(245): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(473): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+Searcher.cpp(888): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1176): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1489): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1509): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1519): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1561): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1580): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1590): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1685): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1749): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1770): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+Searcher.cpp(1771): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+Searcher.cpp(1796): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+Searcher.cpp(1797): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+Searcher.cpp(1800): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1895): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1905): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1924): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(1974): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2008): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2093): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2140): warning C4244: “参数”: 从“double”转换到“unsigned __int64”，可能丢失数据
+Searcher.cpp(2148): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2159): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2183): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2315): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2388): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2407): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2714): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2745): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2750): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2809): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2877): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2884): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(2918): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
+Searcher.cpp(2941): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(3008): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+Searcher.cpp(3155): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\vs2015\VC\include\utility(200): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+  D:\vs2015\VC\include\xmemory0(737): note: 参见对正在编译的函数 模板 实例化“std::pair<const _Kty,_Ty>::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>,void,0>(std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&) noexcept(false)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>
+          ]
+  D:\vs2015\VC\include\xmemory0(737): note: 参见对正在编译的函数 模板 实例化“std::pair<const _Kty,_Ty>::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>,void,0>(std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&) noexcept(false)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>
+          ]
+  D:\vs2015\VC\include\xmemory0(857): note: 参见对正在编译的函数 模板 实例化“void std::allocator<_Other>::construct<_Objty,_Ty>(_Objty *,_Ty &&)”的引用
+          with
+          [
+              _Other=std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>,
+              _Objty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,
+              _Ty=std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>
+          ]
+  D:\vs2015\VC\include\xmemory0(857): note: 参见对正在编译的函数 模板 实例化“void std::allocator<_Other>::construct<_Objty,_Ty>(_Objty *,_Ty &&)”的引用
+          with
+          [
+              _Other=std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>,
+              _Objty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,
+              _Ty=std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>
+          ]
+  D:\vs2015\VC\include\xmemory0(996): note: 参见对正在编译的函数 模板 实例化“void std::allocator_traits<_Alloc>::construct<_Ty,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>>>(std::allocator<_Other> &,_Objty *,std::pair<unsigned __int64,std::unordered_map<_Kty,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>> &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>>,
+              _Ty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,
+              _Kty=std::string,
+              _Other=std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>,
+              _Objty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>
+          ]
+  D:\vs2015\VC\include\xmemory0(995): note: 参见对正在编译的函数 模板 实例化“void std::allocator_traits<_Alloc>::construct<_Ty,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>>>(std::allocator<_Other> &,_Objty *,std::pair<unsigned __int64,std::unordered_map<_Kty,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>> &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>>,
+              _Ty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,
+              _Kty=std::string,
+              _Other=std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>,
+              _Objty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>
+          ]
+  D:\vs2015\VC\include\list(837): note: 参见对正在编译的函数 模板 实例化“void std::_Wrap_alloc<std::allocator<_Other>>::construct<_Ty,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>>>(_Ty *,std::pair<unsigned __int64,std::unordered_map<_Kty,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>> &&)”的引用
+          with
+          [
+              _Other=std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>,
+              _Ty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,
+              _Kty=std::string
+          ]
+  D:\vs2015\VC\include\list(835): note: 参见对正在编译的函数 模板 实例化“void std::_Wrap_alloc<std::allocator<_Other>>::construct<_Ty,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>>>(_Ty *,std::pair<unsigned __int64,std::unordered_map<_Kty,double,std::hash<_Kty>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,double>>>> &&)”的引用
+          with
+          [
+              _Other=std::_List_node<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,void *>,
+              _Ty=std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>,
+              _Kty=std::string
+          ]
+  D:\vs2015\VC\include\list(1065): note: 参见对正在编译的函数 模板 实例化“std::_List_node<std::pair<const _Kty,_Ty>,void *> *std::_List_buy<std::pair<const _Kty,_Ty>,_Alloc>::_Buynode<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::_List_node<std::pair<const _Kty,_Ty>,void *> *,std::_List_node<std::pair<const _Kty,_Ty>,void *> *,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>,
+              _Alloc=std::allocator<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>>
+          ]
+  D:\vs2015\VC\include\list(1064): note: 参见对正在编译的函数 模板 实例化“std::_List_node<std::pair<const _Kty,_Ty>,void *> *std::_List_buy<std::pair<const _Kty,_Ty>,_Alloc>::_Buynode<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::_List_node<std::pair<const _Kty,_Ty>,void *> *,std::_List_node<std::pair<const _Kty,_Ty>,void *> *,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>,
+              _Alloc=std::allocator<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>>
+          ]
+  D:\vs2015\VC\include\list(1037): note: 参见对正在编译的函数 模板 实例化“void std::list<std::pair<const _Kty,_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>::_Insert<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<std::pair<const _Kty,_Ty>>>,std::_Iterator_base0>,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>
+          ]
+  D:\vs2015\VC\include\list(1037): note: 参见对正在编译的函数 模板 实例化“void std::list<std::pair<const _Kty,_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>::_Insert<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::_List_unchecked_const_iterator<std::_List_val<std::_List_simple_types<std::pair<const _Kty,_Ty>>>,std::_Iterator_base0>,std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>
+          ]
+  D:\vs2015\VC\include\xhash(254): note: 参见对正在编译的函数 模板 实例化“void std::list<std::pair<const _Kty,_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>::emplace_front<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>
+          ]
+  D:\vs2015\VC\include\xhash(254): note: 参见对正在编译的函数 模板 实例化“void std::list<std::pair<const _Kty,_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>::emplace_front<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>
+          ]
+  D:\vs2015\VC\include\unordered_map(252): note: 参见对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<std::pair<const _Kty,_Ty>>>>,bool> std::_Hash<std::_Umap_traits<_Kty,_Ty,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>,
+              _Hasher=std::hash<int>,
+              _Keyeq=std::equal_to<int>,
+              _Alloc=std::allocator<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>>
+          ]
+  D:\vs2015\VC\include\unordered_map(252): note: 参见对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<std::pair<const _Kty,_Ty>>>>,bool> std::_Hash<std::_Umap_traits<_Kty,_Ty,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::emplace<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>>(std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>> &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>,
+              _Hasher=std::hash<int>,
+              _Keyeq=std::equal_to<int>,
+              _Alloc=std::allocator<std::pair<const int,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>>
+          ]
+  Searcher.cpp(2691): note: 参见对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<std::pair<const _Kty,_Ty>>>>,bool> std::unordered_map<_Kty,_Ty,std::hash<int>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>::insert<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>,void>(_Valty &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>,
+              _Valty=std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>
+          ]
+  Searcher.cpp(2691): note: 参见对正在编译的函数 模板 实例化“std::pair<std::_List_iterator<std::_List_val<std::_List_simple_types<std::pair<const _Kty,_Ty>>>>,bool> std::unordered_map<_Kty,_Ty,std::hash<int>,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>::insert<std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::equal_to<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,double>>>>,void>(_Valty &&)”的引用
+          with
+          [
+              _Kty=int,
+              _Ty=std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>,
+              _Valty=std::pair<unsigned __int64,std::unordered_map<std::string,double,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,double>>>>
+          ]
+  TagFlow.cpp
+TagFlow.cpp(126): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(160): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(184): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(195): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+TagFlow.cpp(197): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+TagFlow.cpp(215): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(327): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+TagFlow.cpp(350): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(355): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  TAGPriorityQueue.cpp
+TAGPriorityQueue.cpp(165): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  TagSearcher.cpp
+TagSearcher.cpp(106): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+TagSearcher.cpp(114): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+TagSearcher.cpp(162): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+TagSearcher.cpp(336): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+TagSearcher.cpp(510): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+TagSearcher.cpp(514): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  test.cpp
+  daxpy.c
+  ddot.c
+  dnrm2.c
+  dscal.c
+  predict.c
+  train.c
+  正在生成代码
+  All 9515 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  pTop.vcxproj -> E:\个人文件整理\源程序\kernel\pTop 2.0\x64\Release\pTop.exe
+  pTop.vcxproj -> E:\个人文件整理\源程序\kernel\pTop 2.0\x64\Release\pTop.pdb (Full PDB)

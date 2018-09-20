@@ -1,0 +1,183 @@
+D:\pFind\trunk\bin\Release\pFind.exe.config
+D:\pFind\trunk\bin\Release\pFind.exe
+D:\pFind\trunk\bin\Release\pFind.pdb
+D:\pFind\trunk\bin\Release\PdfSharp.Xps.dll
+D:\pFind\trunk\obj\Release\pFind3.0.0.csprojResolveAssemblyReference.cache
+D:\pFind\trunk\obj\Release\About.baml
+D:\pFind\trunk\obj\Release\DTabControl.baml
+D:\pFind\trunk\obj\Release\License_Dialog.baml
+D:\pFind\trunk\obj\Release\NewTask.baml
+D:\pFind\trunk\obj\Release\Settings.baml
+D:\pFind\trunk\obj\Release\Video.baml
+D:\pFind\trunk\obj\Release\App.baml
+D:\pFind\trunk\obj\Release\About.g.cs
+D:\pFind\trunk\obj\Release\License_Dialog.g.cs
+D:\pFind\trunk\obj\Release\MainWindow.g.cs
+D:\pFind\trunk\obj\Release\NewTask.g.cs
+D:\pFind\trunk\obj\Release\Settings.g.cs
+D:\pFind\trunk\obj\Release\Video.g.cs
+D:\pFind\trunk\obj\Release\App.g.cs
+D:\pFind\trunk\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\pFind\trunk\obj\Release\pFind_MarkupCompile.cache
+D:\pFind\trunk\obj\Release\pFind_MarkupCompile.lref
+D:\pFind\trunk\obj\Release\ButtonStyle.baml
+D:\pFind\trunk\obj\Release\MainWindow.baml
+D:\pFind\trunk\obj\Release\Style.baml
+D:\pFind\trunk\obj\Release\pFind.g.resources
+D:\pFind\trunk\obj\Release\pFind.Properties.Resources.resources
+D:\pFind\trunk\obj\Release\pFind3.0.0.csproj.GenerateResource.Cache
+D:\pFind\trunk\obj\Release\pFind.exe
+D:\pFind\trunk\obj\Release\pFind.pdb
+D:\pFind\trunk-ms2\bin\Release\pFind.exe.config
+D:\pFind\trunk-ms2\bin\Release\pFind.exe
+D:\pFind\trunk-ms2\bin\Release\pFind.pdb
+D:\pFind\trunk-ms2\bin\Release\PdfSharp.Xps.dll
+D:\pFind\trunk-ms2\obj\Release\About.baml
+D:\pFind\trunk-ms2\obj\Release\DTabControl.baml
+D:\pFind\trunk-ms2\obj\Release\License_Dialog.baml
+D:\pFind\trunk-ms2\obj\Release\NewTask.baml
+D:\pFind\trunk-ms2\obj\Release\Settings.baml
+D:\pFind\trunk-ms2\obj\Release\Video.baml
+D:\pFind\trunk-ms2\obj\Release\App.baml
+D:\pFind\trunk-ms2\obj\Release\About.g.cs
+D:\pFind\trunk-ms2\obj\Release\License_Dialog.g.cs
+D:\pFind\trunk-ms2\obj\Release\MainWindow.g.cs
+D:\pFind\trunk-ms2\obj\Release\NewTask.g.cs
+D:\pFind\trunk-ms2\obj\Release\Settings.g.cs
+D:\pFind\trunk-ms2\obj\Release\Video.g.cs
+D:\pFind\trunk-ms2\obj\Release\App.g.cs
+D:\pFind\trunk-ms2\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\pFind\trunk-ms2\obj\Release\pFind_MarkupCompile.cache
+D:\pFind\trunk-ms2\obj\Release\pFind_MarkupCompile.lref
+D:\pFind\trunk-ms2\obj\Release\ButtonStyle.baml
+D:\pFind\trunk-ms2\obj\Release\MainWindow.baml
+D:\pFind\trunk-ms2\obj\Release\Style.baml
+D:\pFind\trunk-ms2\obj\Release\pFind.g.resources
+D:\pFind\trunk-ms2\obj\Release\pFind.Properties.Resources.resources
+D:\pFind\trunk-ms2\obj\Release\pFind3.0.0.csproj.GenerateResource.Cache
+D:\pFind\trunk-ms2\obj\Release\pFind.exe
+D:\pFind\trunk-ms2\obj\Release\pFind.pdb
+D:\pFind\trunk-ms2\obj\Release\pFind3.0.0.csprojResolveAssemblyReference.cache
+E:\code\pFind3\Trunk\trunk_ms2\bin\Release\pFind.exe.config
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind.exe
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind.pdb
+E:\code\pFind3\Trunk\trunk_ms2\bin\Release\pFind.exe
+E:\code\pFind3\Trunk\trunk_ms2\bin\Release\pFind.pdb
+E:\code\pFind3\Trunk\trunk_ms2\bin\Release\PdfSharp.Xps.dll
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind3.0.0.csprojResolveAssemblyReference.cache
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\About.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\DTabControl.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\License_Dialog.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\NewTask.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\Settings.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\Video.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\App.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\About.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\License_Dialog.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\MainWindow.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\NewTask.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\Settings.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\Video.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\App.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind_MarkupCompile.cache
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind_MarkupCompile.lref
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\ButtonStyle.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\MainWindow.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\Style.baml
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind.g.resources
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind.Properties.Resources.resources
+E:\code\pFind3\Trunk\trunk_ms2\obj\Release\pFind3.0.0.csproj.GenerateResource.Cache
+D:\pFind\pFind 3 new\bin\Release\pFind.exe.config
+D:\pFind\pFind 3 new\obj\Release\pFind.exe
+D:\pFind\pFind 3 new\obj\Release\pFind.pdb
+D:\pFind\pFind 3 new\bin\Release\pFind.exe
+D:\pFind\pFind 3 new\bin\Release\pFind.pdb
+D:\pFind\pFind 3 new\bin\Release\PdfSharp.Xps.dll
+D:\pFind\pFind 3 new\obj\Release\pFind3.0.0.csprojResolveAssemblyReference.cache
+D:\pFind\pFind 3 new\obj\Release\About.baml
+D:\pFind\pFind 3 new\obj\Release\DTabControl.baml
+D:\pFind\pFind 3 new\obj\Release\License_Dialog.baml
+D:\pFind\pFind 3 new\obj\Release\NewTask.baml
+D:\pFind\pFind 3 new\obj\Release\Settings.baml
+D:\pFind\pFind 3 new\obj\Release\Video.baml
+D:\pFind\pFind 3 new\obj\Release\App.baml
+D:\pFind\pFind 3 new\obj\Release\About.g.cs
+D:\pFind\pFind 3 new\obj\Release\License_Dialog.g.cs
+D:\pFind\pFind 3 new\obj\Release\MainWindow.g.cs
+D:\pFind\pFind 3 new\obj\Release\NewTask.g.cs
+D:\pFind\pFind 3 new\obj\Release\Settings.g.cs
+D:\pFind\pFind 3 new\obj\Release\Video.g.cs
+D:\pFind\pFind 3 new\obj\Release\App.g.cs
+D:\pFind\pFind 3 new\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\pFind\pFind 3 new\obj\Release\pFind_MarkupCompile.cache
+D:\pFind\pFind 3 new\obj\Release\pFind_MarkupCompile.lref
+D:\pFind\pFind 3 new\obj\Release\ButtonStyle.baml
+D:\pFind\pFind 3 new\obj\Release\MainWindow.baml
+D:\pFind\pFind 3 new\obj\Release\Style.baml
+D:\pFind\pFind 3 new\obj\Release\pFind.g.resources
+D:\pFind\pFind 3 new\obj\Release\pFind.Properties.Resources.resources
+D:\pFind\pFind 3 new\obj\Release\pFind3.0.0.csproj.GenerateResource.Cache
+E:\个人文件整理\源程序\pFind 3.1\bin\Release\pFind.exe.config
+E:\个人文件整理\源程序\pFind 3.1\obj\Release\pFind.exe
+E:\个人文件整理\源程序\pFind 3.1\obj\Release\pFind.pdb
+E:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\pFind.exe.config
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.exe
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.pdb
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind3.0.0.csprojResolveAssemblyReference.cache
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\About.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\DTabControl.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\License_Dialog.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\NewTask.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Settings.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Video.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\App.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\About.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\License_Dialog.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\MainWindow.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\NewTask.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Settings.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Video.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\App.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind_MarkupCompile.cache
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind_MarkupCompile.lref
+E:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\pFind.exe
+E:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\pFind.pdb
+E:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\PdfSharp.Xps.dll
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\ButtonStyle.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\MainWindow.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Style.baml
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.g.resources
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.Properties.Resources.resources
+E:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind3.0.0.csproj.GenerateResource.Cache
+J:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\pFind.exe.config
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.exe
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.pdb
+J:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\pFind.exe
+J:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\pFind.pdb
+J:\个人文件整理\源程序\pFind 3.1 GUI\bin\Release\PdfSharp.Xps.dll
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind3.0.0.csprojResolveAssemblyReference.cache
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\About.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\DTabControl.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\License_Dialog.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\NewTask.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Settings.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Video.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\App.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\About.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\License_Dialog.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\MainWindow.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\NewTask.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Settings.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Video.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\App.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\GeneratedInternalTypeHelper.g.cs
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind_MarkupCompile.cache
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind_MarkupCompile.lref
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\ButtonStyle.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\MainWindow.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\Style.baml
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.g.resources
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind.Properties.Resources.resources
+J:\个人文件整理\源程序\pFind 3.1 GUI\obj\Release\pFind3.0.0.csproj.GenerateResource.Cache

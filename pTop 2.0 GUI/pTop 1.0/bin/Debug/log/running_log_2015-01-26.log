@@ -1,0 +1,87 @@
+****************************************
+*                                      *
+*       Welcome to use pTop!           *
+*                                      *
+*            version 1.0.0             *
+*                                      *
+*        http://pfind.ict.ac.cn        *
+*                                      *
+****************************************
+[Info] Configure...
+[Call pParseTD] pParseTD.exe "F:\About pFind\pTop\workspace\cncp\param\pParseTD.cfg"
+[pParseTD] Start pParseTD!
+[pParseTD] F:\About pFind\data\cncp2012\std8_trypsin_denovo_20090729.RAW: MS1 & MS2 files already exists.
+[pParseTD] Processing F:\About pFind\data\cncp2012\std8_trypsin_denovo_20090729.MS1
+[pParseTD] .CSV file already exists, pParse Complete!
+[pParseTD] Time elapsed: 1s.
+
+[Info] Database: F:\About pFind\data\cncp2012\std8.FASTA
+[Info] Getting the PTM forms...
+[Error] Invalid modification type: PEP_N
+****************************************
+*                                      *
+*       Welcome to use pTop!           *
+*                                      *
+*            version 1.0.0             *
+*                                      *
+*        http://pfind.ict.ac.cn        *
+*                                      *
+****************************************
+[Info] Configure...
+[Call pParseTD] pParseTD.exe "F:\About pFind\pTop\workspace\cncp\param\pParseTD.cfg"
+[pParseTD] Start pParseTD!
+[pParseTD] F:\About pFind\data\cncp2012\std8_trypsin_denovo_20090729.RAW: MS1 & MS2 files already exists.
+[pParseTD] Processing F:\About pFind\data\cncp2012\std8_trypsin_denovo_20090729.MS1
+[pParseTD] .CSV file already exists, pParse Complete!
+[pParseTD] Time elapsed: 1s.
+
+[Info] Database: F:\About pFind\data\cncp2012\std8.FASTA
+[Info] Getting the PTM forms...
+[Error] Invalid modification type: PEP_N
+****************************************
+*                                      *
+*       Welcome to use pTop!           *
+*                                      *
+*            version 1.0.0             *
+*                                      *
+*        http://pfind.ict.ac.cn        *
+*                                      *
+****************************************
+[pTop] Configure...
+[Call pParseTD] pParseTD.exe "F:\About pFind\pTop\workspace\ecoli\param\pParseTD.cfg"
+[pParseTD] Start pParseTD!
+[pParseTD] F:\About pFind\data\Data\ecoli_4ug_10CID_5acn.raw: MS1 & MS2 files already exists.
+[pParseTD] Processing F:\About pFind\data\Data\ecoli_4ug_10CID_5acn.MS1
+[pParseTD] Loading MS1 and MS2 files...
+[pParseTD] Loading MS1...
+[pParseTD] Survey MS scan number: 3441
+[pParseTD] Loading MS2...
+[pParseTD] MS/MS scan number: 3083
+[pParseTD] <Exporting CID-FT MS1>: 100%
+
+[pParseTD] <Exporting CID-FT MS2>: 100%
+
+[pParseTD] Output 8756 precursors
+[pParseTD] Time elapsed: 70s.
+
+[pTop] Database: F:\About pFind\data\Data\Ecoli20100628.jiaming.fasta
+[pTop] Getting the PTM forms...
+[pTop] Time cost: 72.642s
+[pTop] Indexing...
+[pTop] Number of proteins: 6126
+[pTop] Searching...
+[pTop] Search F:\About pFind\data\Data\ecoli_4ug_10CID_5acn_CIDFT.pf
+[pTop] <Search>: 3083 / 3083 (100%)
+
+[pTop] Search finished!
+[pTop] The results in F:\About pFind\pTop\workspace\ecoli\result\pTop.query.txt
+[pTop] Time cost: 346.289s
+[pTop] Filtering...
+[pTop] Filter Score: 3.54812
+[pTop] Total PSM number: 124
+Create plabel file
+[pTop] Fileter finished!
+[pTop] The results in F:\About pFind\pTop\workspace\ecoli\result\pTop.filter.csv
+[pTop] Time cost: 346.297s
+[pTop] Total Execution time : 346.297000s
+

@@ -1,0 +1,4 @@
+@NUMBER_LABEL=3
+None=
+15N_Labeling=A_*<N,15N>
+SILAC-Arg10Lys8=A_K<N,15N>A_K<C,13C>A_R<N,15N>A_R<C,13C>

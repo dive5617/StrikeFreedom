@@ -1,0 +1,28 @@
+﻿<Window x:Class="pBuild.Model_Window_DeNovo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf" Title="Model_Window_DeNovo" Height="500" Width="700" Icon="pBuild.ico"
+        Initialized="Window_Initialized" ContentRendered="Window_ContentRendered" PreviewKeyDown="ctrl_C_keydown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Click="initial_clk" Width="50" HorizontalAlignment="Left" Margin="4">Initial</Button>
+            <Button Click="clear_btn_clk" Width="40" HorizontalAlignment="Left" Margin="4">Clear</Button>
+            <Button Click="end_btn_clk" Width="40" HorizontalAlignment="Left" Margin="4">End</Button>
+            <Button Click="back_btn_clk" Width="40" HorizontalAlignment="Left" Margin="4">Back</Button>
+            <Button Click="setting_btn_clk" Width="60" HorizontalAlignment="Left" Margin="4">Setting...</Button>
+            <Button Click="config_btn_clk" Width="80" HorizontalAlignment="Left" Margin="4">Config...</Button>
+            <Button Click="copy_to_clipboard_btn_clk" Width="120" HorizontalAlignment="Left" Margin="4">Copy to Clipboard</Button>
+            <CheckBox Click="deisotope_btn_clk" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4">Deisotope</CheckBox>
+            <Button Click="pNovo_btn_clk" Width="100" Margin="4">Run pNovo2</Button>
+        </StackPanel>
+        <Grid x:Name="grid" Grid.Row="1" Grid.Column="0">
+            <Border x:Name="border">
+                <oxy:Plot x:Name="model" />
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

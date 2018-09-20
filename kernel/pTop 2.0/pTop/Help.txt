@@ -1,0 +1,24 @@
+comment: 
+[to be removed] 先注释掉，回头需要删除
+
+刚读进来时，pF2的title是： filename.scan.scan
+           MGF的title可能已经是：filename.scan.scan.charge.pParseTDRank.dta
+
+分谱搜索之后的临时文件是：filename.passNumber.batchNumber.txt
+临时文件均以逗号作为分隔符
+fileID, title, scan, charge, precursorMass, ProMass, Mass Diff Da, Mass Diff PPM,
+Protein AC, Protein Sequence, PTMs, Score, Evalue,
+Matched Peaks, Nterm Matched Ions, Cterm Matched Ions, Nterm Matched Intensity Ratio, Cterm Matched Intensity Ratio,
+Com_Ion_Ratio, Tag_Ratio, PTM_Score, Fragment Error STD,
+isDecoy, Label Type
+临时文件每张谱图输出 top k
+
+同一张的谱的多个结果之间已经有序: 整体排序法，局部排序法
+
+结果文件：
+有标记： folder + filename + ".L" + s + ".qry.csv"
+无标记： folder + filename + ".qry.csv"
+
+在Configuration里面生成标记对应的i.aa和i.mod
+在Search时，若passNumber < 0则读取aa.ini和mod.ini，
+           否则读取对应的i.aa和i.mod

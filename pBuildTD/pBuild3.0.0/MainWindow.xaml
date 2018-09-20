@@ -1,0 +1,1414 @@
+﻿<Window x:Class="pBuild.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:pBuild"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:tools="clr-namespace:_3DTools;assembly=3DTools"
+        xmlns:cm="clr-namespace:System.ComponentModel;assembly=System"
+        x:Name="main_W"
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf" Title="pBuild 3.0" Height="350" Width="525" Icon="pBuild.ico" WindowState="Maximized"
+        Closed="closed_window" FontFamily="MS Reference Sans Serif" Loaded="load_timer">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.DoF5" Executed="load_Task_F5"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoLoad" Executed="load_Task"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportPDF_Summary" Executed="exp_pdf_Command_Summary"></CommandBinding>
+        <CommandBinding x:Name="export_result_command" Command="local:CustomCommands.DoExportPDF_Result" Executed="exp_pdf_Command_Result"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportPDF_Param" Executed="exp_pdf_Command_Param"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportPDF_Graph" Executed="exp_pdf_Command_Graph"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoHelp_About" Executed="Help_About_Clk"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoHelp_Compare" Executed="Help_Compare_Clk"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoHelp_Compare2" Executed="Help_Compare_Clk2"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoSwitch_To_StartPage" Executed="switch_welcome_page"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_PDF" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Da" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_PPM" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Score" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Mix" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Specific" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Modification" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Length" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Raw_Rate" Executed="exp_clipboard"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.DoExportCliboard_Ratio" Executed="exp_clipboard"></CommandBinding>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="F5" Command="local:CustomCommands.DoF5"></KeyBinding>
+        <KeyBinding Key="L" Modifiers="Alt" Command="local:CustomCommands.DoLoad"></KeyBinding>
+        <KeyBinding Key="S" Modifiers="Alt" Command="local:CustomCommands.DoExportPDF_Summary"></KeyBinding>
+        <KeyBinding Key="R" Modifiers="Alt" Command="local:CustomCommands.DoExportPDF_Result"></KeyBinding>
+        <KeyBinding Key="P" Modifiers="Alt" Command="local:CustomCommands.DoExportPDF_Param"></KeyBinding>
+        <KeyBinding Key="G" Modifiers="Alt" Command="local:CustomCommands.DoExportPDF_Graph"></KeyBinding>
+        <KeyBinding Key="A" Modifiers="Alt" Command="local:CustomCommands.DoHelp_About"></KeyBinding>
+        <KeyBinding Key="C" Modifiers="Alt" Command="local:CustomCommands.DoHelp_Compare"></KeyBinding>
+        <KeyBinding Key="M" Modifiers="Alt" Command="local:CustomCommands.DoHelp_Compare2"></KeyBinding>
+        <KeyBinding Key="T" Modifiers="Alt" Command="local:CustomCommands.DoSwitch_To_StartPage"></KeyBinding>
+        <KeyBinding Key="F" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_PDF" CommandParameter="0"></KeyBinding>
+        <KeyBinding Key="D" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Da" CommandParameter="1"></KeyBinding>
+        <KeyBinding Key="P" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_PPM" CommandParameter="2"></KeyBinding>
+        <KeyBinding Key="S" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Score" CommandParameter="3"></KeyBinding>
+        <KeyBinding Key="M" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Mix" CommandParameter="4"></KeyBinding>
+        <KeyBinding Key="E" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Specific" CommandParameter="5"></KeyBinding>
+        <KeyBinding Key="O" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Modification" CommandParameter="6"></KeyBinding>
+        <KeyBinding Key="L" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Length" CommandParameter="7"></KeyBinding>
+        <KeyBinding Key="A" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Raw_Rate" CommandParameter="8"></KeyBinding>
+        <KeyBinding Key="R" Modifiers="Ctrl+Shift" Command="local:CustomCommands.DoExportCliboard_Ratio" CommandParameter="9"></KeyBinding>
+    </Window.InputBindings>
+
+    <Window.Resources>
+        <local:DataGrid_Converter_TargetDecoy x:Key="dataGrid_Converter1" />
+        <local:DataGrid_Converter_LabelName x:Key="dataGrid_Converter2" />
+        <local:DataGrid_Converter_ModSites x:Key="dataGrid_Converter3" />
+        <cm:BackgroundWorker x:Key="backgroundWorker" WorkerReportsProgress="True" WorkerSupportsCancellation="True"
+                         DoWork="backgroundWorker_DoWork" ProgressChanged="backgroundWorker_ProgressChanged"
+                         RunWorkerCompleted="backgroundWorker_RunWorkerCompleted"></cm:BackgroundWorker>
+        <cm:BackgroundWorker x:Key="backgroundWorker_cand" WorkerReportsProgress="True" WorkerSupportsCancellation="True"
+                         DoWork="backgroundWorker_DoWork_cand" RunWorkerCompleted="backgroundWorker_RunWorkerCompleted_cand"></cm:BackgroundWorker>
+        <cm:BackgroundWorker x:Key="backgroundWorker_filter" WorkerReportsProgress="True" WorkerSupportsCancellation="True"
+                         DoWork="backgroundWorker_DoWork_filter" RunWorkerCompleted="backgroundWorker_RunWorkerCompleted_filter"></cm:BackgroundWorker>
+        <cm:BackgroundWorker x:Key="backgroundWorker_fdr" WorkerReportsProgress="True" WorkerSupportsCancellation="True"
+                         DoWork="backgroundWorker_DoWork_fdr" ProgressChanged="backgroundWorker_ProgressChanged"
+                         RunWorkerCompleted="backgroundWorker_RunWorkerCompleted_fdr"></cm:BackgroundWorker>
+        <DataTemplate x:Key="TimeSpanTemplate">
+            <TextBlock HorizontalAlignment="Right" Width="200"
+               Text="{Binding ttimespan}" TextAlignment="Right"/>
+        </DataTemplate>
+
+        <Image x:Key="File_Load_img" Source="images\folder_open.gif"></Image>
+        <Image x:Key="File_Save_img" Source="images\save.png"></Image>
+        <Image x:Key="File_SaveAs_img" Source="images\save_as.png"></Image>
+
+        <Image x:Key="ms2_quant_table" Source="images\ms2_quant_table.png"></Image>
+        <Image x:Key="ms2_full_size" Source="images\ms2_full_size.png"></Image>
+        <Image x:Key="ms2_advance" Source="images\ms2_advance.png"></Image>
+        <Image x:Key="ms2_setting" Source="images\ms2_setting.png"></Image>
+        <Image x:Key="ms2_review" Source="images\ms2_review.png"></Image>
+        <Image x:Key="ms2_pdf" Source="images\ms2_pdf.png"></Image>
+        <Image x:Key="ms2_clipboard" Source="images\ms2_clipboard.png"></Image>
+        <Image x:Key="ms2_dta" Source="images\ms2_dta.png"></Image>
+        <Image x:Key="ms2_ions" Source="images\ms2_ions.png"></Image>
+        <Image x:Key="ms2_model" Source="images\ms2_model.png"></Image>
+        <Image x:Key="ms1_pdf" Source="images\ms2_pdf.png"></Image>
+        <Image x:Key="ms1_clipboard" Source="images\ms2_clipboard.png"></Image>
+        <Image x:Key="ms1_advance" Source="images\ms2_advance.png"></Image>
+        <Image x:Key="d3_clipboard" Source="images\ms2_clipboard.png"></Image>
+
+        <Image x:Key="toolbar_pConfig_image" Source="images\pConfig.ico"></Image>
+        <Image x:Key="toolbar_Config_image" Source="images\config.png"></Image>
+        <Image x:Key="toolbar_about_image" Source="images\about.png"></Image>
+
+        <Image x:Key="summary_image" Source="images\summary.png"></Image>
+        <Image x:Key="summary_result_image" Source="images\summary_result.png"></Image>
+        <Image x:Key="summary_param_image" Source="images\summary_param.png"></Image>
+        <Image x:Key="summary_graph_image" Source="images\summary_graph.png"></Image>
+        <Image x:Key="summary_report_image" Source="images\summary_report.png"></Image>
+        <Image x:Key="summary_pFind_image" Source="images\pFind.ico"></Image>
+
+        <Image x:Key="ms1_full_size" Source="images\ms1_full_size.png"></Image>
+        <Image x:Key="ms1_initial" Source="images\ms1_initial.png"></Image>
+        <Image x:Key="ms1_setting" Source="images\ms1_setting.png"></Image>
+
+        <Image x:Key="show_spectra_image" Source="images\show_spectra.png"></Image>
+        <Image x:Key="show_spectra_onlySQ_image" Source="images\show_spectra_onlySQ.png"></Image>
+        <Image x:Key="show_selectedItem_image" Source="images\show_selectedItem.png"></Image>
+        <Image x:Key="show_selectedItem_image2" Source="images\show_selectedItem.png"></Image>
+        <Image x:Key="show_mix_psm_image" Source="images\show_mix_psm.png"></Image>
+
+        <Image x:Key="protein_advanced" Source="images\Protein_Advanced.png"></Image>
+
+        <Style x:Key="CellRightAlign">
+            <Setter Property="Control.HorizontalAlignment"
+            Value="Right" />
+        </Style>
+
+        <Style x:Key="myHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+
+        <Style x:Key="hcs" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+        </Style>
+
+        <Style x:Key="SummaryListView" TargetType="{x:Type ListViewItem}">
+            <Style.Resources>
+                <LinearGradientBrush x:Key="ProfitBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="0.1" Color="#AA00CC00" />
+                    <GradientStop Offset="0.8" Color="#55008800" />
+                </LinearGradientBrush>
+            </Style.Resources>
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <Border
+                         BorderBrush="Transparent"
+                         BorderThickness="0"
+                         Background="{TemplateBinding Background}">
+                            <GridViewRowPresenter HorizontalAlignment="Stretch" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Margin="0" Content="{TemplateBinding Content}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=_value}" Value="">
+                    <Setter Property="Background" Value="{StaticResource ProfitBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+        <!-- 解决选中TreeViewItem，结果选中的那些行失去焦点-->
+
+        <!-- 解决选中datagrid中的多行，再点击鼠标右键弹出右键菜单，结果选中的那些行失去焦点 -->
+        <Style TargetType="{x:Type DataGridCell}">
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="True"/>
+                        <Condition Binding="{Binding IsFocused, RelativeSource={RelativeSource Self}}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </MultiDataTrigger>
+
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="True"/>
+                        <Condition Binding="{Binding ContextMenu.IsOpen, RelativeSource={RelativeSource AncestorType=DataGrid}}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+        <LinearGradientBrush x:Key="MyGradientBackground"
+                             StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="White" Offset="0.0"/>
+            <!--<GradientStop Color="AliceBlue" Offset="0.5"/>-->
+            <GradientStop Color="LightBlue" Offset="0.9"/>
+            <GradientStop Color="White" Offset="1.0"/>
+            <!--<GradientStop Color="White" Offset="1.0"/>-->
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <Grid x:Name="frame_Main">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!--MinWidth="90"-->
+            <ColumnDefinition x:Name="frame_left" Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition x:Name="frame_right" Width="2.7*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="3">
+            <MenuItem Header="File" PreviewMouseDown="recent_task_menu_mousedown">
+                <MenuItem Header="Open" InputGestureText="Alt+L" Click="load_Task"></MenuItem>
+                <MenuItem Header="Open MGF" Click="load_MGF"></MenuItem>
+                <MenuItem Header="Open pLink Result" Click="load_pLink_result"></MenuItem>
+                <Separator></Separator>
+                <MenuItem x:Name="recent_task_menu" Header="Recent Task"></MenuItem>
+                <MenuItem Header="Switch to Welcome" InputGestureText="Alt+T" Click="switch_welcome_page"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Exit" InputGestureText="Alt+F4" Click="Help_Exit_Clk"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Tool">
+                <MenuItem Header="Copy Summary Graph">
+                    <MenuItem x:Name="export_fdr_mi" Header="Copy FDR Graph" InputGestureText="Ctrl+Shift+F" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_me_Da_mi" Header="Copy Mass error (Da) Graph" InputGestureText="Ctrl+Shift+D" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_me_ppm_mi" Header="Copy Mass Error (ppm) Graph" InputGestureText="Ctrl+Shift+P" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_score_mi" Header="Copy Score Distribution Graph" InputGestureText="Ctrl+Shift+S" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_mix_spectra_mi" Header="Copy Mixed Spectra Graph" InputGestureText="Ctrl+Shift+M" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_specific_mi" Header="Copy Cleavage Specific Graph" InputGestureText="Ctrl+Shift+E" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_modification_mi" Header="Copy Modification Graph" InputGestureText="Ctrl+Shift+O" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_length_mi" Header="Copy Length Distribution Graph" InputGestureText="Ctrl+Shift+L" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_raw_rate_mi" Header="Copy Raw Rate Graph" InputGestureText="Ctrl+Shift+A" Click="exp_clipboard"></MenuItem>
+                    <MenuItem x:Name="export_ratio_mi" Header="Copy Ratio Graph" InputGestureText="Ctrl+Shift+R" Click="exp_clipboard"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Summary to PDF">
+                    <MenuItem x:Name="export_summary_PDF_mi" Header="Export Summary PDF" InputGestureText="Alt+S" Click="exp_pdf"></MenuItem>
+                    <MenuItem x:Name="export_result_PDF_mi" Header="Export Result PDF" InputGestureText="Alt+R" Click="exp_pdf"></MenuItem>
+                    <MenuItem x:Name="export_param_PDF_mi" Header="Export Parameter PDF" InputGestureText="Alt+P" Click="exp_pdf"></MenuItem>
+                    <MenuItem x:Name="export_graph_PDF_mi" Header="Export Graph PDF" InputGestureText="Alt+G" Click="exp_pdf"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Show Map">
+                    <MenuItem Header="MS1" Click="export_ms1"></MenuItem>
+                    <MenuItem Header="Ratio" Click="export_scan_ratio"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Comparison">
+                    <MenuItem Header="pFind 3.0 vs pFind 3.0" InputGestureText="Alt+C" Click="Help_Compare_Clk"></MenuItem>
+                    <MenuItem Header="pFind 3.0 vs MaxQuant" InputGestureText="Alt+M" Click="Help_Compare_Clk2"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Config" Click="config_clk"></MenuItem>
+                <MenuItem Header="Run pConfig" Click="run_pConfig_clk"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About" InputGestureText="Alt+A" Click="Help_About_Clk"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1" Grid.ColumnSpan="3" ToolBarTray.IsLocked="True" Loaded="toolbar_loaded">
+            <Button Content="{StaticResource File_Load_img}" Click="load_Task" Height="25"/>
+            <!-- <Button Content="{StaticResource toolbar_Config_image}" Click="config_clk" Height="25"/> -->
+            <Button Content="{StaticResource toolbar_pConfig_image}" Click="run_pConfig_clk" Height="25"/>
+            <!-- <Button Content="{StaticResource toolbar_about_image}" Click="Help_About_Clk" Height="25"/> -->
+        </ToolBar>
+        <Grid x:Name="left_grid" Grid.Row="2" Grid.Column="0" Margin="0">
+            <!--  Background="{StaticResource MyGradientBackground}"-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="0.6*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                <!-- 
+                <Canvas VerticalAlignment="Center" Width="40">
+                    <Polygon Points="0,-15,20,0,0,15,0,-15" Stroke="Gray" StrokeThickness="2">
+                        <Polygon.Fill>
+                            <SolidColorBrush Color="LightGray" Opacity="0.4"></SolidColorBrush>
+                        </Polygon.Fill>
+                    </Polygon>
+                </Canvas>
+                -->
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       FontSize="32" FontFamily="Myriad Pro">pBuild</TextBlock>
+            </StackPanel>
+            <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Background="LightGray" Height="1"></GridSplitter>
+            <StackPanel Grid.Row="2" Orientation="Vertical" Margin="4">
+                <TextBlock FontSize="20" Padding="10,2,2,2" Margin="4" FontFamily="MS Reference Sans Serif">Start</TextBlock>
+                <TextBlock Padding="10,2,2,2" FontSize="15" Margin="4"><Hyperlink TextDecorations="None" Click="startpage_open_task_clk">Open...</Hyperlink></TextBlock>
+                <TextBlock Padding="10,2,2,2" FontSize="15" Margin="4"><Hyperlink TextDecorations="None" Click="startpage_about_clk">About us</Hyperlink></TextBlock>
+                <TextBlock Padding="10,2,2,2" FontSize="15" Margin="4"><Hyperlink TextDecorations="None" Click="startpage_exit_clk">Exit</Hyperlink></TextBlock>
+            </StackPanel>
+            <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" Background="LightGray"  Height="1"></GridSplitter>
+            <StackPanel Grid.Row="4" Orientation="Vertical" Margin="4">
+                <TextBlock FontSize="20" Padding="10,2,2,2" Margin="4" FontFamily="MS Reference Sans Serif">Recent</TextBlock>
+                <ListView x:Name="recent_tasks" Background="Transparent" BorderThickness="0" FontFamily="Verdana" FontWeight="Medium" FontSize="14" SelectionMode="Single" Foreground="Black"
+                    		SelectionChanged="load_recent_task" HorizontalAlignment="Left" Width="500">
+                    <ListView.Resources>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </Style>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="ToolTip" Value="{Binding tpath}" />
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="images\recent_task.png" Width="20" Height="20"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding tname}" Width="100"/>
+                            <GridViewColumn CellTemplate="{StaticResource TimeSpanTemplate}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <ScrollViewer Grid.Row="2" Grid.Column="2" Margin="10" VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="right_grid">
+                <TabControl>
+                    <TabItem Header="Introduction">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="101*"/>
+                                <ColumnDefinition Width="226*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" FontSize="20" FontWeight="Bold" Margin="10,10,9.333,10" Grid.ColumnSpan="2">Overview</TextBlock>
+                            <TextBlock Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="5,5,4.333,157" Grid.ColumnSpan="2">pBuild 3.0 is a viewer tool for pFind 3.0. pBuild takes care of every step of result validation, visualization and reporting.</TextBlock>
+                            <TextBlock Grid.Row="1" FontSize="20" FontWeight="Bold" Margin="10,71,9.333,119" Grid.ColumnSpan="2">System Requirements</TextBlock>
+                            <TextBlock Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="5,110,4.333,599.333" Grid.ColumnSpan="2" Grid.RowSpan="3">pBuild 3.0 is available in both 64 bit and 32 bit version. It supports Windows Operation System
+                        (Windows XP, Windows 7 and Windows 8). This program files will only use ～40MB disk space. It requires some extra disk space to store temporary files and intermediate results. The amount of disk space
+                         reequired for this purpose depends on the size of the user's datasets.</TextBlock>
+                            <TextBlock Grid.Row="3" FontSize="14" TextWrapping="Wrap" Margin="5,16,4.333,571.333" Grid.ColumnSpan="2">• CPU: 2.0GHz or higher</TextBlock>
+                            <TextBlock Grid.Row="3" FontSize="14" TextWrapping="Wrap" Margin="5,43,4.333,544.333" Grid.ColumnSpan="2">• Memory: 2GB or higher recommended</TextBlock>
+                            <TextBlock Grid.Row="3" FontSize="14" TextWrapping="Wrap" Margin="5,70,4.333,517.333" Grid.ColumnSpan="2">• Hard Disk: 10GB or higher</TextBlock>
+                            <!-- 
+                        <TextBlock Grid.Row="7" FontSize="20" FontWeight="Bold" Margin="10">Activation</TextBlock>
+                        <TextBlock Grid.Row="8" FontSize="14" TextWrapping="Wrap" Margin="5">If you first run pBuild, you can see the activation interface. So you can input basic information
+                        and send e-mail to <Underline><Bold>pfind@ict.ac.cn</Bold></Underline> or <Underline><Bold>pfind@ict.ac.cn</Bold></Underline>. We will return you the license timely.</TextBlock>
+                        -->
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="The new functions and operation">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" FontSize="20" FontWeight="Bold" Margin="10">The new functions</TextBlock>
+                            <TextBlock Grid.Row="1" FontSize="14" Margin="5">• Add the function of mixture PSMs' matching graph.</TextBlock>
+                            <TextBlock Grid.Row="2" FontSize="14" Margin="5">• Add the function of collapse treatmenet.</TextBlock>
+                            <TextBlock Grid.Row="3" FontSize="14" Margin="5">• Add the function of emass algorithm.</TextBlock>
+                            <TextBlock Grid.Row="4" FontSize="14" Margin="5">• Add the function of beautiful 3D chromatographic graph</TextBlock>
+                            <TextBlock Grid.Row="5" FontSize="14" Margin="5">• Add the function of displaying the protein coverage.</TextBlock>
+                            <TextBlock Grid.Row="6" FontSize="20" FontWeight="Bold" Margin="10">Operation</TextBlock>
+                            <TextBlock Grid.Row="7" FontSize="14" Margin="5">1. Run pFind.exe to search a task.</TextBlock>
+                            <TextBlock Grid.Row="8" FontSize="14" Margin="5">2. Run pBuild.exe to load this task.</TextBlock>
+                            <TextBlock Grid.Row="9" FontSize="14" Margin="5" TextWrapping="Wrap">3. First you can see the Summary Information, you can see the Raw rate, 
+                            the count of identification psms, the percentage of identification modification and specific/non-specific.</TextBlock>
+                            <TextBlock Grid.Row="10" FontSize="14" Margin="5" TextWrapping="Wrap">4. Next you can switch to Peptide panel, then you can see the psms list.</TextBlock>
+                            <TextBlock Grid.Row="11" FontSize="14" Margin="5" TextWrapping="Wrap">5. You click one psm, it will display this psm's MS2-matching graph, MS1 graph and 3D Chromatographic graph.</TextBlock>
+                            <TextBlock Grid.Row="12" FontSize="14" Margin="5" TextWrapping="Wrap">6. Finally, you can switch to Protein panel, then you can see the protine list.</TextBlock>
+                            <TextBlock Grid.Row="13" FontSize="14" Margin="5" TextWrapping="Wrap">7. You click one protein, it will display the protein's sequence, identification peptides and identification modifications.</TextBlock>
+                        </Grid>
+                    </TabItem>
+                    <!--<TabItem Header="pfinder group">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Width="800" Height="540" Source="images\pfinder_team.jpg" Margin="5" Stretch="UniformToFill"></Image>
+                            <TextBlock Grid.Row="1" FontSize="14" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Center">This is our team. If you want to get more information, you can visit this websit: 
+                                <Underline><Bold>http://pfind.ict.ac.cn/members.html</Bold></Underline></TextBlock>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>-->
+                </TabControl>
+            </Grid>
+        </ScrollViewer>
+        <TreeView Grid.Row="2" Grid.Column="0" x:Name="task_treeView" SelectedItemChanged="task_switch" Visibility="Collapsed">
+        </TreeView>
+        <GridSplitter Grid.Row="2" Grid.Column="1" Background="LightGray" VerticalAlignment="Stretch" Width="5" ResizeBehavior="PreviousAndNext"/>
+        <TabControl x:Name="summary_tab" SelectionChanged="clk" Grid.Row="2" Grid.Column="2" Visibility="Collapsed">
+            
+            <TabItem Name="SummaryTabItem" Header="Summary">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ToolBar Grid.Row="0" Visibility="Collapsed">
+                        <Button x:Name="export_summary_pdf_btn" Click="exp_pdf" Content="{StaticResource summary_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Export all PDF</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                        <Button x:Name="export_result_pdf_btn" Click="exp_pdf" Content="{StaticResource summary_result_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Export result PDF</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                        <Button x:Name="export_param_pdf_btn" Click="exp_pdf" Content="{StaticResource summary_param_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Export parameter PDF</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                        <Button x:Name="export_graph_pdf_btn" Click="exp_pdf" Content="{StaticResource summary_graph_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Export graph PDF</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                        <Button x:Name="export_report_btn" Click="exp_report" Content="{StaticResource summary_report_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Export report</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                        <Button x:Name="pFind_btn" Click="pFind_start" Content="{StaticResource summary_pFind_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Start pFind</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                    </ToolBar>
+                    <ScrollViewer Grid.Row="1" x:Name="summary_scroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <Grid x:Name="all_summary">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Visibility="Collapsed">
+                                <Expander x:Name="result_expander" Header="Result" IsExpanded="True">
+                                    <ListView Name="resultReport" Margin="20,0,0,0" ItemContainerStyle="{StaticResource SummaryListView}">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridViewColumn Header="Property" Width="210" DisplayMemberBinding="{Binding _property}">
+                                                </GridViewColumn>
+                                                <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                </Expander>
+                            </Grid>
+                            <Grid Grid.Row="1" Visibility="Collapsed">
+                                <Expander x:Name="param_expander" Header="Parameter" IsExpanded="True">
+                                    <ListView Name="paramReport" Margin="20,0,0,0" ItemContainerStyle="{StaticResource SummaryListView}">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridViewColumn Header="Property" Width="195" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                </Expander>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Expander x:Name="graph_expander" Header="Graph" IsExpanded="True">
+                                    <Grid>
+                                        <Border x:Name="all_summary_graph_border">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="300">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="0.95*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="0.05*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Border x:Name="FDR_border" Grid.Column="0">
+                                                        <oxy:Plot Model="{Binding Model_FDR}" />
+                                                    </Border>
+                                                    <StackPanel x:Name="fdr_btn" Grid.Column="1" Orientation="Vertical">
+
+                                                    </StackPanel>
+                                                </Grid>
+                                                <Grid Grid.Row="1" Grid.Column="0" Height="300">
+                                                    <Border x:Name="me_Da_border">
+                                                        <oxy:Plot Model="{Binding Model_MassError_Da}"/>
+                                                    </Border>
+                                                </Grid>
+                                                <Grid Grid.Row="1" Grid.Column="1" Height="300">
+                                                    <Border x:Name="me_ppm_border">
+                                                        <oxy:Plot Model="{Binding Model_MassError_PPM}"/>
+                                                        <!--  -->
+                                                    </Border>
+                                                </Grid>
+                                                <Grid Grid.Row="2" Grid.Column="0"  Height="300">
+                                                    <Border x:Name="score_border">
+                                                        <oxy:Plot Model="{Binding Model_Score}"/>
+                                                    </Border>
+                                                </Grid>
+                                                <Grid Grid.Row="2" Grid.Column="1" Height="300">
+                                                    <Border x:Name="mixed_spectra_border">
+                                                        <oxy:Plot Model="{Binding Model_Mixed_Spectra}" />
+                                                    </Border>
+                                                </Grid>
+                                                <Grid Grid.Row="3" Grid.Column="0" Height="300">
+                                                    <Border x:Name="specific_border">
+                                                        <oxy:Plot Model="{Binding Model_Specific}"/>
+                                                    </Border>
+                                                </Grid>
+                                                <Grid Grid.Row="3" Grid.Column="1" Height="300">
+                                                    <Border x:Name="modification_border">
+                                                        <oxy:Plot Model="{Binding Model_Modification}"/>
+                                                    </Border>
+                                                </Grid>
+                                                <Grid Grid.Row="4" Grid.Column="0" Height="300">
+                                                    <Border x:Name="length_border">
+                                                        <oxy:Plot Model="{Binding Model_Length}"/>
+                                                    </Border>
+                                                </Grid>
+                                                <Grid Grid.Row="4" Grid.Column="1" Height="300">
+                                                    <Border x:Name="missed_cleavage_border">
+                                                        <oxy:Plot Model="{Binding Model_Missed_Cleavage}"/>
+                                                    </Border>
+                                                </Grid>
+                                                <Grid x:Name="summary_raw_rate_grid" Grid.Row="5" Grid.Column="0" Height="300">
+                                                    <Border x:Name="raw_rate_border">
+                                                        <oxy:Plot Model="{Binding Model_RawRate}"/>
+                                                    </Border>
+                                                </Grid>
+                                                <Grid x:Name="summary_quantification_grid" Grid.Row="5" Grid.Column="1" Height="300">
+                                                    <Border x:Name="quantification_border">
+                                                        <oxy:Plot Model="{Binding Model_Quantification}"/>
+                                                    </Border>
+                                                </Grid>
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Expander>
+                            </Grid>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <!--Header="Peptide"-->
+            <TabItem Header="Protein">
+                <Grid x:Name="gridPSM">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition x:Name="data_RD" Height="1*" MaxHeight="500"></RowDefinition>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition x:Name="graph_RD" Height="5*" MinHeight="100"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ToolBar Grid.Row="0">
+                        <!-- 
+                        <Button x:Name="ss" Click="show_spec_clk" Content="{StaticResource show_spectra_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Show Spectrum!</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                        <Button x:Name="ssOnlySQ" Click="show_spec_clk" Content="{StaticResource show_spectra_onlySQ_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Show Spectrum Only SQ!</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button
+                        -->
+                        <Button VerticalAlignment="Center" x:Name="peptide_display_item_btn" Click="display_selected_item_clk" Content="{StaticResource show_selectedItem_image}" Width="25" Height="25">
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    <TextBlock>Display selected Item</TextBlock>
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
+                        <Grid>
+                            <RadioButton Margin="3" x:Name="sa" Checked="show_all_clk" Content="Spectrum Level" GroupName="status" VerticalAlignment="Center">
+                                <RadioButton.ToolTip>
+                                    <TextBlock>Display all psms which's q_value ≤ fdr.</TextBlock>
+                                </RadioButton.ToolTip>
+                            </RadioButton>
+                        </Grid>
+                        <Grid>
+                            <RadioButton Margin="3" x:Name="rr" Checked="remove_rdd_clk" Content="Peptide Level" GroupName="status" VerticalAlignment="Center">
+                                <RadioButton.ToolTip>
+                                    <TextBlock>Remove the same peptide (include modification and sequence), only retain the best one.</TextBlock>
+                                </RadioButton.ToolTip>
+                            </RadioButton>
+                        </Grid>
+                        <Grid>
+                            <RadioButton Margin="3" x:Name="rrOnlySQ" Checked="remove_rdd_clk" Content="Sequence Level" GroupName="status" VerticalAlignment="Center">
+                                <RadioButton.ToolTip>
+                                    <TextBlock>Remove the same peptide (not include modification, only sequence), only retain the best one.</TextBlock>
+                                </RadioButton.ToolTip>
+                            </RadioButton>
+                        </Grid>
+                        <Grid>
+                            <CheckBox x:Name="other_psms_cbx" Content="Others" Width="60" VerticalAlignment="Center" Margin="3" Click="other_psms_cbx_clk">
+                                <CheckBox.ToolTip>
+                                    <TextBlock>Display the psms which's q_value ﹥ fdr.</TextBlock>
+                                </CheckBox.ToolTip>
+                            </CheckBox>
+                        </Grid>
+                        <Grid>
+                            <Button x:Name="peptide_filter_btn" Width="50" Height="25" Content="Filter..." Click="filter_btn_clk" VerticalAlignment="Center" Margin="3">
+                                <Button.ToolTip>
+                                    <ToolTip>
+                                        <TextBlock>Pop Up the Filter Dialog</TextBlock>
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </Grid>
+                        <Grid>
+                            <Button x:Name="psm_copy_btn" Width="50" Height="25" Content="Copy" Click="datagrid_copy_clk" VerticalAlignment="Center" Margin="3">
+                                <Button.ToolTip>
+                                    <ToolTip>
+                                        <TextBlock>Copy the selected items to clipboard.</TextBlock>
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </Grid>
+                        <Grid>
+                            <Button x:Name="psm_export_btn" Width="100" Height="25" Content="Export to TXT" Click="datagrid_export_clk" VerticalAlignment="Center" Margin="3">
+                                <Button.ToolTip>
+                                    <ToolTip>
+                                        <TextBlock>Export all items to TXT file.</TextBlock>
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </Grid>
+                        <Grid>
+                            <Button Width="100" Height="25" Content="Show Sim" Click="show_all_similarity" VerticalAlignment="Center" Margin="3">
+                                <Button.ToolTip>
+                                    <ToolTip>
+                                        <TextBlock>Show all MS2-Group similarity by sequence.</TextBlock>
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </Grid>
+                        
+                        <Grid>
+                            <Button Width="60" Height="25" Content="Config..." Click="ms2_config_btn_clk" VerticalAlignment="Center" Margin="3">
+                                <Button.ToolTip>
+                                    <ToolTip>
+                                        <TextBlock>Pop Up the MS2 Quantification Config Dialog</TextBlock>
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </Grid>
+                        <Grid>
+                            <Button Width="90" Height="25" Content="MS2 Config..." Click="ms2_config_btn_clk2" VerticalAlignment="Center" Margin="3">
+                                <Button.ToolTip>
+                                    <ToolTip>
+                                        <TextBlock>Pop Up the MS2 Quantification Config Dialog</TextBlock>
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                        </Grid>
+                        <!--  -->
+                    </ToolBar>
+                    <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent"
+                              Grid.Row="1" x:Name="data" ItemsSource="{Binding Display_psms}" AutoGenerateColumns="False" FrozenColumnCount="1" IsReadOnly="True"
+                                SelectionMode="Extended" SelectionChanged="s_ch" RowHeaderWidth="0" ClipboardCopyMode="IncludeHeader" PreviewKeyDown="data_ctrl_C">
+                        <!--   -->
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="#" Binding="{Binding Id}" Width="50" />
+                            <DataGridTextColumn Header="Spectrum" Binding="{Binding Title}" Width="160" />
+                            <DataGridTextColumn Header="Charge" Binding="{Binding Charge}" Width="60" />
+                            <DataGridTextColumn Header="Spectrum mass" Binding="{Binding Spectra_mass}" Width="110" />
+                            <DataGridTextColumn Header="Sequence" Binding="{Binding Sq}" Width="250" />
+                            <DataGridTextColumn Header="Mod_Sites" Binding="{Binding Mod_sites,Converter={StaticResource dataGrid_Converter3}}" Width="110" />
+                            <DataGridTextColumn Header="Specific" Binding="{Binding Specific_flag}" Width="70" />
+                            <DataGridTextColumn Header="Missed_Cleavage" Binding="{Binding Missed_cleavage_number}" Width="70" />
+                            <DataGridTextColumn Header="Detla_Mass (Da)" Binding="{Binding Delta_mass, StringFormat={}{0:N6}}" Width="100">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Detla_Mass (PPM)" Binding="{Binding Delta_mass_PPM, StringFormat={}{0:N3}}" Width="110">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Score" Binding="{Binding Score, StringFormat={}{0:E2}}" Width="80">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Target_Decoy" Binding="{Binding Is_target_flag, Converter={StaticResource dataGrid_Converter1}}" Width="80" />
+                            <DataGridTextColumn Header="Label_Name" Binding="{Binding Pep_flag,Converter={StaticResource dataGrid_Converter2}}" Width="80" />
+                            <DataGridTextColumn Header="AC" Binding="{Binding AC}" Width="80" />
+                            <DataGridTextColumn x:Name="data_ratio_column" Header="Ratio" Binding="{Binding Ratio, StringFormat={}{0:0.0000}}" Width="50">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn x:Name="data_sigma_column" Header="Int. Score" Binding="{Binding Sigma, StringFormat={}{0:0.0000}}" Width="70">
+                                <ToolTipService.ToolTip>Interference Score for ratio</ToolTipService.ToolTip>
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                        <Setter Property="ToolTip" Value="Interference Score for ratio" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn x:Name="data_ms2_ratio_column" Header="MS2 Ratio" Binding="{Binding Ms2_ratio, StringFormat={}{0:0.0000}}" Width="70" Visibility="Collapsed">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn x:Name="data_ms2_ratio_column2" Header="MS2 Ratio Ion" Binding="{Binding Ms2_ratio_a1, StringFormat={}{0:0.0000}}" Width="70" Visibility="Collapsed">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn x:Name="data_ms2_ratio_column3" Header="Ion Intensity (H)" Binding="{Binding A1_intensity, StringFormat={}{0:E2}}" Width="70" Visibility="Collapsed">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Right" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                        <DataGrid.ContextMenu>
+                            <ContextMenu x:Name="filterMenu" StaysOpen="true">
+                                <MenuItem Header="Show All" Click="show_all_clk"/>
+                                <Separator></Separator>
+                                <MenuItem Header="Remove Others" Click="remove_others_clk"/>
+                                <MenuItem Header="Remove Selected" Click="remove_selected_clk"/>
+                                <Separator></Separator>
+                                <MenuItem Header="Show Spectra by Peptide" x:Name="ss" Click="show_spec_clk"/>
+                                <MenuItem Header="Show Spectra by Sequence" x:Name="ssOnlySQ" Click="show_spec_clk"/>
+                                <MenuItem Header="Show Spectra by AC" x:Name="spByAC" Click="show_spec_byAC_clk"/>
+                                <MenuItem Header="Show Similarity by Sequence" Click="show_sim_bySeq_clk"/>
+                                <Separator></Separator>
+                                <MenuItem Header="Copy Title" Click="copy_title_clk"/>
+                                <MenuItem Header="Copy SQ" Click="copy_SQ_clk"/>
+                                <MenuItem Header="Copy AC" Click="copy_AC_clk"/>
+                                <Separator></Separator>
+                                <MenuItem Header="Display Mix" Click="show_mix_clk"/>
+                                <MenuItem Header="Display Two PSMs" Click="show_twoPsm_clk"></MenuItem>
+                                <MenuItem Header="Batch Export PDF" Click="batch_export_pdf_clk"/>
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
+                    </DataGrid>
+                    <GridSplitter x:Name="psm_splitter" Grid.Row="2" Background="AliceBlue" HorizontalAlignment="Stretch" Height="5" ResizeBehavior="PreviousAndNext"/>
+                    <TabControl Grid.Row="3" x:Name="display_tab" SelectionChanged="display_ms1Or2">
+                        <TabItem>
+                            <TabItem.Header>
+                                <Label Content="MS1" Padding="0"/>
+                            </TabItem.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <ToolBar Grid.Row="0" Grid.ColumnSpan="2">
+                                    <Button Click="ms1_ini_Clk" Content="{StaticResource ms1_full_size}" Width="25" Height="25">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Zoom Reset</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Click="ms1_full_size_Clk" Content="{StaticResource ms1_initial}" Width="25" Height="25">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Zoom in the Largest View</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Content="{StaticResource ms1_advance}" Width="25" Height="25" Click="ms1_advance">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Pop Up the Advance Dialog</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Click="ms1_setting_Clk" Content="{StaticResource ms1_setting}" Width="25" Height="25">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Pop Up the Setting Dialog</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button x:Name="export_ms1_pdf_btn" Content="{StaticResource ms1_pdf}" Width="25" Height="25" Click="exp_pdf">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Export to PDF</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button x:Name="export_ms1_clipboard_btn" Content="{StaticResource ms1_clipboard}" Width="25" Height="25" Click="exp_clipboard">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Copy to Clipboard</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Grid>
+                                        <CheckBox VerticalAlignment="Center" x:Name="is_refresh" Click="chk_click" IsChecked="true">Relative Abundance</CheckBox>
+                                    </Grid>
+                                    <Grid>
+                                        <CheckBox VerticalAlignment="Center" x:Name="is_theory" Click="chk_click" IsChecked="true">Theoretical Distribution</CheckBox>
+                                    </Grid>
+                                    <Grid>
+                                        <CheckBox VerticalAlignment="Center" x:Name="is_addArrow" Click="chk_click" IsChecked="true">Experimental Distribution</CheckBox>
+                                    </Grid>
+                                    <Grid>
+                                        <CheckBox VerticalAlignment="Center" x:Name="is_addCharge" Click="chk_click" IsChecked="True">Charge</CheckBox>
+                                    </Grid>
+                                    <Grid>
+                                        <CheckBox VerticalAlignment="Center" x:Name="is_switch" Click="chk_click" IsChecked="True">Mono</CheckBox>
+                                    </Grid>
+                                    <Grid>
+                                        <Button Margin="3" Click="range_clk">Range...</Button>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock x:Name="ms1_mz1_txt" Width="80" VerticalAlignment="Center" TextAlignment="Center" Text="NaN">
+                                            <TextBlock.ToolTip>
+                                                <TextBlock>MZ1</TextBlock>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center" Text="―">
+                                        </TextBlock>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock x:Name="ms1_mz2_txt" Width="80" VerticalAlignment="Center" TextAlignment="Center" Text="NaN">
+                                            <TextBlock.ToolTip>
+                                                <TextBlock>MZ2</TextBlock>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock VerticalAlignment="Center" TextAlignment="Center" Text="=">
+                                        </TextBlock>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock x:Name="ms1_mz3_txt" Width="200" VerticalAlignment="Center" TextAlignment="Center" Text="NaN">
+                                            <TextBlock.ToolTip>
+                                                <TextBlock>Deviation</TextBlock>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                    </Grid>
+                                    <Grid>
+                                        <Button Click="clear_btn" Height="25" Width="40" Margin="3">clear</Button>
+                                    </Grid>
+                                    
+                                    <Grid>
+                                        <TextBox x:Name="mod_number_tb" Height="25" Width="40">10</TextBox>
+                                    </Grid>
+                                    
+                                    <Grid>
+                                        <Button Click="mod_ana_clk" Height="25" Width="65" Margin="3">Mod ANA</Button>
+                                    </Grid>
+                                    <!-- 
+                                    <Grid>
+                                        <Button Click="ana_clk" Height="25" Width="55" Margin="3">ANA</Button>
+                                    </Grid>
+                                    -->
+                                </ToolBar>
+                                <Border x:Name="model1_border" Grid.Row="1" Grid.ColumnSpan="2">
+                                    <oxy:Plot Model="{Binding Model1}" SizeChanged="plot_sizeChg" PreviewKeyDown="ms1_keyDown">
+                                        <oxy:Plot.DefaultTrackerTemplate>
+                                            <ControlTemplate>
+                                                <oxy:TrackerControl Position="{Binding Position}" LineExtents="{Binding PlotModel.PlotArea}">
+                                                    <oxy:TrackerControl.Background>
+                                                        <LinearGradientBrush EndPoint="0,1">
+                                                            <GradientStop Color="#f0e0e0ff" />
+                                                            <GradientStop Offset="1" Color="#f0ffffff" />
+                                                        </LinearGradientBrush>
+                                                    </oxy:TrackerControl.Background>
+                                                    <oxy:TrackerControl.Content>
+                                                        <TextBlock Text="{Binding}" Margin="7" />
+                                                    </oxy:TrackerControl.Content>
+                                                </oxy:TrackerControl>
+                                            </ControlTemplate>
+                                        </oxy:Plot.DefaultTrackerTemplate>
+                                    </oxy:Plot>
+                                </Border>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Name="ms2" IsSelected="true">
+                            <TabItem.Header>
+                                <Label Content="MS2" Padding="0" />
+                            </TabItem.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="11*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition x:Name="frame_right_bottom" Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <ToolBar Grid.Row="0" Grid.ColumnSpan="2">
+                                    <Button x:Name="ms2_fs" Content="{StaticResource ms2_full_size}" Width="25" Height="25" Click="ms2_full_size_Clk">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Zoom Reset</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Content="{StaticResource ms2_advance}" Width="25" Height="25" Click="ms2_advance">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Pop Up the Advance Dialog</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Content="{StaticResource ms2_setting}" Width="25" Height="25" Click="ms2_setting">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Pop Up the Setting Dialog</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Content="{StaticResource ms2_review}" Width="25" Height="25" Click="ms2_review">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Review All Ions</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button x:Name="export_ms2_pdf_btn" Content="{StaticResource ms2_pdf}" Width="25" Height="25" Click="exp_pdf">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Export to PDF</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button x:Name="export_ms2_clipboard_btn" Content="{StaticResource ms2_clipboard}" Width="25" Height="25" Click="exp_clipboard">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Copy to Clipboard</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Content="{StaticResource ms2_dta}" Width="25" Height="25" Click="exp_dta_file">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Export this spectrum to dta file</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button Content="{StaticResource ms2_ions}" Width="25" Height="25" Click="exp_ions_file">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Export all b\y matched ions</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Button x:Name="export_model_btn" Content="{StaticResource ms2_model}" Width="25" Height="25" Click="model_prediction_clk">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Model Export</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                   
+                                    <Button Content="{StaticResource ms2_quant_table}" Width="25" Height="25" Click="review_all_pair_clk">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Review All Pairs</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <!-- -->
+                                    <Grid>
+                                        <Button Margin="3" Click="range_clk">Range...</Button>
+                                    </Grid>
+                                    <!-- -->
+                                    <Grid>
+                                        <Button Margin="3" Click="denovo_clk">DeNovo...</Button>
+                                    </Grid>
+                                    
+                                </ToolBar>
+
+                                <Border x:Name="model2_border"  Grid.Row="1" Grid.ColumnSpan="2" PreviewMouseDown="ms2_mouseDouble_clk">
+                                    <oxy:Plot x:Name="ms2_plot" Model="{Binding Model2}" SizeChanged="plot_sizeChg">
+                                        <oxy:Plot.DefaultTrackerTemplate>
+                                            <ControlTemplate>
+                                                <oxy:TrackerControl Position="{Binding Position}" LineExtents="{Binding PlotModel.PlotArea}">
+                                                    <oxy:TrackerControl.Background>
+                                                        <LinearGradientBrush EndPoint="0,1">
+                                                            <GradientStop Color="#f0e0e0ff" />
+                                                            <GradientStop Offset="1" Color="#f0ffffff" />
+                                                        </LinearGradientBrush>
+                                                    </oxy:TrackerControl.Background>
+                                                    <oxy:TrackerControl.Content>
+                                                        <TextBlock Text="{Binding}" Margin="7" />
+                                                    </oxy:TrackerControl.Content>
+                                                </oxy:TrackerControl>
+                                            </ControlTemplate>
+                                        </oxy:Plot.DefaultTrackerTemplate>
+                                    </oxy:Plot>
+                                </Border>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Chromatogram" PreviewKeyDown="chrom_ctrl_C_keyDown">
+                            <Grid Background="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <ToolBar Grid.Row="0">
+                                    <Grid>
+                                        <CheckBox VerticalAlignment="Center" x:Name="chrom_3D" Click="chrom_3D_clk">Hot</CheckBox>
+                                    </Grid>
+                                    <Grid>
+                                        <Slider x:Name="d3_alpha_slider" Orientation="Horizontal" Maximum="255" Minimum="0" Value="110" 
+                                                Width="100" ValueChanged="d3_alpha_value_chg" Visibility="Collapsed"></Slider>
+                                    </Grid>
+                                    <Button Content="{StaticResource d3_clipboard}" Width="25" Height="25" Click="d3_exp_clipboard">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Copy to Clipboard</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                </ToolBar>
+                                <Border Grid.Row="1"  x:Name="chrom_border" BorderBrush="Transparent" BorderThickness="1" Margin="5" SizeChanged="plot_sizeChg">
+                                    <Grid Background="White">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Viewport3D x:Name="viewport3D" Grid.ColumnSpan="2" ClipToBounds="True">
+                                            <!--此处画图-->
+                                            <Viewport3D.Camera>
+                                                <OrthographicCamera x:Name="camera" Position="-10,10,20" LookDirection="1,-0.4,-0.6" Width="55">
+                                                </OrthographicCamera>
+                                            </Viewport3D.Camera>
+                                        </Viewport3D>
+
+                                        <Canvas x:Name="axis_canvas" Background="Transparent" Grid.ColumnSpan="2" ClipToBounds="True">
+                                            <!--此处为坐标轴-->
+                                            <Canvas.Resources>
+                                                <Style TargetType="{x:Type TextBlock}" x:Key="textStyle">
+                                                    <Setter Property="FontFamily" Value="Verdana"></Setter>
+                                                    <Setter Property="FontSize" Value="15"></Setter>
+                                                </Style>
+                                            </Canvas.Resources>
+                                        </Canvas>
+                                        <Canvas x:Name="text_canvas" Background="Transparent" Grid.ColumnSpan="2" ClipToBounds="True">
+                                            <!--此处为文字-->
+                                            <Canvas.Resources>
+                                            </Canvas.Resources>
+                                        </Canvas>
+                                        <Border x:Name="bullet" Background="Transparent" Grid.ColumnSpan="2"/>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Protein" Visibility="Collapsed">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.4*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="0.6*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TabControl Grid.Row="0" x:Name="protein_control" SelectionChanged="protein_tab_chg">
+                        <TabItem Header="Protein">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <ToolBar Grid.Row="0">
+                                    <Button x:Name="protein_display_item_btn" Click="display_selected_item_clk" Content="{StaticResource show_selectedItem_image2}"
+                                    Width="25" Height="25" Margin="3">
+                                        <Button.ToolTip>
+                                            <ToolTip>
+                                                <TextBlock>Display selected Item</TextBlock>
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                    </Button>
+                                    <Grid>
+                                        <Button x:Name="protein_filter_btn" Width="50" Height="25" Click="filter_btn_clk" Content="Filter..." Margin="3">
+                                            <Button.ToolTip>
+                                                <ToolTip>
+                                                    <TextBlock>Pop Up the Filter Dialog</TextBlock>
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                        </Button>
+                                    </Grid>
+                                    <Grid>
+                                        <Button x:Name="protein_copy_btn" Width="50" Height="25" Content="Copy" Click="datagrid_copy_clk" VerticalAlignment="Center" Margin="3">
+                                            <Button.ToolTip>
+                                                <ToolTip>
+                                                    <TextBlock>Copy the selected items to clipboard.</TextBlock>
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                        </Button>
+                                    </Grid>
+                                    <Grid>
+                                        <Button x:Name="protein_resort_btn" Width="50" Height="25" Content="Sort" Click="datagrid_sort_clk" VerticalAlignment="Center" Margin="3">
+                                            <Button.ToolTip>
+                                                <ToolTip>
+                                                    <TextBlock>Resort the protein lists.</TextBlock>
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                        </Button>
+                                    </Grid>
+                                </ToolBar>
+                                <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent" Grid.Row="1" x:Name="protein_data" ItemsSource="{Binding Display_protein}"  AutoGenerateColumns="False" FrozenColumnCount="1" IsReadOnly="True"
+                      SelectionMode="Extended" SelectionChanged="protein_sch" RowHeaderWidth="0" ClipboardCopyMode="IncludeHeader" PreviewKeyDown="protein_Ctrl_C">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="#" Binding="{Binding ID}" Width="50" />
+                                        <DataGridTextColumn Header="AC" Binding="{Binding AC}" Width="100" />
+                                        <DataGridTextColumn Header="DE" Binding="{Binding DE}" Width="420" />
+                                        <DataGridTextColumn Header="SQ Length" Binding="{Binding Path=SQ.Length}" Width="90" >
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="PSM Count" Binding="{Binding Path=psm_index.Count}" Width="78">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="Coverage" Binding="{Binding Coverage, StringFormat={}{0:P1}}" Width="100">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="Score" Binding="{Binding Score, StringFormat={}{0:F2}}" Width="50">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn x:Name="protein_ratio_column" Header="Ratio"  Binding="{Binding Ratio, StringFormat={}{0:0.0000}}" Width="50">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="Group" Binding="{Binding Parent_Protein_AC}" Width="100" />
+                                        <DataGridTextColumn Header="Flag" Binding="{Binding Same_Sub_Flag}" Width="90" />
+                                        <DataGridTextColumn x:Name="data_protein_ratio_column" Header="Protein Ratio" Binding="{Binding MS2_Ratio, StringFormat={}{0:0.0000}}" Width="90" Visibility="Collapsed">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn x:Name="data_protein_ratio_column2" Header="Protein Ratio a1" Binding="{Binding MS2_Ratio_a1, StringFormat={}{0:0.0000}}" Width="110" Visibility="Collapsed">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Setter Property="HorizontalAlignment" Value="Right" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <!-- -->
+                                    </DataGrid.Columns>
+                                    <DataGrid.ContextMenu>
+                                        <ContextMenu x:Name="protein_filterMenu" StaysOpen="true">
+                                            <MenuItem Header="Show All" Click="protein_show_all_clk"/>
+                                            <Separator></Separator>
+                                            <MenuItem Header="Remove Others" Click="protein_remove_others_clk"/>
+                                            <MenuItem Header="Remove Selected" Click="protein_remove_selected_clk"/>
+                                            <Separator></Separator>
+                                            <MenuItem Header="Show Group Proteins" Click="protein_show_group_protein_clk"/>
+                                            <MenuItem Header="Show SameSet/SubSet Proteins" Click="protein_show_ss_protein_clk"/>
+                                            <Separator></Separator>
+                                            <MenuItem Header="Copy Group Name" Click="protein_copy_group_clk"/>
+                                            <MenuItem Header="Copy Peptides" Click="protein_copy_peptides_clk"/>
+                                        </ContextMenu>
+                                    </DataGrid.ContextMenu>
+                                </DataGrid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Protein Group">
+                            <local:TreeListView AllowsColumnReorder="True" x:Name="protein_group_data" SelectedItemChanged="group_data_sch">
+                                <local:TreeListView.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Protein_Children}"/>
+                                </local:TreeListView.ItemTemplate>
+                                <local:TreeListView.Columns>
+                                    <GridViewColumn Header="AC" Width="200">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <local:TreeListViewExpander />
+                                                    <TextBlock Text="{Binding Protein.AC}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="DE" Width="180">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Protein.DE}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="SQ Length" Width="90">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Protein.SQ.Length}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="PSM Count" Width="78">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Protein.psm_index.Count}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Coverage" Width="100">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Protein.Coverage, StringFormat={}{0:P1}}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Score" Width="50">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Protein.Score, StringFormat={}{0:F2}}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Ratio" Width="50" x:Name="protein_group_ratio_column">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Protein.Ratio, StringFormat={}{0:0.0000}}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Flag" Width="70">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Protein.Same_Sub_Flag}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Group Number" Width="100">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Protein_Children.Count}" HorizontalAlignment="Right" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </local:TreeListView.Columns>
+                                <!-- 
+                            <MaterialGroup>
+                                <MaterialGroup>
+                                    <DiffuseMaterial Brush="Blue"/>
+                                    <DiffuseMaterial Brush="Red"/>
+                                    <SpecularMaterial Brush="Orange"/>
+                                </MaterialGroup>
+                                <EmissiveMaterial Brush="AliceBlue"/>
+
+                            </MaterialGroup>
+                            <EmissiveMaterial Brush="Aqua" />
+                            <DiffuseMaterial Brush="Aqua" />
+                            <EmissiveMaterial Brush="Aqua" />
+                            -->
+                            </local:TreeListView>
+                        </TabItem>
+                    </TabControl>
+                    <GridSplitter Grid.Row="1" Background="AliceBlue" HorizontalAlignment="Stretch" Height="5" ResizeBehavior="PreviousAndNext"/>
+
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <ToolBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Height="25">
+                            <Button x:Name="protein_advance_btn" Click="protein_advanced_btn_clk" Content="{StaticResource protein_advanced}" Width="25" Height="25">
+                                <Button.ToolTip>
+                                    <ToolTip>
+                                        <TextBlock>Pop Up the Advance Dialog</TextBlock>
+                                    </ToolTip>
+                                </Button.ToolTip>
+                            </Button>
+                            <TextBlock>Search Peptide by SQ</TextBlock>
+                            <TextBox x:Name="protein_peptide_SQ_tbx" PreviewKeyDown="protein_peptide_SQ_tbx_keyDown" Width="150"></TextBox>
+                            <Button Click="retainSpecInitProtein">Only Specific</Button>
+                        </ToolBar>
+                        <ScrollViewer Grid.Row="1" Grid.Column="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                            <!--
+                            <TextBlock x:Name="protein_SQ_txt" TextWrapping="Wrap" Margin="10" MinWidth="500" SizeChanged="protein_txt_sizeChd"></TextBlock>
+                            -->
+                            <Grid x:Name="protein_SQ_grid"></Grid>
+                        </ScrollViewer>
+                        <GridSplitter Grid.Row="1" Grid.Column="1" Background="AliceBlue" VerticalAlignment="Stretch" Width="5" ResizeBehavior="PreviousAndNext" />
+                        <ScrollViewer x:Name="protein_SQ_cavas_scroll" Grid.Row="1" Grid.Column="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                            <Grid x:Name="protein_SQ_cavas_grid"></Grid>
+                        </ScrollViewer>
+                    </Grid>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+        <StatusBar Grid.Row="3" Grid.Column="0" Height="22" Grid.ColumnSpan="3" Background="Beige">
+            <TextBlock Padding="0" FontSize="12" Height="22">No. Display:</TextBlock>
+            <TextBlock Padding="0" x:Name="display_size" Width="55" FontSize="12" Height="22"></TextBlock>
+            <Separator Width="2"></Separator>
+            <TextBlock Padding="0" FontSize="12" Height="22">No. Selected:</TextBlock>
+            <TextBlock Padding="0" x:Name="selected_size" Width="55" FontSize="12" Height="22"></TextBlock>
+            <Separator Width="2"></Separator>
+            <TextBlock Padding="0" FontSize="12" Height="22">No. Group:</TextBlock>
+            <TextBlock Padding="0" x:Name="group_size" Width="55" FontSize="12" Height="22"></TextBlock>
+            <Separator Width="2"></Separator>
+            <TextBlock Padding="0" FontSize="12" Height="22">X:</TextBlock>
+            <TextBlock Padding="0" x:Name="state_X" Width="70" FontSize="12" Height="22"></TextBlock>
+            <TextBlock Padding="0" FontSize="12" Height="22">Y:</TextBlock>
+            <TextBlock Padding="0" x:Name="state_Y" Width="70" FontSize="12" Height="22"></TextBlock>
+            <Separator Width="2"></Separator>
+            <TextBlock Padding="0" FontSize="12" Height="22">Protein Coverage:</TextBlock>
+            <TextBlock Padding="0" x:Name="protein_coverage_tb" Width="70" FontSize="12" Height="22"></TextBlock>
+            <Separator Width="2"></Separator>
+            <TextBlock Padding="0" FontSize="12" Height="22">Status:</TextBlock>
+            <TextBlock Padding="0" x:Name="progressText" Width="200" FontSize="12" Height="22"></TextBlock>
+            <StatusBarItem HorizontalAlignment="Right">
+                <ProgressBar x:Name="progressBar" Width="200" Height="22" Visibility="Collapsed"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

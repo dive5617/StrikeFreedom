@@ -1,0 +1,20 @@
+Tue Nov 10 13:31:32 CST 2015
+Info to user:
+Check the config file, some parameters may not be set correctly in this line: LL_FLAG_ENRICHMENT_CALIBRATION=none
+Info to cliu:
+Check the config file, some parameters may not be set correctly in this line: LL_FLAG_ENRICHMENT_CALIBRATION=none
+Info of the exception:
+java.lang.Exception
+java.lang.Exception
+	at function.FunctionConfigFileCustom.soldierParseStringLine(FunctionConfigFileCustom.java:450)
+	at function.FunctionConfigFileCustom.captainReadCustomConfigFile(FunctionConfigFileCustom.java:219)
+	at function.FunctionConfigFileCustom.customFile2Config(FunctionConfigFileCustom.java:23)
+	at Staff.captainInitConfigCustom(Staff.java:108)
+	at Staff.execute(Staff.java:54)
+	at Main.main(Main.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.exe4j.runtime.LauncherEngine.launch(Unknown Source)
+	at com.exe4j.runtime.WinLauncher.main(Unknown Source)

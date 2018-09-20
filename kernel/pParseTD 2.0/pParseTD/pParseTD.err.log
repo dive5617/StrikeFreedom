@@ -1,0 +1,86 @@
+
+==========================
+Thu Oct 08 16:15:02 2015
+
+	  at CMainFlow::GetIPV() Open the ipv file failed.
+		  .\LIPV.txt
+	  at CMainFlow::GetStart() GetStart failed.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 16:51:30 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:04:19 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:07:19 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:10:44 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:13:06 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:15:19 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:19:34 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:26:44 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:36:50 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Thu Oct 08 17:43:14 2015
+
+	  at CMainFlow::GetStart() Caught an unknown exception from GetStart.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Mon Apr 25 15:07:56 2016
+
+bad allocation	  at CMainFlow::GetStart() GetStart failed.
+	  at pParseTD.exe::Main() failed.
+

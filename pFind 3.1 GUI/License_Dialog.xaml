@@ -1,0 +1,40 @@
+﻿<Window x:Class="pFind.License_Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="License Dialog" Height="300" Width="400" Icon="images\pFind.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="5">User Name:</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="name_txt" Margin="5"></TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="5">Institute/Company Name:</TextBlock>
+        <TextBox Grid.Row="01" Grid.Column="1" x:Name="company_txt" Margin="5"></TextBox>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="5">Country:</TextBlock>
+        <ComboBox Grid.Row="2" Grid.Column="1" x:Name="country_txt" Margin="5"></ComboBox>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="5">Email Address:</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="email_txt" Margin="5"></TextBox>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="5">Activation Code:</TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="code_txt" Margin="5" Foreground="Gray" IsReadOnly="True"></TextBox>
+        <Button Grid.Row="5" Grid.Column="0" Margin="5" Click="send1_btn_clk" Content="Send Email">
+            <Button.ToolTip>
+                <ToolTip>
+                    <TextBlock>send mail to pfind@ict.ac.cn</TextBlock>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button Grid.Row="5" Grid.Column="1" Margin="5" Click="send2_btn_clk">Copy to Clipboard</Button>
+        <TextBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" IsReadOnly="True" TextWrapping="Wrap"
+                 FontSize="15" Foreground="Red">The email will be sent to pfind@ict.ac.cn for manual review.</TextBox>
+    </Grid>
+</Window>

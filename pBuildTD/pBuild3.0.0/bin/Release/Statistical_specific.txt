@@ -1,0 +1,4 @@
+Specific	271 / 5405 = 0.050
+N-SemiSpecific	0 / 28 = 0.000
+C-SemiSpecific	5 / 203 = 0.025
+NonSpecific	0 / 0 = 非数字

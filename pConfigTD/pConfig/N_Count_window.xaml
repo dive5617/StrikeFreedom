@@ -1,0 +1,25 @@
+﻿<Window x:Class="pConfig.N_Count_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="N_Count_window" Height="300" Width="500" Icon="pConfig.ico" Closed="close_event">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="3" VerticalAlignment="Center">SQ</TextBlock>
+        <TextBox x:Name="sq_txt" Grid.Row="0" Grid.Column="1" Margin="3"></TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="3" VerticalAlignment="Center">Modification</TextBlock>
+        <TextBox x:Name="mod_txt" Grid.Row="1" Grid.Column="1" Margin="3"></TextBox>
+        <Button Click="get_N_count_clk" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="3">Get N's Count</Button>
+        <Button Click="get_C_count_clk" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="3">Get C's Count</Button>
+        <TextBlock x:Name="N_count_txt" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="3" HorizontalAlignment="Center">0</TextBlock>
+    </Grid>
+</Window>

@@ -1,0 +1,67 @@
+
+==========================
+Tue Jul 28 17:25:01 2015
+
+COptionTool _GetPrivateProfileString cannot find the file.modification.ini	  at CMainFlow::RunMainFlow() GetPTMforms failed.
+	  at pTop.exe::Main() failed.
+
+
+==========================
+Tue Jul 28 17:26:55 2015
+
+COptionTool _GetPrivateProfileString cannot find the file.modification.ini	  at CMainFlow::RunMainFlow() GetPTMforms failed.
+	  at pTop.exe::Main() failed.
+
+
+==========================
+Tue Jul 28 17:30:20 2015
+
+COptionTool _GetPrivateProfileString cannot find the file.modification.ini	  at CMainFlow::RunMainFlow() GetPTMforms failed.
+	  at pTop.exe::Main() failed.
+
+[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.
+==========================
+Wed Aug 03 10:27:07 2016
+
+	  at Clog::Clog() Failed to open log file
+	  at pTop.exe::Main() failed.
+
+
+==========================
+Wed Aug 03 10:28:24 2016
+
+	  at Clog::Clog() Failed to open log file
+	  at pTop.exe::Main() failed.
+
+
+==========================
+Wed Aug 03 10:28:27 2016
+
+	  at Clog::Clog() Failed to open log file
+	  at pTop.exe::Main() failed.
+
+
+==========================
+Wed Aug 03 11:12:22 2016
+
+	  at Clog::Clog() Failed to open log file
+	  at pTop.exe::Main() failed.
+
+[pTop] Call pParseTD failed.
+==========================
+Wed Aug 31 11:21:43 2016
+
+invalid string position	  at CConfiguration::CallpParseTD() Set Input and Output failed.
+	  at CConfiguration::GetAllConfigPara() GetConfigInfo failed.
+	  at CMainFlow::RunMainFlow() Configure failed.
+	  at pTop.exe::Main() failed.
+
+[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.
+==========================
+Thu Feb 09 17:23:53 2017
+
+bad allocation	  at CSearchEngine::Search()() Get candidate proteoforms failed.
+	  at CMainFlow::RunMainFlow() Searcher failed.
+	  at pTop.exe::Main() failed.
+
+[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.[pTop] Call pParseTD failed.

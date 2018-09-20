@@ -1,0 +1,273 @@
+[pXtract] Begin to extract D:\pFind\data\王建数据\TAP_complex_china_7.raw
+[pXtract] <Output MS1 and MS2 Files>: 100.00%
+[pXtract] Output Files Completed
+
+
+###################################
+|    pParse+ from pFind Studio    |
+|        pfind@ict.ac.cn          |
+|     http://pfind.ict.ac.cn      |
+|         2014.7.14 18:20         |
+###################################
+
+[pParse] Calling pXtract to export MS1 and MS2 files... 
+[pParse] MS1list completes. 
+[pParse] Processing TAP_complex_china_7.MS1 
+[pParse] Loading MS1 and MS2 files... 
+	 Loading MS1 Spectra Number: 1267
+	 Loading MS2 Spectra Number: 35314
+[pParse] Writing MS1 to PF... 
+
+[pParse] <Exporting CIDIT>: 100%
+[pParse] Evaluting by the MARS classifier... 
+[pParse] Filtering by the MARS threshold... 
+
+[pParse] <Writing MGF>: 100%
+[pParse] Writing CSV... 
+[pParse] Releasing resources... 
+[pParse] Saving CSV to disk... 
+[pParse] Exported 44377 precursors. 
+[pParse] Found 12760 duplicate scans. 
+[pParse]  == == == Time elapsed: 155 seconds. == == == =  
+
+[pFind]	 #########################################
+[pFind]	 #                                       #
+[pFind]	 #  Welcome to use pFind search engine!  #
+[pFind]	 #                                       #
+[pFind]	 #                  version 3.0 Alpha1   #
+[pFind]	 #                                       #
+[pFind]	 #               http://pfind.ict.ac.cn  #
+[pFind]	 #                                       #
+[pFind]	 #########################################
+[pFind]	Fasta path: D:\pFind\data\mann_data (10.29.0.80)\uniprot_contaminants_AllL_con.fasta
+[pFind]	MSMS path: D:\pFind\data\王建数据\TAP_complex_china_7_CIDIT.pf2
+[pFind]	<Tag Search> Round: 1 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 2 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 3 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 10%
+[pFind]	<Tag Search> Round: 1 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 2 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 3 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Search> Round: 1 / 3
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Search> Round: 2 / 3
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Search> Round: 3 / 3
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 10%
+[pFind]	<GroupFilter> Initialize...
+[pFind]	<Filter> TDA started...
+[pFind]	<Filter> TDA completed.
+[pFind]	<Scoring Proteins>: 100%
+[pFind]	Time used: 1485.36
+
+[pQuant] <Version>: 1.5, liuchao1016@ict.ac.cn, May 2014.
+
+[pQuant] <Start Time>: Wed Jul 16 10:30:52 CST 2014.
+
+[pQuant] <Preprocess>: Starts...
+[pQuant] <Preprocess>: Reading config file: D:\workspace\Test\param\pQuant.cfg
+[pQuant] <Preprocess>: Results are in the folder: D:\workspace\Test\result\
+[pQuant] <Preprocess>: Creating index for D:\pFind\data\王建数据\TAP_complex_china_7.pf1
+[pQuant] <Preprocess>: Reading identification results...
+
+[pQuant] <Quantify>: Starts...
+[pQuant] <Quantify>: The total number of PSMs: 3111
+
+[pQuant] <Quantify>: 100.00%
+
+[pQuant] <Infer>: Starts...
+[pQuant] <Infer>: The total number of proteins: 119
+
+[pQuant] <Infer>: 100.00%
+
+[pQuant] <Finish Time>: Wed Jul 16 10:31:12 CST 2014.
+
+== == == == == Total Time Used for This Task: 00:30:07 == == == == ==
+[pXtract] Begin to extract D:\pFind\data\王建数据\TAP_complex_china_7.raw
+[pXtract] <Output MS1 and MS2 Files>: 100.00%
+[pXtract] Output Files Completed
+
+
+###################################
+|    pParse+ from pFind Studio    |
+|        pfind@ict.ac.cn          |
+|     http://pfind.ict.ac.cn      |
+|         2014.7.14 18:20         |
+###################################
+
+[pParse] Calling pXtract to export MS1 and MS2 files... 
+[pParse] MS1list completes. 
+[pParse] Processing TAP_complex_china_7.MS1 
+[pParse] Loading MS1 and MS2 files... 
+	 Loading MS1 Spectra Number: 1267
+	 Loading MS2 Spectra Number: 35314
+[pParse] Writing MS1 to PF... 
+
+[pParse] <Exporting CIDIT>: 100%
+[pParse] Evaluting by the MARS classifier... 
+[pParse] Filtering by the MARS threshold... 
+
+[pParse] <Writing MGF>: 100%
+[pParse] Writing CSV... 
+[pParse] Releasing resources... 
+[pParse] Saving CSV to disk... 
+[pParse] Exported 44377 precursors. 
+[pParse] Found 12760 duplicate scans. 
+[pParse]  == == == Time elapsed: 155 seconds. == == == =  
+
+[pFind]	 #########################################
+[pFind]	 #                                       #
+[pFind]	 #  Welcome to use pFind search engine!  #
+[pFind]	 #                                       #
+[pFind]	 #                  version 3.0 Alpha1   #
+[pFind]	 #                                       #
+[pFind]	 #               http://pfind.ict.ac.cn  #
+[pFind]	 #                                       #
+[pFind]	 #########################################
+[pFind]	Fasta path: D:\pFind\data\mann_data (10.29.0.80)\uniprot_contaminants_AllL_con.fasta
+[pFind]	MSMS path: D:\pFind\data\王建数据\TAP_complex_china_7_CIDIT.pf2
+[pFind]	<Tag Search> Round: 1 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 2 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 3 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 10%
+[pFind]	<Tag Search> Round: 1 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 2 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Tag Search> Round: 3 / 3
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Search> Round: 1 / 3
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Search> Round: 2 / 3
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Search> Round: 3 / 3
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 10%
+[pFind]	<GroupFilter> Initialize...
+[pFind]	<Filter> TDA started...
+[pFind]	<Filter> TDA completed.
+[pFind]	<Scoring Proteins>: 100%
+[pFind]	Time used: 1485.36
+
+[pQuant] <Version>: 1.5, liuchao1016@ict.ac.cn, May 2014.
+
+[pQuant] <Start Time>: Wed Jul 16 10:30:52 CST 2014.
+
+[pQuant] <Preprocess>: Starts...
+[pQuant] <Preprocess>: Reading config file: D:\workspace\Test\param\pQuant.cfg
+[pQuant] <Preprocess>: Results are in the folder: D:\workspace\Test\result\
+[pQuant] <Preprocess>: Creating index for D:\pFind\data\王建数据\TAP_complex_china_7.pf1
+[pQuant] <Preprocess>: Reading identification results...
+
+[pQuant] <Quantify>: Starts...
+[pQuant] <Quantify>: The total number of PSMs: 3111
+
+[pQuant] <Quantify>: 100.00%
+
+[pQuant] <Infer>: Starts...
+[pQuant] <Infer>: The total number of proteins: 119
+
+[pQuant] <Infer>: 100.00%
+
+[pQuant] <Finish Time>: Wed Jul 16 10:31:12 CST 2014.
+
+== == == == == Total Time Used for This Task: 00:30:07 == == == == ==
+
+###################################
+|    pParse+ from pFind Studio    |
+|        pfind@ict.ac.cn          |
+|     http://pfind.ict.ac.cn      |
+|         2014.7.14 18:20         |
+###################################
+
+[pParse] Processing LZM-bio_HCD_20130717_HCDFT.mgf 
+[pParse] Loading MGF... 
+
+[pParse] Extracting MS2, Scan Num = 1456
+[pParse] Extracting MS2, Scan Num = 1638
+[pParse] Extracting MS2, Scan Num = 1638
+[pParse] Extracting MS2, Scan Num = 1638
+[pParse] Extracting MS2, Scan Num = 1729
+[pParse] Extracting MS2, Scan Num = 1820
+[pParse] Extracting MS2, Scan Num = 1820
+[pParse] Extracting MS2, Scan Num = 1911
+[pParse] Extracting MS2, Scan Num = 1911
+[pParse] Extracting MS2, Scan Num = 2002
+[pParse] Extracting MS2, Scan Num = 2002
+[pParse] Extracting MS2, Scan Num = 2275
+[pParse] Extracting MS2, Scan Num = 2275
+[pParse] Extracting MS2, Scan Num = 2275
+[pParse] Extracting MS2, Scan Num = 2275
+[pParse] Extracting MS2, Scan Num = 2366
+[pParse] Extracting MS2, Scan Num = 2366
+[pParse] Extracting MS2, Scan Num = 2457
+[pParse] Extracting MS2, Scan Num = 2548
+[pParse] Extracting MS2, Scan Num = 2548
+[pParse] Extracting MS2, Scan Num = 2639
+[pParse] Extracting MS2, Scan Num = 2639
+[pParse] Extracting MS2, Scan Num = 2639
+[pParse] Extracting MS2, Scan Num = 2912
+[pParse] Writing PF2... 
+[pParse]  == == == Time elapsed: 0 seconds. == == == =  
+
+[pFind]	 #########################################
+[pFind]	 #                                       #
+[pFind]	 #  Welcome to use pFind search engine!  #
+[pFind]	 #                                       #
+[pFind]	 #                  version 3.0 Alpha1   #
+[pFind]	 #                                       #
+[pFind]	 #               http://pfind.ict.ac.cn  #
+[pFind]	 #                                       #
+[pFind]	 #########################################
+[pFind]	Fasta path: D:\pFind\data\mann_data (10.29.0.80)\uniprot_contaminants_AllL_con.fasta
+[pFind]	MSMS path: D:\pFind\data\tmpData\LZM-bio_HCD_20130717_HCDFT.pf2
+[pFind]	<Tag Search> Round: 1 / 1
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 100%
+[pFind]	<Tag Search> Round: 1 / 1
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Search> Round: 1 / 1
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 100%
+[pFind]	<GroupFilter> Initialize...
+[pFind]	<Filter> TDA started...
+[pFind]	<Filter> TDA completed.
+[pFind]	<Scoring Proteins>: 100%
+[pFind]	Time used: 127.41
+
+
+== == == == == Total Time Used for This Task: 00:02:08 == == == == ==

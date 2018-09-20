@@ -1,0 +1,9 @@
+
+==========================
+Sun Sep  9 12:21:51 2018
+
+	  at CMainFlow::GetIPV() Open the ipv file failed.
+		  LIPV.txt
+	  at CMainFlow::GetStart() GetStart failed.
+	  at pParseTD.exe::Main() failed.
+

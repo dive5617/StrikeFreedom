@@ -1,0 +1,91 @@
+D:\pFindGUI\pConfig\pConfig\bin\Debug\pConfig.exe.config
+D:\pFindGUI\pConfig\pConfig\bin\Debug\pConfig.exe
+D:\pFindGUI\pConfig\pConfig\bin\Debug\pConfig.pdb
+D:\pFindGUI\pConfig\pConfig\obj\Debug\pConfig.csprojResolveAssemblyReference.cache
+D:\pFindGUI\pConfig\pConfig\obj\Debug\MainWindow.baml
+D:\pFindGUI\pConfig\pConfig\obj\Debug\MainWindow.g.cs
+D:\pFindGUI\pConfig\pConfig\obj\Debug\App.g.cs
+D:\pFindGUI\pConfig\pConfig\obj\Debug\pConfig_MarkupCompile.cache
+D:\pFindGUI\pConfig\pConfig\obj\Debug\pConfig.g.resources
+D:\pFindGUI\pConfig\pConfig\obj\Debug\pConfig.Properties.Resources.resources
+D:\pFindGUI\pConfig\pConfig\obj\Debug\pConfig.csproj.GenerateResource.Cache
+D:\pFindGUI\pConfig\pConfig\obj\Debug\pConfig.exe
+D:\pFindGUI\pConfig\pConfig\obj\Debug\pConfig.pdb
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\bin\Debug\pConfig.exe.config
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig.exe
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig.pdb
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\bin\Debug\pConfig.exe
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\bin\Debug\pConfig.pdb
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Database_Add_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\MainWindow.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Database_Add_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\MainWindow.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\App.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig_MarkupCompile.cache
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig.g.resources
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig.Properties.Resources.resources
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig.csproj.GenerateResource.Cache
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Modification_Add_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Modification_Add_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Modification_Element_Edit_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Modification_Element_Edit_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Enzymes_Add_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Enzymes_Add_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Amino_Acid_Edit_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Amino_Acid_Edit_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig.csprojResolveAssemblyReference.cache
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Element_Add_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Element_Add_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Quantification_Add_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Quantification_Add_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Database_Edit_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Database_Edit_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Modification_Edit_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Modification_Edit_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Quantification_Edit_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Quantification_Edit_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Enzymes_Edit_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Enzymes_Edit_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Element_Edit_Dialog.baml
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\Element_Edit_Dialog.g.cs
+D:\2014上半年工作\pFind3.0开发\pConfig界面开发\pConfig\pConfig\obj\Debug\pConfig_MarkupCompile.lref
+J:\pFind studio\pConfig_TD\pConfig\bin\Debug\pConfig.exe.config
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig.exe
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig.pdb
+J:\pFind studio\pConfig_TD\pConfig\bin\Debug\pConfig.exe
+J:\pFind studio\pConfig_TD\pConfig\bin\Debug\pConfig.pdb
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig.csprojResolveAssemblyReference.cache
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Database_Add_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Amino_Acid_Edit_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Element_Add_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Enzymes_Add_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Modification_Add_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Modification_Element_Edit_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\N_Count_window.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Quantification_Add_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Database_Edit_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Modification_Edit_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Quantification_Edit_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Enzymes_Edit_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Element_Edit_Dialog.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Database_Add_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Amino_Acid_Edit_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Element_Add_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Enzymes_Add_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\MainWindow.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Modification_Add_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Modification_Element_Edit_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\N_Count_window.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Quantification_Add_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Database_Edit_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Modification_Edit_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Quantification_Edit_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Enzymes_Edit_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\Element_Edit_Dialog.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\App.g.cs
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig_MarkupCompile.cache
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig_MarkupCompile.lref
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\MainWindow.baml
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig.g.resources
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig.Properties.Resources.resources
+J:\pFind studio\pConfig_TD\pConfig\obj\Debug\pConfig.csproj.GenerateResource.Cache

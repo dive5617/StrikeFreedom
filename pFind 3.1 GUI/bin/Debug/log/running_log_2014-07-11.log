@@ -1,0 +1,84 @@
+
+###################################
+|    pParse+ from pFind Studio    |
+|        pfind@ict.ac.cn          |
+|     http://pfind.ict.ac.cn      |
+|         2014.7.04 10:28         |
+###################################
+
+[pParse] Calling pXtract to export MS1 and MS2 files... 
+[pParse] Processing std8_trypsin_denovo_20090729.MS1 
+[pParse] CSV file already exists, pParse Complete! 
+[pParse] Process complete! 
+[pParse]  == == == Time elapsed: 0 seconds. == == == =  
+
+[pFind]	 #########################################
+[pFind]	 #                                       #
+[pFind]	 #  Welcome to use pFind search engine!  #
+[pFind]	 #                                       #
+[pFind]	 #                  version 3.0 Alpha1   #
+[pFind]	 #                                       #
+[pFind]	 #               http://pfind.ict.ac.cn  #
+[pFind]	 #                                       #
+[pFind]	 #########################################
+[pFind]	Fasta path: D:\pFind\data\cncp2012\std8.FASTA
+[pFind]	MSMS path: D:\pFind\data\cncp2012\std8_trypsin_denovo_20090729_HCDFT.pf2
+[pFind]	<Tag Search> Round: 1 / 1
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 100%
+[pFind]	<Tag Search> Round: 1 / 1
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Search> Round: 1 / 1
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 100%
+[pFind]	<Tag Search> Round: 1 / 1
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 100%
+[pFind]	<Tag Search> Round: 1 / 1
+[pFind]	<Tag Search>: 100%
+[pFind]	<Protein Search> Round: 1 / 1
+[pFind]	<Protein Search>: 100%
+[pFind]	<Protein Infer> Inferring proteins...
+[pFind]	<Protein Infer>: 100%
+[pFind]	<Protein Infer> Inferring proteins completed.
+[pFind]	<Filter> Start filtering less confident peptides...
+[pFind]	<Filter>: 100%
+[pFind]	<GroupFilter> Initialize...
+[pFind]	<Filter> TDA started...
+[pFind]	<Filter> TDA completed.
+[pFind]	<Scoring Proteins>: 100%
+[pFind]	Time used: 47.79
+
+[pQuant] <Version>: 1.5, liuchao1016@ict.ac.cn, May 2014.
+
+[pQuant] <Start Time>: Fri Jul 11 17:20:50 CST 2014.
+
+[pQuant] <Preprocess>: Starts...
+[pQuant] <Preprocess>: Reading config file: D:\workspace\Task1\param\pQuant.cfg
+[pQuant] <Preprocess>: Results are in the folder: D:\workspace\Task1\result\
+[pQuant] <Preprocess>: Creating index for D:\pFind\data\cncp2012\std8_trypsin_denovo_20090729.pf1
+[pQuant] <Preprocess>: Reading identification results...
+
+[pQuant] <Quantify>: Starts...
+[pQuant] <Quantify>: The total number of PSMs: 1958
+
+[pQuant] <Quantify>: 100.00%
+
+[pQuant] <Infer>: Starts...
+[pQuant] <Infer>: The total number of proteins: 1407
+
+[pQuant] <Infer>: 100.00%
+
+[pQuant] <Finish Time>: Fri Jul 11 17:21:39 CST 2014.

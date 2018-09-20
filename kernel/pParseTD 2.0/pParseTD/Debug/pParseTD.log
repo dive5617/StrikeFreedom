@@ -1,0 +1,64 @@
+﻿生成启动时间为 2016/5/9 星期一 9:40:22。
+     1>项目“L:\pTop\pTop\kernel\pParseTD 2.0\pParseTD\pParseTD.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt BasicFunction.cpp MS1Reader.cpp MonoCandidates.cpp
+         MonoCandidates.cpp
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\monocandidates.cpp(49): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\monocandidates.cpp(80): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\monocandidates.cpp(81): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\monocandidates.cpp(263): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\monocandidates.cpp(348): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\monocandidates.cpp(509): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\monocandidates.cpp(510): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+         MS1Reader.cpp
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(461): warning C4018: “<”: 有符号/无符号不匹配
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(900): warning C4018: “<”: 有符号/无符号不匹配
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(950): warning C4018: “<”: 有符号/无符号不匹配
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(958): warning C4018: “<”: 有符号/无符号不匹配
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(1023): warning C4018: “<”: 有符号/无符号不匹配
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(1083): warning C4018: “<”: 有符号/无符号不匹配
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(2084): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(2088): warning C4018: “<”: 有符号/无符号不匹配
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\ms1reader.cpp(2099): warning C4018: “<”: 有符号/无符号不匹配
+         BasicFunction.cpp
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\basicfunction.cpp(66): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\time.inl(86) : 参见“ctime”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\basicfunction.cpp(75): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\time.inl(86) : 参见“ctime”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\basicfunction.cpp(178): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\basicfunction.cpp(184): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\basicfunction.cpp(520): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\time.inl(112) : 参见“localtime”的声明
+     1>l:\ptop\ptop\kernel\pparsetd 2.0\pparsetd\basicfunction.cpp(528): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : 参见“sprintf”的声明
+         正在生成代码...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"L:\pTop\pTop\kernel\pParseTD 2.0\Debug\pParseTD.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"L:\pTop\pTop\kernel\pParseTD 2.0\Debug\pParseTD.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"L:\pTop\pTop\kernel\pParseTD 2.0\Debug\pParseTD.lib" /MACHINE:X86 Debug\BasicFunction.obj
+         Debug\Classification.obj
+         Debug\Com.obj
+         Debug\CPeakMap.obj
+         Debug\emass.obj
+         Debug\MonoCandidates.obj
+         Debug\MS1Reader.obj
+         Debug\MS1Spectrum.obj
+         Debug\MS2Reader.obj
+         Debug\MS2Spectrum.obj
+         Debug\Solve.obj
+         Debug\SpecDataIO.obj
+         Debug\StringProcessor.obj
+         Debug\TrainingFileReader.obj
+         pParseTD.vcxproj -> L:\pTop\pTop\kernel\pParseTD 2.0\Debug\pParseTD.exe
+     1>已完成生成项目“L:\pTop\pTop\kernel\pParseTD 2.0\pParseTD\pParseTD.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:10.97

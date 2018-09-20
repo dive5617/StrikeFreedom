@@ -1,0 +1,20 @@
+﻿pBuild
+
+
+winexe
+C#
+.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\
+pBuild
+none
+false
+DEBUG;TRACE
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\App.xaml
+30650390172
+11179881978
+1052030472033
+36545010145
+About.xaml;ColorDialog.xaml;ColorPicker.xaml;Config_Dialog.xaml;Display_ms2_ratio_table.xaml;Display_ms2_table.xaml;MGF_PSM_Filter_Dialog.xaml;pLink\Ms2_advance.xaml;pLink\PSM_Filter_Dialog.xaml;Themes\Generic.xaml;License_Dialog.xaml;Model_Window.xaml;MS1_Advance.xaml;MS1_Setting.xaml;MS2_Denovol_Config.xaml;MS2_Denovol_Setting.xaml;MS2_Quant_Config_Dialog.xaml;MS2_Quant_Config_Dialog2.xaml;MZ_Input_Dialog.xaml;Pnovol_Result_Window.xaml;Protein_Adanvaced_Dialog.xaml;Protein_Filter_Dialog.xaml;PSM_Filter_Dialog.xaml;MainWindow.xaml;Ms2_advance.xaml;Ms2_setting.xaml;Task_Compare_Tool.xaml;Task_Compare_Tool2.xaml;Tmp_Window.xaml;Model_Window_DeNovo.xaml;
+
+True
+

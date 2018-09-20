@@ -1,0 +1,57 @@
+﻿Build started 2016/10/30 14:25:01.
+     1>Project "L:\pTop\pTop\kernel\pParseTD 2.0\pParseTD\pParseTD.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\boost_1_53_0 /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _CRT_SECURE_NO_DEPRECATE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BasicFunction.cpp Classification.cpp Com.cpp CPeakMap.cpp emass.cpp MonoCandidates.cpp MS1Reader.cpp MS1Spectrum.cpp MS2Reader.cpp MS2Spectrum.cpp Solve.cpp SpecDataIO.cpp StringProcessor.cpp TrainingFileReader.cpp
+         BasicFunction.cpp
+         Classification.cpp
+     1>Classification.cpp(62): warning C4018: '<' : signed/unsigned mismatch
+     1>Classification.cpp(74): warning C4018: '<' : signed/unsigned mismatch
+     1>Classification.cpp(82): warning C4018: '<' : signed/unsigned mismatch
+         Com.cpp
+     1>Com.cpp(275): warning C4554: '<<' : check operator precedence for possible error; use parentheses to clarify precedence
+     1>Com.cpp(276): warning C4554: '<<' : check operator precedence for possible error; use parentheses to clarify precedence
+         CPeakMap.cpp
+         emass.cpp
+         MonoCandidates.cpp
+         MS1Reader.cpp
+     1>MS1Reader.cpp(461): warning C4018: '<' : signed/unsigned mismatch
+     1>MS1Reader.cpp(900): warning C4018: '<' : signed/unsigned mismatch
+     1>MS1Reader.cpp(950): warning C4018: '<' : signed/unsigned mismatch
+     1>MS1Reader.cpp(958): warning C4018: '<' : signed/unsigned mismatch
+     1>MS1Reader.cpp(1023): warning C4018: '<' : signed/unsigned mismatch
+     1>MS1Reader.cpp(1083): warning C4018: '<' : signed/unsigned mismatch
+     1>MS1Reader.cpp(2084): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>MS1Reader.cpp(2088): warning C4018: '<' : signed/unsigned mismatch
+     1>MS1Reader.cpp(2099): warning C4018: '<' : signed/unsigned mismatch
+         MS1Spectrum.cpp
+         MS2Reader.cpp
+         MS2Spectrum.cpp
+     1>MS2Spectrum.cpp(743): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+         Solve.cpp
+         SpecDataIO.cpp
+     1>SpecDataIO.cpp(530): warning C4018: '<' : signed/unsigned mismatch
+         StringProcessor.cpp
+         TrainingFileReader.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"L:\pTop\pTop\kernel\pParseTD 2.0\Release\pParseTD2.0.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\boost_1_53_0\bin\vc11\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"L:\pTop\pTop\kernel\pParseTD 2.0\Release\pParseTD2.0.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"L:\pTop\pTop\kernel\pParseTD 2.0\Release\pParseTD2.0.lib" /MACHINE:X86 /SAFESEH Release\BasicFunction.obj
+         Release\Classification.obj
+         Release\Com.obj
+         Release\CPeakMap.obj
+         Release\emass.obj
+         Release\MonoCandidates.obj
+         Release\MS1Reader.obj
+         Release\MS1Spectrum.obj
+         Release\MS2Reader.obj
+         Release\MS2Spectrum.obj
+         Release\Solve.obj
+         Release\SpecDataIO.obj
+         Release\StringProcessor.obj
+         Release\TrainingFileReader.obj
+         Generating code
+         Finished generating code
+         pParseTD.vcxproj -> L:\pTop\pTop\kernel\pParseTD 2.0\Release\pParseTD2.0.exe
+     1>Done Building Project "L:\pTop\pTop\kernel\pParseTD 2.0\pParseTD\pParseTD.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.18

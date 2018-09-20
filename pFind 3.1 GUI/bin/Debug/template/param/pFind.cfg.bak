@@ -1,0 +1,69 @@
+# This is a standard pFind configure file
+# For help: mail to chihao@ict.ac.cn
+# Time: 2014/7/1 20:32:41
+
+[Version]
+pFind_Version=EVA.3.0.0.1.2014.07.05
+GUI_Version=LocalSearch.30.2014.07.05
+
+[param]
+thread=2
+activation_type=HCD-FTMS
+mstol=20
+mstolppm=1
+msmstol=20
+msmstolppm=1
+temppepnum=100
+pepnum=10
+selectpeak=200
+maxprolen=20000000
+maxspec=100000
+#Consider I and L as the same AA
+IeqL=1
+#The Length of the Possible Signal Peptides
+npep=1
+#Maximum Mass Shift in Open Search
+maxdelta=500
+selectmod=
+fixmod=
+maxmod=3
+enzyme=Trypsin KR _ C
+digest=3
+max_clv_sites=3
+
+[filter]
+psm_fdr=0.01
+psm_fdr_type=1
+mass_lower=600
+mass_upper=10000
+len_lower=6
+len_upper=100
+pep_per_pro=1
+pro_fdr=0.01
+
+[engine]
+open_tag_len=5
+
+rest_tag_iteration=1
+rest_tag_len=4
+rest_mod_num=10
+
+salvo_iteration=1
+salvo_mod_num=5
+
+[file]
+modpath=
+fastapath=
+outputpath=
+outputname=
+
+[datalist]
+msmsnum=0
+msmspath1=
+msmstype=PF2
+
+[quant]
+quant=1|None
+
+[system]
+log=LOG_INFO

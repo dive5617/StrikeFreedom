@@ -1,0 +1,55 @@
+﻿<Window x:Class="pBuild.pLink.PSM_Filter_Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pBuild.pLink"
+        mc:Ignorable="d"
+        Title="pLink.PSM_Filter_Dialog" Height="300" Width="400" Icon="..\pBuild.ico" Closed="closed_event">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="3">Mixed Number</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="3" x:Name="filter_mix_num" Text="" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By the Number of Precursors</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="3">Title</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="3" x:Name="title_subStr_txt" Text="" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By Title SubString</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="3">SQ</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="3" x:Name="sq_subStr_txt" Text="" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By SQ SubString</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="3">Ratio ≤</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="3" x:Name="ratio1_tbx" Text="" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By Ratio</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="3">Ratio ≥</TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="3" x:Name="ratio2_tbx" Text="" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By Ratio</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <Button Margin="3" Grid.Row="5" Grid.Column="1" Click="filter_btn">Filter</Button>
+    </Grid>
+</Window>

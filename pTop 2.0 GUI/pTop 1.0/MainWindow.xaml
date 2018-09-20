@@ -1,0 +1,1088 @@
+﻿<Window x:Class="pTop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:pTop" 
+        xmlns:lc="clr-namespace:pTop.classes"
+        mc:Ignorable="d" Title="pTop" Icon="images\ptop.png" FontFamily="MS Reference Sans Serif"
+        Background="AliceBlue" Height="700" Width="1000" WindowState="Maximized" MinHeight="500" MinWidth="600">
+    <Window.Resources>
+        <DataTemplate x:Key="SizeTemplate">
+            <TextBlock HorizontalAlignment="Right" Width="110"
+               Text="{Binding FileSize}" TextAlignment="Right"/>
+        </DataTemplate>
+        <Image x:Key="File_New_img" Source="images\icons\filenew.gif" Width="16" Height="16"></Image>
+        <Image x:Key="Folder_load_img" Source="images\icons\folder_open.gif" Width="16" Height="16"></Image>
+        <Image x:Key="File_Save_img" Source="images\icons\save.gif"></Image>
+        <Image x:Key="File_SaveAs_img" Source="images\icons\save_as.png"></Image>
+        <Image x:Key="Task_Run_img" Source="images\icons\run.png" Width="16" Height="16"></Image>
+        <Image x:Key="Task_Stop_img" Source="images\icons\mm-Stop.ico" Width="16" Height="16"></Image>
+        <ControlTemplate x:Key="DTabControl1" TargetType="{x:Type TabControl}">
+            <ControlTemplate.Resources>
+
+                <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TabItem}">
+                                <Grid SnapsToDevicePixels="True">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="MouseOver">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                Storyboard.TargetName="hoverShape"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1"
+                                                Duration="0:0:0.1" />
+
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState Name="Normal">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                Storyboard.TargetName="hoverShape"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0"
+                                                Duration="0:0:0.1" />
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup Name="SelectionStates">
+                                            <VisualState Name="Selected">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="buttonShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="1" Duration="0:0:0.3"/>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="hoverShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="0" Duration="0:0:0.1"/>
+                                                    <ColorAnimation 
+                                                    Storyboard.TargetName="buttonText"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                    To="White" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState Name="Unselected">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="buttonShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="0" Duration="0:0:0.1"/>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="hoverShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="0" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <!--<Border Name="hoverShape" Height="32" Margin="0,0,1,0"
+                                        SnapsToDevicePixels="True" BorderThickness="0,0,1,0"
+                                        BorderBrush="LightGray">
+                                    <Border BorderBrush="#ffa1b7ea" BorderThickness="0,1"
+                                            Background="#ffe5eef9" Height="40"
+                                            SnapsToDevicePixels="True" />-->
+
+                                    <Border Name="hoverShape" Height="32" Margin="0,0,1,0"
+                                        SnapsToDevicePixels="True" BorderThickness="0"
+                                        BorderBrush="LightGray">
+                                        <Path Data="M 214,108 L 366,108 376,124 
+                                                  366,140 214,140 224,124 z"
+                                              SnapsToDevicePixels="True"
+                                              Stretch="Fill" Height="32" Opacity="0.3">
+                                            <Path.Fill>
+                                                <RadialGradientBrush GradientOrigin="0.2,0.5" RadiusX="0.8" RadiusY="0.8">
+                                                    <GradientStop Color="#ff5fa3f6" Offset="0" />
+                                                    <GradientStop Color="#ff0c55b9" Offset="1" />
+                                                </RadialGradientBrush>
+                                            </Path.Fill>
+                                        </Path>
+                                    </Border>
+
+                                    <Border Name="buttonShape" Opacity="0" BorderBrush="#ffe9ecef" 
+                                        BorderThickness="0" Height="32" SnapsToDevicePixels="True">
+                                        <Path Data="M 214,108 L 366,108 376,124 
+                                                  366,140 214,140 224,124 z"
+                                              SnapsToDevicePixels="True"
+                                              Stretch="Fill" Height="32">
+                                            <Path.Fill>
+                                                <RadialGradientBrush GradientOrigin="0.2,0.5" RadiusX="0.8" RadiusY="0.8">
+                                                    <GradientStop Color="#ff5fa3f6" Offset="0" />
+                                                    <GradientStop Color="#ff0c55b9" Offset="1" />
+                                                </RadialGradientBrush>
+                                            </Path.Fill>
+                                        </Path>
+                                    </Border>
+
+                                    <ContentPresenter Name="buttonText" Margin="15,0,5,0" 
+                                                  TextBlock.FontFamily="MS Reference Sans Serif"
+                                                  TextBlock.FontSize="11pt"
+                                                  TextBlock.Foreground="Black"
+                                                  ContentSource="Header" 
+                                                  VerticalAlignment="Center" PreviewMouseDown="BeforeTabChange">
+                                    </ContentPresenter>
+
+                                </Grid>
+
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ControlTemplate.Resources>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border Background="#ffe9ecef" Grid.Row="0"  BorderBrush="LightGray" BorderThickness="1" 
+                    SnapsToDevicePixels="True">
+                </Border>
+                <StackPanel Orientation="Horizontal" IsItemsHost="True" Grid.Row="0" Margin="0,0,-1,0" SnapsToDevicePixels="True">
+
+                </StackPanel>
+                <ContentPresenter Content="{TemplateBinding SelectedContent}"  Grid.Row="1" Margin="15,0,0,0"/>
+
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="lc:CustomCommands.New" Executed="New_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Open" Executed="Open_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Run" Executed="Run_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Rename" Executed="Rename_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Save" Executed="SaveTask"/>
+        <!--<CommandBinding Command="lc:CustomCommands.SaveAs" Executed="TaskSaveAs"/>-->
+    </Window.CommandBindings>
+    <Grid Name="body">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Name="menuNew" Header="New" Click="New_Task"  InputGestureText="Ctrl+N"></MenuItem>
+                <MenuItem Name="menuOpen" Header="Open" Click="Open_Task"  InputGestureText="Ctrl+O"></MenuItem>
+                <MenuItem Name="menuSave" Header="Save"  InputGestureText="Ctrl+S" Click="SaveTask"></MenuItem>
+                <!--<MenuItem Header="Save As"></MenuItem>-->
+                <!--<MenuItem Header="Rename" InputGestureText="F2" Click="RenameTask"></MenuItem>-->
+                <Separator></Separator>
+                <MenuItem Header="Exit" InputGestureText="Alt+F4" Click="CloseWindow"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Options">
+                <MenuItem Header="_Settings..." Click="OpenSettings"></MenuItem>
+                <MenuItem Header="_Meta Data Configuration..." Click="OpenConfig"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help" Name="helpItem">
+                <!--<MenuItem Header="User Guide"></MenuItem>-->
+                <MenuItem Header="About" Click="Help_About_Clk"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1" Name="toolbar">
+            <Button Content="{StaticResource File_New_img}" Click="New_Task"  RenderTransformOrigin="0.36,0.32">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Create a new task(Ctrl+N)
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Content="{StaticResource Folder_load_img}" Click="Open_Task"  RenderTransformOrigin="0.36,0.32">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Load a task(Ctrl+O)
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="toolSave" Content="{StaticResource File_Save_img}" RenderTransformOrigin="0.36,0.32" Click="SaveTask">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Save(Ctrl+S)
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <!--<Button Content="{StaticResource File_SaveAs_img}"  RenderTransformOrigin="0.36,0.32">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Save As(Ctrl+Shift+S)
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>-->
+            <Button Name="toolRun" Content="{StaticResource Task_Run_img}"  RenderTransformOrigin="0.36,0.32" Style="{StaticResource ButtonOpacity}"
+                    Click="StartSearch">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Run(F5)
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="toolStop" Content="{StaticResource Task_Stop_img}"  RenderTransformOrigin="0.36,0.32" Style="{StaticResource ButtonOpacity}"
+                    Click="StopTask">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Stop Task (F10)
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+        </ToolBar>
+        <Grid Grid.Row="2">
+           <Grid.RowDefinitions>
+               <RowDefinition Height="1*"/>
+               <RowDefinition Height="Auto"></RowDefinition>
+               <RowDefinition Height="150"/>
+           </Grid.RowDefinitions>
+           <TabControl Name="tab" SelectionChanged="clk" Grid.Row="0" Template="{DynamicResource DTabControl1}">
+                <TabItem Header="MS Data" Name="FileTab" FocusVisualStyle="{x:Null}">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock Margin="10,10,0,0" Width="110" HorizontalAlignment="Left" VerticalAlignment="Center">MS Instrument :</TextBlock>
+                                <ComboBox Name="InstrumentChoices" SelectedIndex="{Binding Path=Instrument_index}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,10,0,0" Width="120">
+                                    <ComboBoxItem>HCD</ComboBoxItem>
+                                    <ComboBoxItem>CID</ComboBoxItem>
+                                    <ComboBoxItem>ETD</ComboBoxItem>
+                                    <ComboBoxItem>EThcD</ComboBoxItem>
+                                    <ComboBoxItem>ETciD</ComboBoxItem>
+                                    <ComboBoxItem>UVPD</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                            <Grid Grid.Row="2" Margin="0,10,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Margin="10,10,10,0" >Data File List</TextBlock>
+                                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,10,0,0" Style="{StaticResource DFVisibility}">
+                                    <TextBlock Name="dfnum" FontWeight="Bold" Text="0"></TextBlock>
+                                    <TextBlock Text=" File(s), "/>
+                                    <TextBlock Name="dfsize" FontWeight="Bold" Text="0.0"></TextBlock>
+                                    <TextBlock Name="size_unit" Text=" GB"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                    <ListView x:Name="fileList"  Margin="10,10,0,0" Width="520" Height="150"                          
+                              ItemContainerStyle="{StaticResource ListViewItemContainerStyle}" HorizontalAlignment="Right" ItemsSource="{Binding Path=Data_file_list}">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridViewColumn Header="Files" DisplayMemberBinding="{Binding FilePath}" Width="410"/>
+                                                <GridViewColumn Width="110" Header="Size" CellTemplate="{StaticResource SizeTemplate}"/>
+                                                <!--<GridViewColumn Header="Size" DisplayMemberBinding="{Binding FileSize}" Width="110"/>-->
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                    <StackPanel Margin="50,12,0,0">
+                                        <Button Name="addRawBtn" Width="70" HorizontalAlignment="Left" Margin="10" Height="28"
+                                Click="Add_DataFiles">Add</Button>
+                                        <Button Name="deleteRawBtn"  Margin="10" Width="70" HorizontalAlignment="Left" Height="28"
+                                Click="Delete_DataFile">Delete</Button>
+                                        <Button Name="clearRawBtn"  Margin="10" Width="70" HorizontalAlignment="Left" Height="28"
+                                Click="Clear_DataFiles">Clear</Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+
+                            <Expander Name="pParseConfig" Grid.Row="3" Margin="10" Expanded="pParseConfig_Expanded" IsExpanded="True">
+                                <Expander.Header>
+                                    <Label VerticalAlignment="Center" >Data Extraction</Label>
+                                </Expander.Header>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+                                            <Label VerticalAlignment="Center" Width="135">Precursors Detection</Label>
+                                            <Separator Height="1" Width="570" VerticalAlignment="Center" BorderBrush="Black"></Separator>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1" Orientation="Horizontal" Height="45">
+                                            <Label VerticalAlignment="Center" Margin="20,0,0,0" Width="118" 
+                                                   ToolTip="Full width of the isolation window.">Isolation Width :</Label>
+                                                <TextBox Name="isolation_width" VerticalAlignment="Center" Width="75" 
+                                                 ToolTip="Isolation width should not be less than 2 or larger than 20.">
+                                                    <TextBox.Text>
+                                                    <Binding Path="Pparse_advanced.Isolation_width" Mode="TwoWay">
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                                <StackPanel Name="MixSpec" Orientation="Horizontal" Margin="80,0,0,0">
+                                                <CheckBox Name="MixSpecCB" VerticalAlignment="Center" IsChecked="{Binding Path=Pparse_advanced.Mix_spectra,Mode=OneWay}"></CheckBox>
+                                                   <Label VerticalAlignment="Center">Mixture Spectra</Label>
+                                                </StackPanel>
+                                        </StackPanel>
+                                        <!--<Grid Grid.Row="2"  Height="45" Margin="20,0,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>                                           
+                                            <StackPanel Grid.Column="1" Name="mars_thresh" Orientation="Horizontal" VerticalAlignment="Center" Visibility="Visible">
+                                                <Label VerticalAlignment="Center" Margin="80,0,0,0" Width="115">MARS Threshold :</Label>
+                                                <TextBox Name="threshhold" VerticalAlignment="Center" Width="75"
+                                                 ToolTip="Threshold for MARS model should not be less than -1000 or larger than 1000.">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Pparse_advanced.Threshold" Mode="TwoWay">
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                                <Label VerticalAlignment="Center" Width="118">Model :</Label>
+                                                <ComboBox Name="model" Width="75" VerticalAlignment="Center" SelectedIndex="{Binding Path=Pparse_advanced.Model}" SelectionChanged="ModelChanged">
+                                                    <ComboBoxItem>SVM</ComboBoxItem>
+                                                    <ComboBoxItem>MARS</ComboBoxItem>
+                                                </ComboBox>
+                                            </StackPanel>
+                                        </Grid>-->
+                                    </Grid>
+                                    <Grid Grid.Row="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="40"/>
+                                            <RowDefinition Height="40"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+                                            <Label VerticalAlignment="Center" Width="135">Deconvolution</Label>
+                                            <Separator Height="1" Width="570" VerticalAlignment="Center" BorderBrush="Black"></Separator>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20,0,0,0">                     
+                                                <Label VerticalAlignment="Center" Width="118"
+                                                       ToolTip="Maximum charge state of the precursor." >Maximum Charge :</Label>
+                                                <TextBox Name="Max_charge" VerticalAlignment="Center" Width="75" 
+                                                 ToolTip="Maximum charge should not be less than 4 or larger than 50.">
+                                                    <TextBox.Text>
+                                                    <Binding Path="Pparse_advanced.Max_charge" Mode="TwoWay">
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>                                    
+                                                <Label VerticalAlignment="Center" Margin="80,0,0,0" Width="115"
+                                                       ToolTip="Used to match between theoretical and experimental isotope clusters." >M/Z Tolerance :</Label>
+                                                <TextBox Name="Mz_tolerance" VerticalAlignment="Center" Width="75" 
+                                                 ToolTip="M/Z tolerance should not be less than 0 or larger than 30.">
+                                                    <TextBox.Text>
+                                                    <Binding Path="Pparse_advanced.Mz_tolerance" Mode="TwoWay">
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                                <Label VerticalAlignment="Center" Margin="8,0,0,0">ppm</Label>                            
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="20,0,0,0">
+                                                <Label VerticalAlignment="Center" Width="118"
+                                                       ToolTip="Maximum mass of the precursor." >Maximum Mass :</Label>
+                                                <TextBox Name="Max_mass" VerticalAlignment="Center" Width="75" 
+                                                 ToolTip="Maximum mass should not be less than 5000 or larger than 100000.">
+                                                    <TextBox.Text>
+                                                    <Binding Path="Pparse_advanced.Max_mass" Mode="TwoWay">
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            
+                                                <Label VerticalAlignment="Center" Margin="80,0,0,0" Width="115"
+                                                       ToolTip="Used to compare the level of a desired signal to the level of background noise." >S/N Ratio :</Label>
+                                                <TextBox Name="SN_ratio" VerticalAlignment="Center" Width="75" 
+                                                 ToolTip="S/N ratio should not be less than 1 or larger than 3.">
+                                                    <TextBox.Text>
+                                                    <Binding Path="Pparse_advanced.Sn_ratio" Mode="TwoWay">
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>                                      
+                                        </StackPanel>
+                                    </Grid>
+                                    <Grid Grid.Row="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+                                            <Label VerticalAlignment="Center" Width="135">Place of Decimal</Label>
+                                            <Separator Height="1" Width="570" VerticalAlignment="Center" BorderBrush="Black"></Separator>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1" Orientation="Horizontal" Height="40" Margin="20,0,0,0">
+                                            <Label VerticalAlignment="Center" Width="118" ToolTip="This option specifies the decimal place of m/z ratio. Its value goes from 1 to 9, and the default value is 5.">
+                                                M/Z :
+                                            </Label>
+                                            <ComboBox Name="mzDecimal" SelectedIndex="{Binding Path=Pparse_advanced.Mz_decimal_index}" Width="75" VerticalAlignment="Center">
+                                                <ComboBoxItem>1</ComboBoxItem>
+                                                <ComboBoxItem>2</ComboBoxItem>
+                                                <ComboBoxItem>3</ComboBoxItem>
+                                                <ComboBoxItem>4</ComboBoxItem>
+                                                <ComboBoxItem>5</ComboBoxItem>
+                                                <ComboBoxItem>6</ComboBoxItem>
+                                                <ComboBoxItem>7</ComboBoxItem>
+                                                <ComboBoxItem>8</ComboBoxItem>
+                                                <ComboBoxItem>9</ComboBoxItem>
+                                            </ComboBox>
+                                            <Label VerticalAlignment="Center" Margin="80,0,0,0" Width="115" ToolTip="This option specifies the decimal place of intensity. Its value goes from 1 to 9, and the default value is 1.">
+                                                Intensity :
+                                            </Label>
+                                            <ComboBox Name="IntensityDecimal" SelectedIndex="{Binding Path=Pparse_advanced.Intensity_decimal_index}" Width="75" VerticalAlignment="Center">
+                                                <ComboBoxItem>1</ComboBoxItem>
+                                                <ComboBoxItem>2</ComboBoxItem>
+                                                <ComboBoxItem>3</ComboBoxItem>
+                                                <ComboBoxItem>4</ComboBoxItem>
+                                                <ComboBoxItem>5</ComboBoxItem>
+                                                <ComboBoxItem>6</ComboBoxItem>
+                                                <ComboBoxItem>7</ComboBoxItem>
+                                                <ComboBoxItem>8</ComboBoxItem>
+                                                <ComboBoxItem>9</ComboBoxItem>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock Margin="10,10,0,0" Width="110" HorizontalAlignment="Left" VerticalAlignment="Center">MS Data Format :</TextBlock>
+                                <ComboBox Name="FormatChoices" SelectedIndex="{Binding Path=File_format_index}" HorizontalAlignment="Left" Margin="15,10,0,0" 
+                              Width="120" VerticalAlignment="Center"  SelectionChanged="FormatChange">
+                                    <ComboBoxItem>MGF</ComboBoxItem>
+                                    <ComboBoxItem>RAW</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Name="IdentificationTab" Header="Identification" FocusVisualStyle="{x:Null}">
+                    <ScrollViewer Name="IdentScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,10,0,0">
+                        <Grid Name="gridIndentify">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Expander Name="search" Grid.Row="0" SnapsToDevicePixels="True" IsExpanded="True">
+                                <Expander.Header>
+                                    <Label Style="{StaticResource LabelStyle}" VerticalAlignment="Center">Database Search</Label>
+                                </Expander.Header>
+                                <Grid Name="searchGrid" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0" Margin="0,5,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                                            <Label Width="86" VerticalAlignment="Center" HorizontalAlignment="Left">Database :</Label>
+                                            <ComboBox Name="Database" Width="200" SelectedIndex="{Binding Path=Db_index}"  VerticalAlignment="Center" SelectionChanged="DatabaseChanged">
+                                            </ComboBox>
+                                            <TextBlock Name="dbtip" Margin="10,0,0,0" VerticalAlignment="Center" Foreground="Red" Style="{StaticResource DBtipStyle}">*</TextBlock>
+                                        </StackPanel>
+                                 
+                                        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="0,0,10,0">
+                                            <TextBlock VerticalAlignment="Center" Margin="5,0,0,0">Precursor Tolerance :</TextBlock>
+                                            <Label VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0">±</Label>
+                                            <TextBox Name="PreTol" Width="80" VerticalAlignment="Center" ToolTip="Hint: The value of the tolerance cannot be less than 0.">
+                                                <TextBox.Text>
+                                                    <Binding Mode="TwoWay" Path="Ptl.Tl_value">
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+                                            <!--SelectedIndex="{Binding Path=Ptl.Isppm}"-->
+                                            <ComboBox Name="ptolUnits" SelectedIndex="0" IsEnabled="False"  Width="50" VerticalAlignment="Center" Margin="10,10,0,10">
+                                                <ComboBoxItem>Da</ComboBoxItem>
+                                                <ComboBoxItem>ppm</ComboBoxItem>
+                                            </ComboBox>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal"  Margin="15,0,0,0">
+                                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">Fragment Tolerance :</TextBlock>
+                                            <Label VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0">±</Label>
+                                            <TextBox Name="FraTol" Width="80" VerticalAlignment="Center" ToolTip="Hint: The value of the tolerance cannot be less than 0.">
+                                                <TextBox.Text>
+                                                    <Binding Path="Ftl.Tl_value" Mode="TwoWay">
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+                                            <!--SelectedIndex="{Binding Path=Ftl.Isppm}"-->
+                                            <ComboBox Name="ftolUnits" SelectedIndex="1" IsEnabled="False" Width="50" VerticalAlignment="Center" Margin="10,0,0,0">
+                                                <ComboBoxItem>Da</ComboBoxItem>
+                                                <ComboBoxItem>ppm</ComboBoxItem>
+                                            </ComboBox>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Margin="0,0,10,0">
+                                            <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" Width="137">Max Truncated Mass :</TextBlock>
+                                            <TextBox Name="maxTruncatedMass" Width="80" VerticalAlignment="Center" ToolTip="Hint: The max mass allowed to be truncated on the N/C terminus.">
+                                                <TextBox.Text>
+                                                    <Binding Mode="TwoWay" Path="MaxTruncatedMass">
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+                                            <TextBlock VerticalAlignment="Center" Margin="5,0,0,0">Da</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="2" Grid.Column="2" Name="SecondSearchSwitch" Orientation="Horizontal" Margin="15,0,0,0">
+                                            <CheckBox Name="SecondSearchCB" VerticalAlignment="Center" IsChecked="{Binding Path=SecondSearch}"></CheckBox>
+                                            <Label VerticalAlignment="Center">Second Search</Label>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                                            <TextBlock Width="110" HorizontalAlignment="Left" VerticalAlignment="Center">Search Mode :</TextBlock>
+                                            <ComboBox Name="SearchMode" SelectedIndex="{Binding Path=SearchModeIndex}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" Width="80"  SelectionChanged="SearchModeChange">
+                                                <ComboBoxItem>Tag-Index</ComboBoxItem>
+                                                <ComboBoxItem>Ion-Index</ComboBoxItem>
+                                            </ComboBox>
+                                        </StackPanel>
+                                        
+                                        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Margin="0,0,10,5" Height="36">
+                                            <Label Width="142" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                   ToolTip="Maximum number of variable modifications allowed on each protein." >Max PTM Positions :</Label>
+                                            <xctk:IntegerUpDown Name="maxmod" Width="80" VerticalAlignment="Center" ToolTip="Maximum number of modifications (including variable and unexpected) allowed in each proteoform.">
+                                                <xctk:IntegerUpDown.Text>
+                                                    <Binding Mode="TwoWay" Path="Max_mod">
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </xctk:IntegerUpDown.Text>
+                                            </xctk:IntegerUpDown>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" Margin="0,0,10,0">
+                                            <TextBlock VerticalAlignment="Center" Margin="15,0,0,0" Width="110">Max Mod. Mass :</TextBlock>
+                                            <TextBox Name="maxModMass" Width="80" VerticalAlignment="Center" Margin="15,0,0,0"
+                                                     ToolTip="Hint: Maximum absolute value of the mass shift (in Dalton) of an modification. Default value: 500.">
+                                                <TextBox.Text>
+                                                    <Binding Mode="TwoWay" Path="MaxModMass">
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+                                            <TextBlock VerticalAlignment="Center" Margin="5,0,0,0">Da</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                                            <TextBlock Width="110" HorizontalAlignment="Left" VerticalAlignment="Center">Unexpected PTMs:</TextBlock>
+                                            <ComboBox Name="unexpectedMod" SelectedIndex="{Binding Path=UnexpectedModNum}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" Width="80"
+                                                      ToolTip="Hint: Maximum number of unexpected modifications in a proteoform. Default value: 0.">
+                                                <ComboBoxItem>0</ComboBoxItem>
+                                                <ComboBoxItem>1</ComboBoxItem>
+                                                <ComboBoxItem>2</ComboBoxItem>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </Grid>
+                                    <GroupBox Name="ModConfig" Grid.Row="1" Grid.ColumnSpan="2" Header="Add Modification" >
+                                        <Grid Margin="0,10,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="42" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10,0,15,0"  Width="Auto"  VerticalAlignment="Center">Fixed</TextBlock>
+                                            <ListView Name="selectedFixMod" Grid.Row="0" Grid.Column="1" Width="180" Height="110" Margin="0,5,0,0"
+                                            Background="#eef6f6f6" SelectionMode="Extended" ItemsSource="{Binding Path=Fix_mods}">
+
+                                            </ListView>
+                                            <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Center">
+                                                <Button Width="40" Height="25" Margin="10" Click="add_fix_mods">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_left.png" />
+                                                </Button>
+                                                <Button Width="40" Height="25" Margin="10" Click="remove_fix_mods">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_right.png"/>
+                                                </Button>
+                                            </StackPanel>
+                                            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,0,15,0"  Width="Auto" VerticalAlignment="Center">Variable</TextBlock>
+                                            <ListView Name="selectedVarMod" Grid.Row="1" Grid.Column="1" Width="180" Height="110" Margin="0,10,0,0"
+                                            Background="#eef6f6f6" ItemsSource="{Binding Path=Var_mods}" SelectionMode="Extended">
+
+                                            </ListView>
+                                            <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+                                                <Button Width="40" Height="25" Margin="10" Click="add_var_mods">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                                </Button>
+                                                <Button Width="40" Height="25" Margin="10" Click="remove_var_mods">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                                </Button>
+                                            </StackPanel>
+                                            <ListView Name="Modifications" Grid.Row="0" Grid.RowSpan="2" Grid.Column="3" Width="280" Height="230" SelectionMode="Extended"
+                                           Background="#aaF6F6F6" BorderBrush="LightGray" ItemsSource="{Binding }" MouseDown="select_mods" Margin="0,5,0,0">
+
+                                            </ListView>
+
+                                            <StackPanel Grid.Row="2" Grid.Column="3" Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
+                                                <CheckBox Name="disAllMod" Checked="show_all_mods" Unchecked="show_com_mods" Width="25" VerticalAlignment="Center"></CheckBox>
+                                                <TextBlock VerticalAlignment="Center">Display All</TextBlock>
+                                                <Button Click="Config_Mods" VerticalAlignment="Center" Margin="100,0,0,0" Width="60" Height="25" FontStyle="Italic" Background="AliceBlue">
+                                                    Edit...
+                                                </Button>
+                                            </StackPanel>
+
+                                        </Grid>
+                                    </GroupBox>
+                                    <!--Style="{StaticResource CheckBoxStyle1}"-->
+                                </Grid>
+                            </Expander>
+                            <Expander Name="filter" Grid.Row="1" SnapsToDevicePixels="True" IsExpanded="True">
+                                <Expander.Header>
+                                    <Label Style="{StaticResource LabelStyle}" VerticalAlignment="Center">Result Filter</Label>
+                                </Expander.Header>
+                                <Grid Name="FilterGrid" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="10">
+                                        <Label Content="FDR ≤ " VerticalAlignment="Center" />
+                                        <TextBox Name="FDRValue" Width="70" VerticalAlignment="Center"
+                                             ToolTip="Hint: The value of FDR must be between 0 and 100.">
+                                            <TextBox.Text>
+                                                <Binding Path="Filter.Fdr_value" Mode="TwoWay" UpdateSourceTrigger="LostFocus">
+                                                    <Binding.ValidationRules>
+                                                        <DataErrorValidationRule />
+                                                        <ExceptionValidationRule />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+                                        <Label Content=" %  " HorizontalAlignment="Left" Width="50" VerticalAlignment="Center" />
+                                        <!--
+                                   <Slider Name="FDRControl" HorizontalAlignment="Right" VerticalAlignment="Center"  
+                                          Value="{Binding ElementName=FDRValue,Path=Text}" Margin="90,0,0,0" Width="420"  Height="36" Maximum="100" Minimum="0"/>
+                                   -->
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="20,0,0,0">
+                                        <CheckBox Name="SeparateFilterCB" VerticalAlignment="Center" IsChecked="{Binding Path=Filter.SeparateFiltering}"
+                                                  ToolTip="Hint: Filter separately for each input file. Otherwise, merge the results of all the input files and then filter."></CheckBox>
+                                        <Label VerticalAlignment="Center">Separate Filtering</Label>
+                                    </StackPanel>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Quantitation" Name="QuantTab" FocusVisualStyle="{x:Null}">
+                    <ScrollViewer Name="quantScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,10,0,0">
+                        <Grid Name="V_MS1Quant">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="1" Name="Quant_Label">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <!--
+                     <StackPanel Name="maxLA" Grid.Row="1" Visibility="Collapsed"  Orientation="Horizontal">
+                         <Label Content="Max.  labeled A   "  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                         <TextBox Name="maxLabelA" Text="3" Width="205" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                  Margin="0,8" BorderBrush="DarkGray"></TextBox>                  
+                     </StackPanel>  
+                     -->
+                                <Grid Name="multipLabels" Grid.Row="1" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="250"/>
+                                        <ColumnDefinition Width="90"/>
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right" >
+                                        <!--<Label VerticalAlignment="Bottom">Labels</Label>-->
+                                        <Button Click="Config_Labels" VerticalAlignment="Center" Width="60" Height="25" FontStyle="Italic" Background="AliceBlue">
+                                            Labels...
+                                        </Button>
+                                    </StackPanel>
+                                    <Label Name="lightLabel" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Light Label :</Label>
+                                    <Label Name="mediumLabel" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Medium Label :</Label>
+                                    <Label Name="heavyLabel" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Heavy Label :</Label>
+                                    <ListBox Name="selectedLightLabels" Grid.Row="1" Grid.Column="1" Height="50" Width="240" 
+                                  HorizontalAlignment="Left" Background="#eeF6F6F6" ItemsSource="{Binding Path=Labeling.Light_label}">
+                                    </ListBox>
+                                    <ListBox Name="selectedMediumLabels" Grid.Row="2" Grid.Column="1" Height="50" Width="240" Margin="0,10,0,0"
+                                  HorizontalAlignment="Left" Background="#eeF6F6F6" ItemsSource="{Binding Path=Labeling.Medium_label}">
+                                    </ListBox>
+                                    <ListBox Name="selectedHeavyLabels" Grid.Row="3" Grid.Column="1" Height="50" Width="240" Margin="0,10,0,0"
+                                  HorizontalAlignment="Left" Background="#eeF6F6F6" ItemsSource="{Binding Path=Labeling.Heavy_label}">
+                                    </ListBox>
+                                    <ListView x:Name="labellist"  Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" Height="210" Width="320" Background="#efF6F6F6">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridViewColumn Header="Name" Width="110"  DisplayMemberBinding="{Binding Label_name}"/>
+                                                <GridViewColumn Header="Value" DisplayMemberBinding="{Binding Label_element}"/>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                    <StackPanel Name="lightBtn" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+                                        <Button Width="32" Height="20" Margin="5" Click="add_light_labels" Style="{StaticResource AddLBtnStyle}">
+                                            <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                        </Button>
+                                        <Button Width="32" Height="20" Margin="5" Click="remove_light_labels" Style="{StaticResource RemoveLBtnStyle}">
+                                            <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Name="mediumBtn" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
+                                        <Button Width="32" Height="20" Margin="5" Click="add_medium_labels" Style="{StaticResource AddMBtnStyle}">
+                                            <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                        </Button>
+                                        <Button Width="32" Height="20" Margin="5" Click="remove_medium_labels" Style="{StaticResource RemoveMBtnStyle}">
+                                            <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Name="heavyBtn" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center">
+                                        <Button Width="32" Height="20" Margin="5" Click="add_heavy_labels" Style="{StaticResource AddHBtnStyle}">
+                                            <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                        </Button>
+                                        <Button Width="32" Height="20" Margin="5" Click="remove_heavy_labels" Style="{StaticResource RemoveHBtnStyle}">
+                                            <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                        </Button>
+                                    </StackPanel>
+                                </Grid>
+                                <StackPanel Grid.Row="0" Orientation="Horizontal" Height="42">
+                                    <Label Content="Multiplicity :"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"/>
+                                    <ComboBox Name="MultiplicityType" SelectedIndex="{Binding Path=Labeling.Multiplicity_index}" Width="125" VerticalAlignment="Center" 
+                                   SelectionChanged="select_multiplicity_type">
+                                        <ComboBoxItem Name="multiplicity1">1</ComboBoxItem>
+                                        <ComboBoxItem>2</ComboBoxItem>
+                                        <ComboBoxItem>3</ComboBoxItem>
+                                    </ComboBox>
+                                </StackPanel>
+                            </Grid>
+                            <Expander Grid.Row="2" Name="QuantAdvanced" Expanded="pQuant_Expanded" IsExpanded="False" Margin="0,10,0,0">
+                                <Expander.Header>
+                                    <TextBlock VerticalAlignment="Center" >Advanced</TextBlock>
+                                </Expander.Header>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,10,0,0" Height="32" Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Width="220" >NUMBER_SCANS_HALF_CMTG :
+                                            <TextBlock.ToolTip>
+                                                <ToolTip Background="#ffe9ecef">
+                                                    <TextBox IsReadOnly="True" Width="220" TextWrapping="Wrap" Background="#ffe9ecef" BorderThickness="0">
+                                                        The number of MS1 scans along half of the chromatogram. Generally, it is 100 ~ 200.
+                                                    </TextBox>
+                                                </ToolTip>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                        <TextBox Name="number_scans_half_cmtg" VerticalAlignment="Center" Width="75" BorderBrush="DarkGray">
+                                            <TextBox.Text>
+                                                <Binding Path="Quant_advanced.Number_scans_half_cmtg" Mode="TwoWay">
+                                                    <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                    <Binding.ValidationRules>
+                                                        <DataErrorValidationRule />
+                                                        <ExceptionValidationRule />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                            <TextBox.ToolTip>
+                                                <ToolTip Background="#ffe9ecef">
+                                                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Background="#ffe9ecef" BorderThickness="0">
+                                                        You can only input integer number between 100 and 10000.
+                                                    </TextBox>
+                                                </ToolTip>
+                                            </TextBox.ToolTip>
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,10,0,0" Height="32" Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Width="220">PPM_FOR_CALIBRATION :
+                                            <TextBlock.ToolTip>
+                                                <ToolTip Background="#ffe9ecef">
+                                                    <TextBox IsReadOnly="True" Width="220" TextWrapping="Wrap" Background="#ffe9ecef" BorderThickness="0">
+                                                        The mass biases (ppm level) of the peaks in MS1 scans. If you calibrated your Mass Spec, it is 0.
+                                                    </TextBox>
+                                                </ToolTip>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                        <TextBox Name="ppm_for_calibration" VerticalAlignment="Center" Width="75" BorderBrush="DarkGray">
+                                            <TextBox.Text>
+                                                <Binding Path="Quant_advanced.Ppm_for_calibration" Mode="TwoWay">
+                                                    <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                    <Binding.ValidationRules>
+                                                        <DataErrorValidationRule />
+                                                        <ExceptionValidationRule />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="70,10,0,0" Height="32" Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Width="220">PPM_HALF_WIN_ACCURACY_PEAK :
+                                            <TextBlock.ToolTip>
+                                                <ToolTip Background="#ffe9ecef">
+                                                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Width="220" Background="#ffe9ecef" BorderThickness="0">
+                                                        Similar to precursor tolerance in the identification panel. 
+                                                     pQuant will find the experimental peaks in this window.
+                                                    </TextBox>
+                                                </ToolTip>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                        <TextBox Name="ppm_half_win_accuracy_peak" VerticalAlignment="Center" Width="75" BorderBrush="DarkGray">
+                                            <TextBox.Text>
+                                                <Binding Path="Quant_advanced.Ppm_half_win_accuracy_peak" Mode="TwoWay">
+                                                    <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                    <Binding.ValidationRules>
+                                                        <DataErrorValidationRule />
+                                                        <ExceptionValidationRule />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="0" Grid.Column="1" Margin="70,10,0,0" Height="32" Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Width="220">NUMBER_HOLE_IN_CMTG :
+                                            <TextBlock.ToolTip>
+                                                <ToolTip Background="#ffe9ecef">
+                                                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Width="220" Background="#ffe9ecef" BorderThickness="0">
+                                                        In general, the parameter is set to 2. It is used when pQuant find the start and the end points of the chromatograms.
+                                                    </TextBox>
+                                                </ToolTip>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                        <ComboBox Name="number_hole_in_cmtg" SelectedIndex="{Binding Path=Quant_advanced.Number_hole_in_cmtg}" Width="75" VerticalAlignment="Center">
+                                            <ComboBoxItem>1</ComboBoxItem>
+                                            <ComboBoxItem>2</ComboBoxItem>
+                                            <ComboBoxItem>3</ComboBoxItem>
+                                            <ComboBoxItem>4</ComboBoxItem>
+                                            <ComboBoxItem>5</ComboBoxItem>
+                                            <ComboBoxItem>6</ComboBoxItem>
+                                            <ComboBoxItem>7</ComboBoxItem>
+                                            <ComboBoxItem>8</ComboBoxItem>
+                                            <ComboBoxItem>9</ComboBoxItem>
+                                            <ComboBoxItem>10</ComboBoxItem>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Name="sample_rate_sp" Grid.Row="2" Grid.Column="0" Height="32" Margin="10,10,0,0" Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Width="310">TYPE_SAME_START_END_BETWEEN_EVIDENCE :
+                                            <TextBlock.ToolTip>
+                                                <ToolTip Background="#ffe9ecef">
+                                                    <TextBox IsReadOnly="True" TextWrapping="Wrap" Width="220" Background="#ffe9ecef" BorderThickness="0">
+                                                        The chromatograms of the light and heavy peptide have the dependent or the independent start and end points. 
+                                                   In general, the sample is 1:1 mixed.
+                                                    </TextBox>
+                                                </ToolTip>
+                                            </TextBlock.ToolTip>
+                                        </TextBlock>
+                                        <ComboBox Name="type_same_start_end_between_evidence" SelectedIndex="{Binding Path=Quant_advanced.Type_same_start_end_between_evidence}" Width="180" VerticalAlignment="Center">
+                                            <ComboBoxItem>For 1:1 Mixed Samples</ComboBoxItem>
+                                            <ComboBoxItem>For 10:1 or 1:10 Mixed Samples</ComboBoxItem>
+                                            <ComboBoxItem>Independent</ComboBoxItem>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Name="calibriation_15N_sp" Grid.Row="2" Grid.Column="1" Height="32" Margin="70,10,0,0" Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center">
+                                                ELEMENT_ENRICHMENT_CALIBRIATION :
+                                        </TextBlock>
+                                        <ComboBox Name="ll_element_enrichment_calibration" SelectedIndex="{Binding Path=Quant_advanced.Ll_element_enrichment_calibration}" Width="75" VerticalAlignment="Center">
+                                            <ComboBoxItem ToolTip="It is not 15N quantitation">none</ComboBoxItem>
+                                            <ComboBoxItem ToolTip="It is 15N quantitation, but the enrichment of 15N is fixed in element.ini.">15N</ComboBoxItem>
+                                            <ComboBoxItem ToolTip="It is 15N quantitation, pQuant will calculate the atomic percent enrichment of 15N for every peptide.">13C</ComboBoxItem>
+                                        </ComboBox>
+                                    </StackPanel>
+                                </Grid>
+                            </Expander>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label Content="Type :"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"/>
+                                <ComboBox Name="QuanType" SelectedIndex="{Binding Path=Quantitation_type}" Width="125" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="select_quantitation_type">
+                                    <ComboBoxItem>Label-None</ComboBoxItem>
+                                    <ComboBoxItem>Labeling</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Summary" Name="SummaryTab" FocusVisualStyle="{x:Null}">
+                    <ScrollViewer Name="SumScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,0,0,0" SizeChanged="SumScrollChanged">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ToolBar Grid.Row="0" Height="28" ToolBarTray.IsLocked="True" Loaded="ToolBar_Loaded_1">
+                                <Button Name="sumSave" Style="{StaticResource ButtonOpacity}" Click="SaveTask">
+                                    <Button.ToolTip>                                     
+                                        <ToolTip>
+                                            Save the configuration
+                                        </ToolTip>
+                                    </Button.ToolTip>
+                                    <Image Source="images/icons/save.gif"/>
+                                </Button>
+                                <Button Name="sumRun" Margin="5,0,5,0" Click="StartSearch" Style="{StaticResource ButtonOpacity}">
+                                    <Button.ToolTip>                                        
+                                        <ToolTip>
+                                            Start to run
+                                        </ToolTip>
+                                    </Button.ToolTip>
+                                    <Image Source="images/icons/run.png"></Image>
+                                </Button>
+                                <Button Name="exp_pdf" Click="export_pdf">
+                                    <Button.ToolTip>                                       
+                                        <ToolTip>
+                                            Export this configuration to a pdf file
+                                        </ToolTip>
+                                    </Button.ToolTip>
+                                    <Image Source="images/icons/pdf_export.png" Width="18" Height="18"></Image>
+                                </Button>
+                            </ToolBar>
+                            <!--<ScrollViewer Grid.Row="1" Name="SumScroll" MaxHeight="600" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">-->
+                            <Grid Grid.Row ="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <Grid x:Name="all_summary" Grid.Row="0" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Expander Name="FiRScroll" Grid.Row="0" Header="MS Data" IsExpanded="True">
+                                        <ListView Name="fileReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickMSData" ItemContainerStyle="{StaticResource SummaryListView}">
+                                            <ListView.View>
+                                                <GridView>
+                                                    <GridViewColumn Header="Property" Width="195" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                    <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                                    <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                </GridView>
+                                            </ListView.View>
+                                        </ListView>
+                                    </Expander>
+                                    <Expander Name="SRScroll" Grid.Row="1" Header="Identification" IsExpanded="True">
+                                        <ListView Name="searchReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickSearch" ItemContainerStyle="{StaticResource SummaryListView}">
+                                            <ListView.View>
+                                                <GridView>
+                                                    <GridViewColumn Header="Property" Width="195" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                    <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                                    <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                </GridView>
+                                            </ListView.View>
+                                        </ListView>
+                                    </Expander>
+                                    <Expander Name="QRScroll" Grid.Row="2" Header="Quantitation" IsExpanded="True">
+                                        <ListView Name="quantReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickQuant" ItemContainerStyle="{StaticResource SummaryListView}">
+                                            <ListView.View>
+                                                <GridView>
+                                                    <GridViewColumn Header="Property" Width="195" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                    <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                                    <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                </GridView>
+                                            </ListView.View>
+                                        </ListView>
+                                    </Expander>
+                                </Grid>
+                                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                                    <Button Name="saveBtn" Width="80" Height="30" Margin="0,0,20,0"
+                                            Click="SaveTask" Style="{StaticResource ButtonStyle1}">Save</Button>
+                                    <Button Name="startBtn" Width="80" Height="30" Margin="0,0,20,0" HorizontalAlignment="Right" 
+                                            Click="StartSearch" Style="{StaticResource ButtonStyle1}">Start</Button>
+                                    
+                                    <Button Name="stopBtn" Width="80" Height="30" HorizontalAlignment="Right" 
+                                            Click="StopTask" Style="{StaticResource ButtonStyle1}">Stop</Button>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+           </TabControl>
+           <GridSplitter Grid.Row="1" Background="LightGray" HorizontalAlignment="Stretch" Height="2" ResizeBehavior="PreviousAndNext" />
+           <GroupBox Name="outputInfo" Grid.Row="2" BorderBrush="DarkGray" Height="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True" Background="White">
+                <GroupBox.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="images/icons/output.png"></Image>
+                        <Label Style="{StaticResource LabelStyle}">Output</Label>
+                    </StackPanel>
+                </GroupBox.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="28" Orientation="Horizontal">
+                        <Button Name="saveReportBtn" Click="Save_Output_Report" Width="85" Height="26" HorizontalAlignment="Left" FontStyle="Italic">
+                            Save Report
+                        </Button>
+                    </StackPanel>
+                    <TextBox Grid.Row="1" BorderBrush="White" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden" Name="Output" TextWrapping="Wrap" IsReadOnly="True" 
+                             FontFamily="Courier New" Background="White" Foreground="Black">
+
+                    </TextBox>
+                </Grid>
+           </GroupBox>
+        </Grid>
+        <StatusBar Name="statusPanel" Background="#007acc" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Stretch" Height="25" Foreground="White">
+            <StackPanel Orientation="Horizontal" Background="#007acc">
+                <TextBlock Name="status1">Ready</TextBlock>
+            </StackPanel>
+        </StatusBar>
+    </Grid>
+</Window>

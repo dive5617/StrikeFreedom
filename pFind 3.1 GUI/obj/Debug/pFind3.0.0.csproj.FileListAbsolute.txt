@@ -1,0 +1,96 @@
+D:\pFind\trunk\bin\Debug\pFind.exe.config
+D:\pFind\trunk\bin\Debug\pFind.exe
+D:\pFind\trunk\bin\Debug\pFind.pdb
+D:\pFind\trunk\bin\Debug\Common.dll
+D:\pFind\trunk\bin\Debug\CrashReportManager.dll
+D:\pFind\trunk\obj\Debug\pFind3.0.0.csprojResolveAssemblyReference.cache
+D:\pFind\trunk\obj\Debug\About.baml
+D:\pFind\trunk\obj\Debug\DTabControl.baml
+D:\pFind\trunk\obj\Debug\License_Dialog.baml
+D:\pFind\trunk\obj\Debug\NewTask.baml
+D:\pFind\trunk\obj\Debug\Settings.baml
+D:\pFind\trunk\obj\Debug\Video.baml
+D:\pFind\trunk\obj\Debug\App.baml
+D:\pFind\trunk\obj\Debug\About.g.cs
+D:\pFind\trunk\obj\Debug\License_Dialog.g.cs
+D:\pFind\trunk\obj\Debug\MainWindow.g.cs
+D:\pFind\trunk\obj\Debug\NewTask.g.cs
+D:\pFind\trunk\obj\Debug\Settings.g.cs
+D:\pFind\trunk\obj\Debug\Video.g.cs
+D:\pFind\trunk\obj\Debug\App.g.cs
+D:\pFind\trunk\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\pFind\trunk\obj\Debug\pFind_MarkupCompile.cache
+D:\pFind\trunk\obj\Debug\pFind_MarkupCompile.lref
+D:\pFind\trunk\obj\Debug\ButtonStyle.baml
+D:\pFind\trunk\obj\Debug\MainWindow.baml
+D:\pFind\trunk\obj\Debug\Style.baml
+D:\pFind\trunk\obj\Debug\pFind.g.resources
+D:\pFind\trunk\obj\Debug\pFind.Properties.Resources.resources
+D:\pFind\trunk\obj\Debug\pFind3.0.0.csproj.GenerateResource.Cache
+D:\pFind\trunk\obj\Debug\pFind.exe
+D:\pFind\trunk\obj\Debug\pFind.pdb
+D:\About pFind\pFind\trunk-ms2\bin\Debug\pFind.exe.config
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind.exe
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind.pdb
+D:\About pFind\pFind\trunk-ms2\bin\Debug\pFind.exe
+D:\About pFind\pFind\trunk-ms2\bin\Debug\pFind.pdb
+D:\About pFind\pFind\trunk-ms2\bin\Debug\Common.dll
+D:\About pFind\pFind\trunk-ms2\bin\Debug\CrashReportManager.dll
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind3.0.0.csprojResolveAssemblyReference.cache
+D:\About pFind\pFind\trunk-ms2\obj\Debug\About.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\DTabControl.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\License_Dialog.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\NewTask.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\Settings.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\Video.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\App.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\About.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\License_Dialog.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\MainWindow.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\NewTask.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\Settings.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\Video.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\App.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind_MarkupCompile.cache
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind_MarkupCompile.lref
+D:\About pFind\pFind\trunk-ms2\obj\Debug\ButtonStyle.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\MainWindow.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\Style.baml
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind.g.resources
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind.Properties.Resources.resources
+D:\About pFind\pFind\trunk-ms2\obj\Debug\pFind3.0.0.csproj.GenerateResource.Cache
+D:\pFind\trunk-ms2\bin\Debug\pFind.exe.config
+D:\pFind\trunk-ms2\bin\Debug\pFind.exe
+D:\pFind\trunk-ms2\bin\Debug\pFind.pdb
+D:\pFind\trunk-ms2\bin\Debug\Common.dll
+D:\pFind\trunk-ms2\bin\Debug\CrashReportManager.dll
+D:\pFind\trunk-ms2\obj\Debug\pFind3.0.0.csprojResolveAssemblyReference.cache
+D:\pFind\trunk-ms2\obj\Debug\About.baml
+D:\pFind\trunk-ms2\obj\Debug\DTabControl.baml
+D:\pFind\trunk-ms2\obj\Debug\License_Dialog.baml
+D:\pFind\trunk-ms2\obj\Debug\NewTask.baml
+D:\pFind\trunk-ms2\obj\Debug\Settings.baml
+D:\pFind\trunk-ms2\obj\Debug\Video.baml
+D:\pFind\trunk-ms2\obj\Debug\App.baml
+D:\pFind\trunk-ms2\obj\Debug\About.g.cs
+D:\pFind\trunk-ms2\obj\Debug\License_Dialog.g.cs
+D:\pFind\trunk-ms2\obj\Debug\MainWindow.g.cs
+D:\pFind\trunk-ms2\obj\Debug\NewTask.g.cs
+D:\pFind\trunk-ms2\obj\Debug\Settings.g.cs
+D:\pFind\trunk-ms2\obj\Debug\Video.g.cs
+D:\pFind\trunk-ms2\obj\Debug\App.g.cs
+D:\pFind\trunk-ms2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\pFind\trunk-ms2\obj\Debug\pFind_MarkupCompile.cache
+D:\pFind\trunk-ms2\obj\Debug\pFind_MarkupCompile.lref
+D:\pFind\trunk-ms2\obj\Debug\ButtonStyle.baml
+D:\pFind\trunk-ms2\obj\Debug\MainWindow.baml
+D:\pFind\trunk-ms2\obj\Debug\Style.baml
+D:\pFind\trunk-ms2\obj\Debug\pFind.g.resources
+D:\pFind\trunk-ms2\obj\Debug\pFind.Properties.Resources.resources
+D:\pFind\trunk-ms2\obj\Debug\pFind3.0.0.csproj.GenerateResource.Cache
+D:\pFind\trunk-ms2\obj\Debug\pFind.exe
+D:\pFind\trunk-ms2\obj\Debug\pFind.pdb
+E:\code\pFind3\Trunk\trunk_ms2\bin\Debug\pFind.exe.config
+E:\code\pFind3\Trunk\trunk_ms2\obj\Debug\pFind.exe
+E:\code\pFind3\Trunk\trunk_ms2\obj\Debug\pFind.pdb

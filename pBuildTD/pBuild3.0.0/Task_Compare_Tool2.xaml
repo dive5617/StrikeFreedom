@@ -1,0 +1,27 @@
+﻿<Window x:Class="pBuild.Task_Compare_Tool2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Task_Compare_Tool2" Height="400" Width="300" Icon="pBuild.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Margin="3" VerticalAlignment="Center">pFind 3.0 's Task</TextBlock>
+        <ListView x:Name="all_tasks_lv" Grid.Row="1" Grid.Column="0" Margin="3"></ListView>
+        <Button x:Name="pFind_open_btn" Grid.Row="1" Grid.Column="1" Margin="3" Click="open_btn_clk" Height="25" Width="50" HorizontalAlignment="Right">Open</Button>
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="3" VerticalAlignment="Center">MaxQuant 's msms.txt</TextBlock>
+        <ListView x:Name="all_tasks_lv2" Grid.Row="3" Grid.Column="0" Margin="3"></ListView>
+        <Button x:Name="maxQuant_open_btn" Grid.Row="3" Grid.Column="1" Margin="3" Click="open_btn_clk" Height="25" Width="50" HorizontalAlignment="Right">Open</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Height="25" Width="70" HorizontalAlignment="Center" Margin="3" Click="compare_btn_clk">Compare</Button>
+        <StackPanel x:Name="compare_result_sp"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal"></StackPanel>
+    </Grid>
+</Window>

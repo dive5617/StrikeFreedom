@@ -1,0 +1,26 @@
+# This is a standard pParseTD configuration file
+# For help: mail to wangruimin@ict.ac.cn
+# Time: 2016/10/24 13:21:44
+
+[Basic Options]
+datanum=4
+datapath1=L:\pTop\Data\NIBS-Ecoli\P30859\P30859_Normal_mass_range_5mTorr_S_lens_100_Q_5Da_SID_20_Ave100_precursor_1017.63_ETD_120K_2_20150127060909.raw
+datapath2=L:\pTop\Data\NIBS-Ecoli\P30859\P30859_Normal_mass_range_5mTorr_S_lens_100_Q_5Da_SID_20_Ave100_precursor_1017.63_ETD_120K_2.raw
+datapath3=L:\pTop\Data\NIBS-Ecoli\P30859\P30859_Normal_mass_range_5mTorr_S_lens_100_Q_5Da_SID_20_Ave100_precursor_1017.63_ETD_HCD15_120K.raw
+datapath4=L:\pTop\Data\NIBS-Ecoli\P30859\P30859_Normal_mass_range_5mTorr_S_lens_100_Q_5Da_SID_20_Ave100_precursor_1017.63_ETD_HCD15_120K_2.raw
+input_format=raw
+
+[Advanced Options]
+max_charge=30
+max_mass=50000
+SN_threshold=1.5
+mz_error_tolerance=20
+
+label=none
+co-elute=1
+isolation_width=10
+
+
+[About pXtract]
+m/z=5
+Intensity=1

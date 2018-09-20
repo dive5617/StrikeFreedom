@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1895" height="666.3361" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,537.9953)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0</text>
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,477.6853)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">20</text>
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,417.3752)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">40</text>
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,357.0652)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">60</text>
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,296.7552)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">80</text>
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,236.4451)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">100</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(4,387.2204) rotate(-90)" font-family="Calibri" font-size="15" font-weight="700" fill="black">Relative Intensity (%)</text>
+<polyline points="54.058,537.9953 47.058,537.9953" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="54.058,477.6853 47.058,477.6853" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="54.058,417.3752 47.058,417.3752" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="54.058,357.0652 47.058,357.0652" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="54.058,296.7552 47.058,296.7552" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="54.058,236.4451 47.058,236.4451" style="fill:none;stroke:black;stroke-width:1" />
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(207.1695,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">998</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(390.8637,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">1995</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(574.5579,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">2993</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(758.2521,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">3990</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(941.9463,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">4988</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(1125.6405,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">5986</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(1309.3347,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">6983</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(1493.0289,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">7981</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(1676.7231,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">8978</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(1860.4173,643.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">9976</text>
+<text dominant-baseline="baseline" text-anchor="middle" transform="translate(972.529,662.3361)" font-family="Calibri" font-size="15" font-weight="700" fill="black">m/z</text>
+<polyline points="207.1695,632.2301 207.1695,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="390.8637,632.2301 390.8637,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="574.5579,632.2301 574.5579,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="758.2521,632.2301 758.2521,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="941.9463,632.2301 941.9463,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="1125.6405,632.2301 1125.6405,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="1309.3347,632.2301 1309.3347,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="1493.0289,632.2301 1493.0289,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="1676.7231,632.2301 1676.7231,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<polyline points="1860.4173,632.2301 1860.4173,639.2301" style="fill:none;stroke:black;stroke-width:1" />
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,632.2301)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">-20</text>
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,594.5363)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">0</text>
+<text dominant-baseline="middle" text-anchor="end" transform="translate(43.058,556.8425)" font-family="Segoe UI" font-size="12" font-weight="400" fill="black">20</text>
+<text dominant-baseline="hanging" text-anchor="middle" transform="translate(4,594.5363) rotate(-90)" font-family="Calibri" font-size="15" font-weight="700" fill="black">ppm</text>
+<polyline points="54.058,632.2301 1891,632.2301" style="fill:none;stroke:rgb(0,0,0);stroke-width:1.5;stroke-opacity:0.250980392156863;stroke-dasharray:1,1" />
+<polyline points="54.058,594.5363 1891,594.5363" style="fill:none;stroke:rgb(0,0,0);stroke-width:1.5;stroke-opacity:0.250980392156863;stroke-dasharray:1,1" />
+<polyline points="54.058,556.8425 1891,556.8425" style="fill:none;stroke:rgb(0,0,0);stroke-width:1.5;stroke-opacity:0.250980392156863;stroke-dasharray:1,1" />
+<polyline points="54.058,632.2301 47.058,632.2301" style="fill:none;stroke:black;stroke-width:1.5" />
+<polyline points="54.058,594.5363 47.058,594.5363" style="fill:none;stroke:black;stroke-width:1.5" />
+<polyline points="54.058,556.8425 47.058,556.8425" style="fill:none;stroke:black;stroke-width:1.5" />
+
+
+
+
+
+
+
+<polyline points="54.058,537.9953 1891,537.9953" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="63.2648,537.9953 63.2648,536.0705" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="67.5032,537.9953 67.5032,532.1165" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="79.6465,537.9953 79.6465,536.216" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="150.719,537.9953 150.719,534.9704" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="177.7882,537.9953 177.7882,535.5996" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="177.8222,537.9953 177.8222,535.2486" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="179.8836,537.9953 179.8836,536.0484" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="181.2485,537.9953 181.2485,535.0086" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="187.0723,537.9953 187.0723,536.1764" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="188.4554,537.9953 188.4554,536.2212" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="190.0122,537.9953 190.0122,534.8159" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="191.678,537.9953 191.678,536.1638" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="191.7257,537.9953 191.7257,534.1644" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="192.0488,537.9953 192.0488,535.7554" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="192.1677,537.9953 192.1677,532.5908" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="192.4884,537.9953 192.4884,534.7172" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="193.48,537.9953 193.48,530.7313" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="193.7587,537.9953 193.7587,535.1145" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="194.0478,537.9953 194.0478,533.4948" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="194.3115,537.9953 194.3115,534.2774" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="194.3512,537.9953 194.3512,534.7478" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="194.7303,537.9953 194.7303,531.6187" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="195.5499,537.9953 195.5499,530.1083" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="197.0372,537.9953 197.0372,522.9778" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="200.8076,537.9953 200.8076,534.5342" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="202.0144,537.9953 202.0144,534.5054" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="210.0107,537.9953 210.0107,533.8809" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="210.0303,537.9953 210.0303,531.9014" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="210.7868,537.9953 210.7868,536.1286" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="212.784,537.9953 212.784,536.2025" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="212.868,537.9953 212.868,534.6658" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="214.0931,537.9953 214.0931,536.0413" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="214.2178,537.9953 214.2178,534.5896" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="214.7476,537.9953 214.7476,534.8589" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="215.652,537.9953 215.652,536.0661" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="220.9699,537.9953 220.9699,536.1155" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="221.9917,537.9953 221.9917,536.2077" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="233.1263,537.9953 233.1263,531.5105" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="265.0085,537.9953 265.0085,528.607" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="334.61,537.9953 334.61,535.6841" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="338.4953,537.9953 338.4953,534.1314" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="347.1754,537.9953 347.1754,532.6535" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="349.3971,537.9953 349.3971,528.9212" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="354.4303,537.9953 354.4303,534.4233" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="357.2483,537.9953 357.2483,530.2113" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="360.4162,537.9953 360.4162,525.1994" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="360.7084,537.9953 360.7084,528.465" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="361.4819,537.9953 361.4819,527.0467" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="361.7696,537.9953 361.7696,534.0499" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="361.8179,537.9953 361.8179,527.528" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="363.1415,537.9953 363.1415,533.5975" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="363.3605,537.9953 363.3605,533.1446" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="363.7496,537.9953 363.7496,527.2319" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="364.2284,537.9953 364.2284,531.9222" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="365.303,537.9953 365.303,534.6922" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="367.7116,537.9953 367.7116,533.451" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="369.4943,537.9953 369.4943,523.8806" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="371.162,537.9953 371.162,533.6756" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="371.6419,537.9953 371.6419,527.7661" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="387.6525,537.9953 387.6525,531.8219" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="395.2045,537.9953 395.2045,532.7507" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="404.8355,537.9953 404.8355,529.744" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="405.0201,537.9953 405.0201,532.191" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="420.4368,537.9953 420.4368,535.0046" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="430.4175,537.9953 430.4175,529.4303" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="518.1349,537.9953 518.1349,532.9693" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="520.16,537.9953 520.16,533.8548" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="532.8194,537.9953 532.8194,534.9083" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="534.9046,537.9953 534.9046,526.6218" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="536.8397,537.9953 536.8397,532.8747" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="541.2955,537.9953 541.2955,532.2086" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="542.0574,537.9953 542.0574,522.2107" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="556.2647,537.9953 556.2647,533.6592" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="556.6149,537.9953 556.6149,534.6317" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="558.8552,537.9953 558.8552,534.1611" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="572.0831,537.9953 572.0831,531.1125" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="572.4616,537.9953 572.4616,528.1402" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="581.6086,537.9953 581.6086,531.5963" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="582.9547,537.9953 582.9547,534.3564" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="585.1847,537.9953 585.1847,534.1037" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="594.8417,537.9953 594.8417,534.6197" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="618.7168,537.9953 618.7168,534.4433" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="618.8804,537.9953 618.8804,535.037" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="683.9071,537.9953 683.9071,534.9777" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="690.9466,537.9953 690.9466,531.4165" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="692.6062,537.9953 692.6062,534.1517" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="698.0282,537.9953 698.0282,519.3729" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="701.133,537.9953 701.133,530.9427" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="705.8268,537.9953 705.8268,531.1832" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="720.0444,537.9953 720.0444,531.7045" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="733.3081,537.9953 733.3081,526.9744" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="749.6453,537.9953 749.6453,535.1525" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="753.4969,537.9953 753.4969,532.6032" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="776.7729,537.9953 776.7729,453.2938" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="776.9533,537.9953 776.9533,529.9031" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="779.7387,537.9953 779.7387,530.1012" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="796.3157,537.9953 796.3157,528.6703" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="796.3174,537.9953 796.3174,517.8745" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="800.3158,537.9953 800.3158,531.4594" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="854.5981,537.9953 854.5981,532.9144" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="856.5211,537.9953 856.5211,532.9809" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="856.806,537.9953 856.806,529.4958" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="857.8128,537.9953 857.8128,533.9452" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="860.9414,537.9953 860.9414,525.9425" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="861.0466,537.9953 861.0466,526.1504" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="863.3395,537.9953 863.3395,527.4174" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="867.2001,537.9953 867.2001,532.3091" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="871.0899,537.9953 871.0899,521.8758" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="871.1799,537.9953 871.1799,514.5896" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="873.2952,537.9953 873.2952,529.387" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="873.4281,537.9953 873.4281,534.7523" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="877.7136,537.9953 877.7136,533.6721" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="878.7775,537.9953 878.7775,532.5123" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="880.0465,537.9953 880.0465,521.6184" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="880.1395,537.9953 880.1395,502.79" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="880.7963,537.9953 880.7963,506.3749" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="881.2083,537.9953 881.2083,526.5095" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="947.9732,537.9953 947.9732,530.5539" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="968.9867,537.9953 968.9867,532.2758" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="980.5463,537.9953 980.5463,531.8079" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="980.7254,537.9953 980.7254,514.9551" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1000.2711,537.9953 1000.2711,439.943" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1000.4546,537.9953 1000.4546,530.127" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1006.201,537.9953 1006.201,528.1285" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1037.0674,537.9953 1037.0674,533.7753" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1042.8124,537.9953 1042.8124,528.8486" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1047.3245,537.9953 1047.3245,524.5478" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1047.9867,537.9953 1047.9867,517.6733" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1058.2945,537.9953 1058.2945,533.1114" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1058.8463,537.9953 1058.8463,530.198" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1067.5531,537.9953 1067.5531,531.5119" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1204.5785,537.9953 1204.5785,521.3515" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1225.7931,537.9953 1225.7931,523.5599" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1229.8703,537.9953 1229.8703,530.8444" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1346.6273,537.9953 1346.6273,509.8928" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1372.2084,537.9953 1372.2084,517.0628" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1377.1866,537.9953 1377.1866,520.9356" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1380.506,537.9953 1380.506,527.1559" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1386.397,537.9953 1386.397,529.0213" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1438.5435,537.9953 1438.5435,528.8928" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1458.7094,537.9953 1458.7094,520.9357" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1473,537.9953 1473,526.7543" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1510.2076,537.9953 1510.2076,524.1723" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1514.1196,537.9953 1514.1196,529.6839" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1516.5138,537.9953 1516.5138,527.3125" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1543.9153,537.9953 1543.9153,513.6269" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1554.0648,537.9953 1554.0648,511.2098" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1573.8793,537.9953 1573.8793,512.4549" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1574.3286,537.9953 1574.3286,524.8972" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1578.8528,537.9953 1578.8528,492.9493" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1582.4236,537.9953 1582.4236,511.1968" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1630.4997,537.9953 1630.4997,530.1049" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1671.1457,537.9953 1671.1457,512.2262" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1683.4923,537.9953 1683.4923,528.6635" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1693.8216,537.9953 1693.8216,515.2732" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1696.9472,537.9953 1696.9472,431.3323" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1699.8922,537.9953 1699.8922,399.0812" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1701.7335,537.9953 1701.7335,479.7844" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1704.3025,537.9953 1704.3025,490.1805" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1706.1322,537.9953 1706.1322,525.965" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1708.4415,537.9953 1708.4415,515.9589" style="fill:none;stroke:rgb(255,255,255);stroke-width:3;stroke-linejoin:bevel" />
+<polyline points="1732.2057,537.9953 1732.2057,529.2951" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1732.416,537.9953 1732.416,447.1284" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1734.5962,537.9953 1734.5962,507.5471" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1734.9723,537.9953 1734.9723,522.6511" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1739.7543,537.9953 1739.7543,425.8415" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1740.7815,537.9953 1740.7815,504.0246" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1742.3321,537.9953 1742.3321,430.086" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1743.4041,537.9953 1743.4041,506.7369" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1745.0899,537.9953 1745.0899,294.4201" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1745.4815,537.9953 1745.4815,529.2738" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1747.4905,537.9953 1747.4905,424.3369" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1752.8342,537.9953 1752.8342,236.4451" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1754.8484,537.9953 1754.8484,453.1678" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1757.4223,537.9953 1757.4223,264.0144" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1759.1381,537.9953 1759.1381,483.3266" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1760.5512,537.9953 1760.5512,495.5502" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<polyline points="1881.7932,537.9953 1881.7932,526.5926" style="fill:none;stroke:black;stroke-width:2;stroke-linejoin:bevel" />
+<rect x="231.1263" y="595.3119" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="336.4953" y="605.4879" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="402.8355" y="595.9428" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="428.4175" y="598.0192" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="534.8397" y="598.27" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="570.4616" y="599.4087" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="616.8804" y="596.8005" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="731.3081" y="596.8472" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="774.7729" y="595.235" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="794.3174" y="597.1913" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="978.7254" y="598.5407" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="998.2711" y="597.7307" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="1202.5785" y="601.6352" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="1344.6273" y="595.0199" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="1370.2084" y="596.8897" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<rect x="1436.5435" y="601.6402" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="1541.9153" y="599.7174" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="1628.4997" y="600.2954" width="4" height="4" style="fill:rgb(0,128,0);stroke:none;" />
+<rect x="1706.4415" y="596.4393" width="4" height="4" style="fill:rgb(202,29,82);stroke:none;" />
+<polyline points="161.3245,108.2094 161.3245,85.8156 172.3071,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="598.4309,108.2094 609.4135,108.2094 609.4135,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="609.4135,108.2094 609.4135,85.8156 620.3961,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="993.8036,108.2094 1004.7861,108.2094 1004.7861,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1072.8781,108.2094 1083.8607,108.2094 1083.8607,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1083.8607,108.2094 1083.8607,85.8156 1094.8433,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1336.4599,108.2094 1347.4424,108.2094 1347.4424,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1347.4424,108.2094 1347.4424,85.8156 1358.425,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1389.1762,108.2094 1400.1588,108.2094 1400.1588,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1558.3079,108.2094 1558.3079,85.8156 1569.2904,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1600.0416,108.2094 1611.0242,108.2094 1611.0242,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="1611.0242,108.2094 1611.0242,85.8156 1622.0068,85.8156" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="203.0583,164.7501 214.0409,164.7501 214.0409,142.3563" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="214.0409,164.7501 214.0409,142.3563 225.0234,142.3563" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="334.8492,164.7501 345.8317,164.7501 345.8317,142.3563" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="345.8317,164.7501 345.8317,142.3563 356.8143,142.3563" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="492.9982,164.7501 503.9808,164.7501 503.9808,142.3563" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="503.9808,164.7501 503.9808,142.3563 514.9634,142.3563" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="598.4309,164.7501 609.4135,164.7501 609.4135,142.3563" style="fill:none;stroke:black;stroke-width:1;stroke-linejoin:bevel" />
+<polyline points="233.1263,537.9956 233.1263,531.5105" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(233.1263,532.5105) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y10+</text>
+<polyline points="338.4953,537.9956 338.4953,534.1314" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(338.4953,535.1314) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y16+</text>
+<polyline points="404.8355,537.9956 404.8355,529.744" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(404.8355,530.744) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b19+</text>
+<polyline points="430.4175,537.9956 430.4175,529.4303" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(430.4175,530.4303) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y21+</text>
+<polyline points="536.8397,537.9956 536.8397,532.8747" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(536.8397,533.8747) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b49++</text>
+<polyline points="572.4616,537.9956 572.4616,528.1402" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(572.4616,529.1402) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y28+</text>
+<polyline points="618.8804,537.9956 618.8804,534.9798" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(618.8804,535.9798) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y30+</text>
+<polyline points="733.3081,537.9956 733.3081,526.9744" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(733.3081,527.9744) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b34+</text>
+<polyline points="776.7729,537.9956 776.7729,453.2938" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(776.7729,454.2938) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y38+</text>
+<polyline points="796.3174,537.9956 796.3174,517.8745" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(796.3174,518.8745) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b37+</text>
+<polyline points="980.7254,537.9956 980.7254,514.9551" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(980.7254,515.9551) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y48+</text>
+<polyline points="1000.2711,537.9956 1000.2711,439.943" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1000.2711,440.943) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b47+</text>
+<polyline points="1204.5785,537.9956 1204.5785,521.3515" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1204.5785,522.3515) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b57+</text>
+<polyline points="1346.6273,537.9956 1346.6273,509.8928" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1346.6273,510.8928) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b64+</text>
+<polyline points="1372.2084,537.9956 1372.2084,517.0628" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1372.2084,518.0628) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y66+</text>
+<polyline points="1438.5435,537.9956 1438.5435,528.8928" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1438.5435,529.8928) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b69+</text>
+<polyline points="1543.9153,537.9956 1543.9153,513.6269" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1543.9153,514.6269) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b75+</text>
+<polyline points="1630.4997,537.9956 1630.4997,530.1049" style="fill:none;stroke:rgb(0,128,0);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1630.4997,531.1049) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(0,128,0)">b79+</text>
+<polyline points="1708.4415,537.9956 1708.4415,515.9589" style="fill:none;stroke:rgb(202,29,82);stroke-width:3" />
+<text dominant-baseline="hanging" text-anchor="start" transform="translate(1708.4415,516.9589) rotate(-90)" font-family="Segoe UI" font-size="12" font-weight="400" fill="rgb(202,29,82)">y83+</text>
+<polygon points="68.4274,66.823 68.4274,52.77 126.9264,52.77 126.9264,66.823" style="fill:none;stroke:none;" />
+<polygon points="123.1154,66.823 123.1154,52.77 189.8314,52.77 189.8314,66.823" style="fill:none;stroke:none;" />
+<polygon points="190.7389,66.823 190.7389,52.77 250.2369,52.77 250.2369,66.823" style="fill:none;stroke:none;" />
+<polygon points="249.8687,66.823 249.8687,52.77 397.8457,52.77 397.8457,66.823" style="fill:none;stroke:none;" />
+<polygon points="416.9916,66.823 416.9916,52.77 560.4596,52.77 560.4596,66.823" style="fill:none;stroke:none;" />
+<polygon points="570.4258,66.823 570.4258,52.77 697.3698,52.77 697.3698,66.823" style="fill:none;stroke:none;" />
+<polygon points="712.3639,66.823 712.3639,52.77 791.8239,52.77 791.8239,66.823" style="fill:none;stroke:none;" />
+<polygon points="791.5902,66.823 791.5902,52.77 827.1032,52.77 827.1032,66.823" style="fill:none;stroke:none;" />
+<polygon points="68.4274,35.4115 68.4274,21.3585 100.3944,21.3585 100.3944,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(72.4274,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="black">Title: </text>
+<polygon points="95.6848,35.4115 95.6848,21.3585 361.1298,21.3585 361.1298,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(99.6848,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="rgb(0,0,255)">20160306_YEAST_controlD_HD_A4_1.1042.1042.10.0.dta      </text>
+<polygon points="394.1361,35.4115 394.1361,21.3585 431.1071,21.3585 431.1071,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(398.1361,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="black">Mods: </text>
+<polygon points="427.6313,35.4115 427.6313,21.3585 566.5093,21.3585 566.5093,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(431.6313,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="rgb(0,0,255)">Acetyl[ProteinN-term] : 0,         </text>
+<polygon points="577.6833,35.4115 577.6833,21.3585 614.6543,21.3585 614.6543,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(581.6833,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="black">Label: </text>
+<polygon points="609.4125,35.4115 609.4125,21.3585 654.8525,21.3585 654.8525,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(613.4125,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="rgb(0,0,255)">None      </text>
+<polygon points="652.0246,35.4115 652.0246,21.3585 681.9846,21.3585 681.9846,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(656.0246,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="black">Info: </text>
+<polygon points="676.9327,35.4115 676.9327,21.3585 846.4197,21.3585 846.4197,35.4115" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(680.9327,35.4115)" font-family="Calibri" font-size="12" font-weight="700" fill="rgb(0,0,255)">20160306_YEAST_controlD_HD_A4_1</text>
+<polygon points="97.4152,89.1299 110.6667,89.1299 110.6667,112.2094 97.4152,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="middle" transform="translate(104.0409,108.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="rgb(255,0,0)">*</text>
+<polygon points="85.5972,71.2781 108.0409,71.2781 108.0409,88.7964 85.5972,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(104.0409,84.7964)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(255,0,0)">10+</text>
+<polygon points="109.0012,89.1299 125.9922,89.1299 125.9922,112.2094 109.0012,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(113.0012,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">S</text>
+<polygon points="157.3245,71.2781 170.0624,71.2781 170.0624,88.7964 157.3245,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(161.3245,81.7964)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="162.4661,73.1818 178.0467,73.1818 178.0467,88.7964 162.4661,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(166.4661,81.7964)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">83</text>
+<polygon points="135.3594,89.1299 153.1064,89.1299 153.1064,112.2094 135.3594,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(139.3594,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="161.7175,89.1299 179.4645,89.1299 179.4645,112.2094 161.7175,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(165.7175,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="188.0757,89.1299 206.5652,89.1299 206.5652,112.2094 188.0757,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(192.0757,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="214.4339,89.1299 232.1809,89.1299 232.1809,112.2094 214.4339,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(218.4339,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">R</text>
+<polygon points="240.7921,89.1299 258.5391,89.1299 258.5391,112.2094 240.7921,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(244.7921,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="267.1502,89.1299 285.6397,89.1299 285.6397,112.2094 267.1502,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(271.1502,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="293.5084,89.1299 309.7434,89.1299 309.7434,112.2094 293.5084,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(297.5084,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">F</text>
+<polygon points="319.8666,89.1299 338.3561,89.1299 338.3561,112.2094 319.8666,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(323.8666,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="346.2248,89.1299 363.2158,89.1299 363.2158,112.2094 346.2248,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(350.2248,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="372.5829,89.1299 390.3299,89.1299 390.3299,112.2094 372.5829,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(376.5829,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="398.9411,89.1299 416.6881,89.1299 416.6881,112.2094 398.9411,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(402.9411,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="425.2993,89.1299 442.2903,89.1299 442.2903,112.2094 425.2993,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(429.2993,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">S</text>
+<polygon points="451.6575,89.1299 468.6485,89.1299 468.6485,112.2094 451.6575,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(455.6575,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="478.0157,89.1299 495.7627,89.1299 495.7627,112.2094 478.0157,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(482.0157,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="504.3738,89.1299 520.6088,89.1299 520.6088,112.2094 504.3738,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(508.3738,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">L</text>
+<polygon points="530.732,89.1299 548.479,89.1299 548.479,112.2094 530.732,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(534.732,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="557.0902,89.1299 574.0812,89.1299 574.0812,112.2094 557.0902,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(561.0902,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">P</text>
+<polygon points="597.8329,123.3637 597.8329,111.7491 613.4135,111.7491 613.4135,123.3637" style="fill:none;stroke:none;" />
+<polygon points="591.0053,123.3637 591.0053,109.8454 604.2033,109.8454 604.2033,123.3637" style="fill:none;stroke:none;" />
+<polygon points="605.4135,71.2781 618.1514,71.2781 618.1514,88.7964 605.4135,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(609.4135,81.7964)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="610.5551,73.1818 626.1357,73.1818 626.1357,88.7964 610.5551,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(614.5551,81.7964)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">66</text>
+<polygon points="583.4484,89.1299 601.1954,89.1299 601.1954,112.2094 583.4484,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(587.4484,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="609.8065,89.1299 626.7975,89.1299 626.7975,112.2094 609.8065,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(613.8065,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">S</text>
+<polygon points="636.1647,89.1299 654.6542,89.1299 654.6542,112.2094 636.1647,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(640.1647,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Q</text>
+<polygon points="662.5229,89.1299 680.2699,89.1299 680.2699,112.2094 662.5229,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(666.5229,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="688.8811,89.1299 705.8721,89.1299 705.8721,112.2094 688.8811,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(692.8811,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">S</text>
+<polygon points="715.2392,89.1299 732.2302,89.1299 732.2302,112.2094 715.2392,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(719.2392,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Y</text>
+<polygon points="741.5974,89.1299 759.3444,89.1299 759.3444,112.2094 741.5974,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(745.5974,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="767.9556,89.1299 784.9466,89.1299 784.9466,112.2094 767.9556,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(771.9556,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="794.3138,89.1299 812.8033,89.1299 812.8033,112.2094 794.3138,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(798.3138,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Q</text>
+<polygon points="820.6719,89.1299 839.1614,89.1299 839.1614,112.2094 820.6719,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(824.6719,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="847.0301,89.1299 864.7771,89.1299 864.7771,112.2094 847.0301,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(851.0301,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="873.3883,89.1299 890.3793,89.1299 890.3793,112.2094 873.3883,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(877.3883,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="899.7465,89.1299 916.7375,89.1299 916.7375,112.2094 899.7465,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(903.7465,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Y</text>
+<polygon points="926.1046,89.1299 937.8441,89.1299 937.8441,112.2094 926.1046,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(930.1046,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">I</text>
+<polygon points="952.4628,89.1299 968.6978,89.1299 968.6978,112.2094 952.4628,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(956.4628,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">T</text>
+<polygon points="993.2056,123.3637 993.2056,111.7491 1008.7861,111.7491 1008.7861,123.3637" style="fill:none;stroke:none;" />
+<polygon points="986.3779,123.3637 986.3779,109.8454 999.576,109.8454 999.576,123.3637" style="fill:none;stroke:none;" />
+<polygon points="978.821,89.1299 996.568,89.1299 996.568,112.2094 978.821,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(982.821,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="1005.1792,89.1299 1022.9262,89.1299 1022.9262,112.2094 1005.1792,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1009.1792,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="1031.5374,89.1299 1049.2844,89.1299 1049.2844,112.2094 1031.5374,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1035.5374,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="1072.2801,123.3637 1072.2801,111.7491 1087.8607,111.7491 1087.8607,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1065.4525,123.3637 1065.4525,109.8454 1078.6505,109.8454 1078.6505,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1079.8607,71.2781 1092.5985,71.2781 1092.5985,88.7964 1079.8607,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1083.8607,81.7964)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="1085.0023,73.1818 1100.5828,73.1818 1100.5828,88.7964 1085.0023,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1089.0023,81.7964)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">48</text>
+<polygon points="1057.8955,89.1299 1075.6425,89.1299 1075.6425,112.2094 1057.8955,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1061.8955,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="1084.2537,89.1299 1102.0007,89.1299 1102.0007,112.2094 1084.2537,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1088.2537,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="1110.6119,89.1299 1127.6029,89.1299 1127.6029,112.2094 1110.6119,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1114.6119,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">V</text>
+<polygon points="1136.9701,89.1299 1154.7171,89.1299 1154.7171,112.2094 1136.9701,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1140.9701,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="1163.3282,89.1299 1181.8177,89.1299 1181.8177,112.2094 1163.3282,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1167.3282,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="1189.6864,89.1299 1207.4334,89.1299 1207.4334,112.2094 1189.6864,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1193.6864,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="1216.0446,89.1299 1233.0356,89.1299 1233.0356,112.2094 1216.0446,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1220.0446,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">V</text>
+<polygon points="1242.4028,89.1299 1260.8923,89.1299 1260.8923,112.2094 1242.4028,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1246.4028,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Q</text>
+<polygon points="1268.7609,89.1299 1285.7519,89.1299 1285.7519,112.2094 1268.7609,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1272.7609,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">P</text>
+<polygon points="1295.1191,89.1299 1312.1101,89.1299 1312.1101,112.2094 1295.1191,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1299.1191,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="1335.8619,123.3637 1335.8619,111.7491 1351.4424,111.7491 1351.4424,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1329.0342,123.3637 1329.0342,109.8454 1342.2323,109.8454 1342.2323,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1343.4424,71.2781 1356.1803,71.2781 1356.1803,88.7964 1343.4424,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1347.4424,81.7964)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="1348.584,73.1818 1364.1646,73.1818 1364.1646,88.7964 1348.584,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1352.584,81.7964)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">38</text>
+<polygon points="1321.4773,89.1299 1339.2243,89.1299 1339.2243,112.2094 1321.4773,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1325.4773,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="1347.8355,89.1299 1365.5825,89.1299 1365.5825,112.2094 1347.8355,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1351.8355,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">N</text>
+<polygon points="1388.5782,123.3637 1388.5782,111.7491 1404.1588,111.7491 1404.1588,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1381.7506,123.3637 1381.7506,109.8454 1394.9486,109.8454 1394.9486,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1374.1936,89.1299 1391.9406,89.1299 1391.9406,112.2094 1374.1936,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1378.1936,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="1400.5518,89.1299 1419.0413,89.1299 1419.0413,112.2094 1400.5518,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1404.5518,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="1426.91,89.1299 1443.901,89.1299 1443.901,112.2094 1426.91,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1430.91,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">V</text>
+<polygon points="1453.2682,89.1299 1469.5032,89.1299 1469.5032,112.2094 1453.2682,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1457.2682,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">F</text>
+<polygon points="1479.6264,89.1299 1498.1159,89.1299 1498.1159,112.2094 1479.6264,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1483.6264,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Q</text>
+<polygon points="1505.9845,89.1299 1524.474,89.1299 1524.474,112.2094 1505.9845,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1509.9845,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="1554.3079,71.2781 1567.0457,71.2781 1567.0457,88.7964 1554.3079,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1558.3079,81.7964)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="1559.4494,73.1818 1575.03,73.1818 1575.03,88.7964 1559.4494,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1563.4494,81.7964)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">30</text>
+<polygon points="1532.3427,89.1299 1549.3337,89.1299 1549.3337,112.2094 1532.3427,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1536.3427,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">V</text>
+<polygon points="1558.7009,89.1299 1576.4479,89.1299 1576.4479,112.2094 1558.7009,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1562.7009,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">H</text>
+<polygon points="1599.4436,123.3637 1599.4436,111.7491 1615.0242,111.7491 1615.0242,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1592.616,123.3637 1592.616,109.8454 1605.814,109.8454 1605.814,123.3637" style="fill:none;stroke:none;" />
+<polygon points="1607.0242,71.2781 1619.7621,71.2781 1619.7621,88.7964 1607.0242,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1611.0242,81.7964)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="1612.1658,73.1818 1627.7464,73.1818 1627.7464,88.7964 1612.1658,88.7964" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1616.1658,81.7964)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">28</text>
+<polygon points="1585.0591,89.1299 1602.8061,89.1299 1602.8061,112.2094 1585.0591,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1589.0591,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="1611.4172,89.1299 1628.4082,89.1299 1628.4082,112.2094 1611.4172,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1615.4172,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">S</text>
+<polygon points="1637.7754,89.1299 1655.5224,89.1299 1655.5224,112.2094 1637.7754,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1641.7754,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="1664.1336,89.1299 1681.1246,89.1299 1681.1246,112.2094 1664.1336,112.2094" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(1668.1336,103.2094)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="100.0409,137.3371 108.0409,137.3371 108.0409,145.3371 100.0409,145.3371" style="fill:none;stroke:none;" />
+<polygon points="109.0012,145.6706 126.7482,145.6706 126.7482,168.7501 109.0012,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(113.0012,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="135.3594,145.6706 153.8489,145.6706 153.8489,168.7501 135.3594,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(139.3594,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="161.7175,145.6706 179.4645,145.6706 179.4645,168.7501 161.7175,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(165.7175,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="202.4603,179.9044 202.4603,168.2898 218.0409,168.2898 218.0409,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(214.0409,174.9044)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(0,128,0)">64</text>
+<polygon points="195.6327,179.9044 195.6327,166.3861 208.8307,166.3861 208.8307,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(204.8307,174.9044)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(0,128,0)">b</text>
+<polygon points="210.0409,127.8188 222.7787,127.8188 222.7787,145.3371 210.0409,145.3371" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(214.0409,138.3371)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="215.1824,129.7225 230.763,129.7225 230.763,145.3371 215.1824,145.3371" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(219.1824,136.3371)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">21</text>
+<polygon points="188.0757,145.6706 205.8227,145.6706 205.8227,168.7501 188.0757,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(192.0757,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="214.4339,145.6706 232.1809,145.6706 232.1809,168.7501 214.4339,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(218.4339,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">N</text>
+<polygon points="240.7921,145.6706 258.5391,145.6706 258.5391,168.7501 240.7921,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(244.7921,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="267.1502,145.6706 284.1412,145.6706 284.1412,168.7501 267.1502,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(271.1502,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="293.5084,145.6706 311.9979,145.6706 311.9979,168.7501 293.5084,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(297.5084,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="334.2512,179.9044 334.2512,168.2898 349.8317,168.2898 349.8317,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(345.8317,174.9044)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(0,128,0)">69</text>
+<polygon points="327.4235,179.9044 327.4235,166.3861 340.6216,166.3861 340.6216,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(336.6216,174.9044)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(0,128,0)">b</text>
+<polygon points="341.8317,127.8188 354.5696,127.8188 354.5696,145.3371 341.8317,145.3371" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(345.8317,138.3371)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="346.9733,129.7225 362.5539,129.7225 362.5539,145.3371 346.9733,145.3371" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(350.9733,136.3371)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">16</text>
+<polygon points="319.8666,145.6706 338.3561,145.6706 338.3561,168.7501 319.8666,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(323.8666,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Q</text>
+<polygon points="346.2248,145.6706 364.7143,145.6706 364.7143,168.7501 346.2248,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(350.2248,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="372.5829,145.6706 389.5739,145.6706 389.5739,168.7501 372.5829,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(376.5829,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">E</text>
+<polygon points="398.9411,145.6706 415.9321,145.6706 415.9321,168.7501 398.9411,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(402.9411,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">S</text>
+<polygon points="425.2993,145.6706 441.5343,145.6706 441.5343,168.7501 425.2993,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(429.2993,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">L</text>
+<polygon points="451.6575,145.6706 469.4045,145.6706 469.4045,168.7501 451.6575,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(455.6575,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="492.4002,179.9044 492.4002,168.2898 507.9808,168.2898 507.9808,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(503.9808,174.9044)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(0,128,0)">75</text>
+<polygon points="485.5726,179.9044 485.5726,166.3861 498.7706,166.3861 498.7706,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(494.7706,174.9044)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(0,128,0)">b</text>
+<polygon points="499.9808,127.8188 512.7187,127.8188 512.7187,145.3371 499.9808,145.3371" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(503.9808,138.3371)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(202,29,82)">y</text>
+<polygon points="505.1224,129.7225 520.703,129.7225 520.703,145.3371 505.1224,145.3371" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(509.1224,136.3371)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(202,29,82)">10</text>
+<polygon points="478.0157,145.6706 495.7627,145.6706 495.7627,168.7501 478.0157,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(482.0157,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="504.3738,145.6706 522.8633,145.6706 522.8633,168.7501 504.3738,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(508.3738,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Q</text>
+<polygon points="530.732,145.6706 548.479,145.6706 548.479,168.7501 530.732,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(534.732,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="557.0902,145.6706 574.8372,145.6706 574.8372,168.7501 557.0902,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(561.0902,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">R</text>
+<polygon points="597.8329,179.9044 597.8329,168.2898 613.4135,168.2898 613.4135,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(609.4135,174.9044)" font-family="Calibri" font-size="9.0894" font-weight="700" fill="rgb(0,128,0)">79</text>
+<polygon points="591.0053,179.9044 591.0053,166.3861 604.2033,166.3861 604.2033,179.9044" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="end" transform="translate(600.2033,174.9044)" font-family="Calibri" font-size="11.3618" font-weight="700" fill="rgb(0,128,0)">b</text>
+<polygon points="583.4484,145.6706 601.1954,145.6706 601.1954,168.7501 583.4484,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(587.4484,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">D</text>
+<polygon points="609.8065,145.6706 626.7975,145.6706 626.7975,168.7501 609.8065,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(613.8065,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">Y</text>
+<polygon points="636.1647,145.6706 655.4102,145.6706 655.4102,168.7501 636.1647,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(640.1647,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">M</text>
+<polygon points="662.5229,145.6706 681.0124,145.6706 681.0124,168.7501 662.5229,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(666.5229,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">G</text>
+<polygon points="688.8811,145.6706 706.6281,145.6706 706.6281,168.7501 688.8811,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(692.8811,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="715.2392,145.6706 732.9862,145.6706 732.9862,168.7501 715.2392,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(719.2392,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">A</text>
+<polygon points="741.5974,145.6706 759.3444,145.6706 759.3444,168.7501 741.5974,168.7501" style="fill:none;stroke:none;" />
+<text dominant-baseline="baseline" text-anchor="start" transform="translate(745.5974,159.7501)" font-family="Calibri" font-size="18" font-weight="700" fill="black">K</text>
+<polygon points="54.058,4 1891,4 1891,632.2301 54.058,632.2301" style="fill:none;stroke:black;stroke-width:1" />
+</svg>

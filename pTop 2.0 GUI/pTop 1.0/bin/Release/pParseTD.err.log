@@ -1,0 +1,16 @@
+
+==========================
+Thu Jan 22 10:13:41 2015
+
+	  at CMainFlow::GetIPV() Open the ipv file failed.
+		  .\LIPV.txt
+	  at CMainFlow::GetStart() GetStart failed.
+	  at pParseTD.exe::Main() failed.
+
+
+==========================
+Mon Jan 26 15:08:14 2015
+
+bad allocation	  at CMainFlow::GetStart() GetStart failed.
+	  at pParseTD.exe::Main() failed.
+

@@ -1,0 +1,42 @@
+﻿Build started 2016/12/10 12:14:26.
+     1>Project "J:\pTop\pTop\kernel\pParseTD 2.0\pParseTD\pParseTD.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt MS1Reader.cpp
+         MS1Reader.cpp
+     1>MS1Reader.cpp(51): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(243): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(543): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(808): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(894): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(904): warning C4244: 'argument' : conversion from 'double' to 'unsigned __int64', possible loss of data
+     1>MS1Reader.cpp(992): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(995): warning C4244: 'argument' : conversion from 'double' to 'unsigned __int64', possible loss of data
+     1>MS1Reader.cpp(1476): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(1477): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(1943): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(1945): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(1946): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(1993): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(2027): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>MS1Reader.cpp(2110): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"J:\pTop\pTop\kernel\pParseTD 2.0\x64\Debug\pParseTD2.0.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"J:\pTop\pTop\kernel\pParseTD 2.0\x64\Debug\pParseTD2.0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\pTop\pTop\kernel\pParseTD 2.0\x64\Debug\pParseTD2.0.lib" /MACHINE:X64 x64\Debug\BasicFunction.obj
+         x64\Debug\Classification.obj
+         x64\Debug\Com.obj
+         x64\Debug\CPeakMap.obj
+         x64\Debug\emass.obj
+         x64\Debug\MonoCandidates.obj
+         x64\Debug\MS1Reader.obj
+         x64\Debug\MS1Spectrum.obj
+         x64\Debug\MS2Reader.obj
+         x64\Debug\MS2Spectrum.obj
+         x64\Debug\Solve.obj
+         x64\Debug\SpecDataIO.obj
+         x64\Debug\StringProcessor.obj
+         x64\Debug\TrainingFileReader.obj
+         pParseTD.vcxproj -> J:\pTop\pTop\kernel\pParseTD 2.0\x64\Debug\pParseTD2.0.exe
+     1>Done Building Project "J:\pTop\pTop\kernel\pParseTD 2.0\pParseTD\pParseTD.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.40

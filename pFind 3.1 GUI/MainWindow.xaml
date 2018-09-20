@@ -1,0 +1,1641 @@
+﻿<Window x:Class="pFind.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pFind"
+        xmlns:lc="clr-namespace:pFind.classes"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"  
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:lv="clr-namespace:WPF.ListViewDrag.ServiceProviders.UI"
+        mc:Ignorable="d" Title="pFind" Icon="images\pFind.ico" FontFamily="MS Reference Sans Serif" 
+        Closing="Window_Closing_1" Closed="Window_Closed_1" WindowState="Maximized" MinHeight="500" MinWidth="600">
+    <!--Height="800" Width="1100" WindowState="Maximized" Background="#cc1857b7"-->
+    <Window.Resources>
+        <Style TargetType="{x:Type TreeViewItem}">
+            <EventSetter Event="TreeViewItem.PreviewMouseRightButtonDown" Handler="TreeViewItem_PreviewMouseRightButtonDown"/>
+        </Style>
+        <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="OnChecking">
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="25"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="OnUnchecking">
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                    <SplineThicknessKeyFrame KeyTime="00:00:00.3000000" Value="1,1,1,1"/>
+                                </ThicknessAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+
+                        <DockPanel x:Name="dockPanel">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}" RecognizesAccessKey="True" VerticalAlignment="Center"/>
+                            <Grid Margin="5,5,0,5" Width="50" Background="#FFC0CCD9">
+                                <TextBlock Text="ON" TextWrapping="Wrap" FontWeight="Bold" FontSize="12" HorizontalAlignment="Right" Margin="0,0,3,0"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="2,0,0,0" FontSize="12" FontWeight="Bold" Text="OFF" TextWrapping="Wrap"/>
+                                <Border HorizontalAlignment="Left" x:Name="slider" Width="23" BorderThickness="1,1,1,1" CornerRadius="3,3,3,3" RenderTransformOrigin="0.5,0.5" Margin="1,1,1,1">
+                                    <Border.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                            <SkewTransform AngleX="0" AngleY="0"/>
+                                            <RotateTransform Angle="0"/>
+                                            <TranslateTransform X="0" Y="0"/>
+                                        </TransformGroup>
+                                    </Border.RenderTransform>
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                                            <GradientStop Color="#FF4490FF" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <Border.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF8AB4FF" Offset="1"/>
+                                            <GradientStop Color="#FFD1E2FF" Offset="0"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                            </Grid>
+                        </DockPanel>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource OnUnchecking}" x:Name="OnUnchecking_BeginStoryboard"/>
+                                </Trigger.ExitActions>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource OnChecking}" x:Name="OnChecking_BeginStoryboard"/>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="ToolTip" 
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+        </Style>
+        <DataTemplate x:Key="SizeTemplate">
+            <TextBlock HorizontalAlignment="Right" Width="110"
+               Text="{Binding FileSize}" TextAlignment="Right"/>
+        </DataTemplate>
+        <DataTemplate x:Key="TimeSpanTemplate">
+            <TextBlock HorizontalAlignment="Right" Width="200"
+               Text="{Binding ttimespan}" TextAlignment="Right"/>
+        </DataTemplate>
+        <Image x:Key="File_New_img" Source="images\icons\filenew.gif" Width="16" Height="16"></Image>
+        <Image x:Key="Folder_load_img" Source="images\icons\folder_open.gif" Width="16" Height="16"></Image>
+        <Image x:Key="File_Save_img" Source="images\icons\save.gif"></Image>
+        <Image x:Key="File_SaveAs_img" Source="images\icons\save_as.png"></Image>
+        <Image x:Key="Task_Run_img" Source="images\icons\run.png" Width="16" Height="16"></Image>
+        <Image x:Key="Task_RunAll_img" Source="images\icons\runAll.ico" Width="16" Height="16"></Image>
+        <Image x:Key="Task_Remove_img" Source="images\Remove.png" Width="16" Height="16"></Image>
+        <Image x:Key="Task_Delete_img" Source="images\delete2.png" Width="16" Height="16"></Image>
+        <Image x:Key="Task_Stop_img" Source="images\icons\mm-Stop.ico" Width="16" Height="16"></Image>
+        <DataTemplate x:Key="ProgressCell">
+            <ProgressBar Width="100" Height="20" Value="{Binding Progress,Mode=TwoWay}" ToolTip="{Binding ProgressText,Mode=TwoWay}" ></ProgressBar>
+        </DataTemplate>
+
+        <ContextMenu x:Key="wait_cm">
+            <MenuItem Header="Remove" Click="RemoveTask"></MenuItem>
+            <MenuItem Header="Up" Click="Task_Up" ToolTip="move up the item in the waiting list"></MenuItem>
+            <MenuItem Header="Down" Click="Task_Down" ToolTip="move down the item in the waiting list"></MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="run_cm">
+            <MenuItem Header="Stop" Click="StopTask"></MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="done_cm">
+            <MenuItem Header="Remove" Click="RemoveTask"></MenuItem>
+        </ContextMenu>
+        <ContextMenu x:Key="open_folder_cm">
+            <MenuItem Header="Open the folder" Click="Open_the_folder"></MenuItem>
+        </ContextMenu>
+        <ControlTemplate x:Key="DTabControl1" TargetType="{x:Type TabControl}">
+            <ControlTemplate.Resources>
+
+                <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TabItem}">
+                                <Grid SnapsToDevicePixels="True">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="MouseOver">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                Storyboard.TargetName="hoverShape"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1"
+                                                Duration="0:0:0.1" />
+
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState Name="Normal">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                Storyboard.TargetName="hoverShape"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0"
+                                                Duration="0:0:0.1" />
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup Name="SelectionStates">
+                                            <VisualState Name="Selected">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="buttonShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="1" Duration="0:0:0.3"/>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="hoverShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="0" Duration="0:0:0.1"/>
+                                                    <ColorAnimation 
+                                                    Storyboard.TargetName="buttonText"
+                                                    Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                                    To="White" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState Name="Unselected">
+                                                <Storyboard>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="buttonShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="0" Duration="0:0:0.1"/>
+                                                    <DoubleAnimation 
+                                                    Storyboard.TargetName="hoverShape"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="0" Duration="0:0:0.1"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <!--<Border Name="hoverShape" Height="32" Margin="0,0,1,0"
+                                        SnapsToDevicePixels="True" BorderThickness="0,0,1,0"
+                                        BorderBrush="LightGray">
+                                    <Border BorderBrush="#ffa1b7ea" BorderThickness="0,1"
+                                            Background="#ffe5eef9" Height="40"
+                                            SnapsToDevicePixels="True" />-->
+
+                                    <Border Name="hoverShape" Height="32" Margin="0,0,1,0"
+                                        SnapsToDevicePixels="True" BorderThickness="0"
+                                        BorderBrush="LightGray">
+                                        <Path Data="M 214,108 L 366,108 376,124 
+                                                  366,140 214,140 224,124 z"
+                                              SnapsToDevicePixels="True"
+                                              Stretch="Fill" Height="32" Opacity="0.3">
+                                            <Path.Fill>
+                                                <RadialGradientBrush GradientOrigin="0.2,0.5" RadiusX="0.8" RadiusY="0.8">
+                                                    <GradientStop Color="#ff5fa3f6" Offset="0" />
+                                                    <GradientStop Color="#ff0c55b9" Offset="1" />
+                                                </RadialGradientBrush>
+                                            </Path.Fill>
+                                        </Path>
+                                    </Border>
+
+                                    <Border Name="buttonShape" Opacity="0" BorderBrush="#ffe9ecef" 
+                                        BorderThickness="0" Height="32" SnapsToDevicePixels="True">
+                                        <Path Data="M 214,108 L 366,108 376,124 
+                                                  366,140 214,140 224,124 z"
+                                              SnapsToDevicePixels="True"
+                                              Stretch="Fill" Height="32">
+                                            <Path.Fill>
+                                                <RadialGradientBrush GradientOrigin="0.2,0.5" RadiusX="0.8" RadiusY="0.8">
+                                                    <GradientStop Color="#ff5fa3f6" Offset="0" />
+                                                    <GradientStop Color="#ff0c55b9" Offset="1" />
+                                                </RadialGradientBrush>
+                                            </Path.Fill>
+                                        </Path>
+                                    </Border>
+
+                                    <ContentPresenter Name="buttonText" Margin="15,0,5,0" 
+                                                  TextBlock.FontFamily="MS Reference Sans Serif"
+                                                  TextBlock.FontSize="11pt"
+                                                  TextBlock.Foreground="Black"
+                                                  ContentSource="Header" 
+                                                  VerticalAlignment="Center" PreviewMouseDown="BeforeTabChange">
+                                    </ContentPresenter>
+
+                                </Grid>
+
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ControlTemplate.Resources>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border Background="#ffe9ecef" Grid.Row="0"  BorderBrush="LightGray" BorderThickness="1" 
+                    SnapsToDevicePixels="True">
+                </Border>
+                <StackPanel Orientation="Horizontal" IsItemsHost="True" Grid.Row="0" Margin="0,0,-1,0" SnapsToDevicePixels="True">
+
+                </StackPanel>
+                <ContentPresenter Content="{TemplateBinding SelectedContent}"  Grid.Row="1" Margin="15,0,0,0"  />
+
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="lc:CustomCommands.New" Executed="New_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Open" Executed="Open_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Run" Executed="Run_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Rename" Executed="Rename_Command"/>
+        <CommandBinding Command="lc:CustomCommands.Save" Executed="SaveConfiguration"/>
+        <CommandBinding Command="lc:CustomCommands.SaveAs" Executed="TaskSaveAs"/>
+    </Window.CommandBindings>
+    <Grid Name="frame_Main">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="frame_left" Width="1*" MinWidth="90"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition x:Name="frame_right" Width="2.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="3">
+            <MenuItem Header="_File" PreviewMouseDown="recent_task_menu_FocusCHD">
+                <MenuItem Name="menuNew" Header="_New" Click="New_Task" InputGestureText="Ctrl+N"></MenuItem>
+                <MenuItem Name="menuOpen" Header="_Open..." Click="open_task" InputGestureText="Ctrl+O"></MenuItem>
+                <MenuItem Name="menuSave"  Header="_Save" Click="SaveConfiguration" InputGestureText="Ctrl+S"></MenuItem>
+                <!--<MenuItem Header="_Save As..." Click="TaskSaveAs" InputGestureText="Ctrl+Shift+S"></MenuItem>-->
+                <Separator></Separator>
+                <MenuItem Header="_Recent Tasks" Name="recent_task_menu"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="_Exit" InputGestureText="Alt+F4" Click="CloseWindow"></MenuItem>
+            </MenuItem>
+            <MenuItem Name="manuOptions" Header="_Options">
+                <MenuItem Name="manuItemSettings" Header="_Settings..." Click="OpenSettings"></MenuItem>
+                <MenuItem Header="_Meta Data Configuration..." Click="OpenConfig"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help" Name="helpItem">
+                <MenuItem Header="User Guide" Click="User_Guide_Clk"></MenuItem>
+                <MenuItem Header="About pFind Stuido..." Click="Help_About_Clk"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1" Grid.ColumnSpan="3" Loaded="ToolBar_Loaded_1" Height="28" ToolBarTray.IsLocked="True">
+            <Button Content="{StaticResource File_New_img}"  RenderTransformOrigin="0.36,0.32"  Click="New_Task">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <!--Style="{StaticResource SimpleTip}"-->
+                          Create New Task(Ctrl+N)
+                     </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Content="{StaticResource Folder_load_img}"  RenderTransformOrigin="0.36,0.32"  Click="open_task">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <!--Style="{StaticResource SimpleTip}"-->
+                        Open Task(Ctrl+O)
+                     </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="toolSave" Content="{StaticResource File_Save_img}" RenderTransformOrigin="0.36,0.32"  Click="SaveConfiguration" Style="{StaticResource ButtonOpacity}">
+                <Button.ToolTip>
+                     <ToolTip>
+                        <!--Style="{StaticResource SimpleTip}"-->
+                        Save(Ctrl+S)
+                     </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <!--<Button Content="{StaticResource File_SaveAs_img}"  RenderTransformOrigin="0.36,0.32" Click="TaskSaveAs">
+                <Button.ToolTip>
+                     <ToolTip Style="{StaticResource SimpleTip}">
+                          Save As(Ctrl+Shift+S)
+                     </ToolTip>
+                </Button.ToolTip>
+            </Button>-->
+            <Separator />
+            <Button Name="toolRemove" Content="{StaticResource Task_Remove_img}"  RenderTransformOrigin="0.36,0.32" Style="{StaticResource ButtonOpacity}"
+                    Click="Remove_Task">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Remove Task
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="toolDelete" Content="{StaticResource Task_Delete_img}"  RenderTransformOrigin="0.36,0.32" Style="{StaticResource ButtonOpacity}"
+                    Click="Delete_Task">
+                <Button.ToolTip>             
+                    <ToolTip>
+                        Delete Task
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Separator />
+            <Button Name="toolRun" Content="{StaticResource Task_Run_img}"  RenderTransformOrigin="0.36,0.32" Style="{StaticResource ButtonOpacity}"
+                    Click="StartSearch">
+                <Button.ToolTip>
+                    <!--Style="{StaticResource SimpleTip}"-->
+                    <ToolTip>
+                          Run(F5)
+                     </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Content="{StaticResource Task_RunAll_img}"  RenderTransformOrigin="0.36,0.32"  Click="RunAllTasks">
+                <Button.ToolTip>
+                    <!--Style="{StaticResource SimpleTip}"-->
+                    <ToolTip>
+                          Run All(Ctrl+F5)
+                     </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="toolStop" Content="{StaticResource Task_Stop_img}"  RenderTransformOrigin="0.36,0.32" Style="{StaticResource ButtonOpacity}"
+                    Click="StopTask">
+                <Button.ToolTip>
+                    <!--Style="{StaticResource SimpleTip}"-->
+                    <ToolTip>
+                        Stop Task (F10)
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+        </ToolBar>
+        <Grid x:Name="left_grid0" Grid.Row="2" Grid.Column="0" Margin="0">
+            <!--  Background="{StaticResource MyGradientBackground}"-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="0.6*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                <!-- 
+                <Canvas VerticalAlignment="Center" Width="40">
+                    <Polygon Points="0,-15,20,0,0,15,0,-15" Stroke="Gray" StrokeThickness="2">
+                        <Polygon.Fill>
+                            <SolidColorBrush Color="LightGray" Opacity="0.4"></SolidColorBrush>
+                        </Polygon.Fill>
+                    </Polygon>
+                </Canvas>
+                -->
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       FontSize="32" FontFamily="Myriad Pro">pFind</TextBlock>
+            </StackPanel>
+            <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Background="LightGray" Height="1"></GridSplitter>
+            <StackPanel Grid.Row="2" Orientation="Vertical" Margin="4">
+                <TextBlock FontSize="20" Padding="10,2,2,2" Margin="4" FontFamily="MS Reference Sans Serif">Start</TextBlock>
+                <TextBlock Padding="10,2,2,2" FontSize="15" Margin="4"><Hyperlink TextDecorations="None" Click="New_Task">New...</Hyperlink></TextBlock>
+                <TextBlock Padding="10,2,2,2" FontSize="15" Margin="4"><Hyperlink TextDecorations="None" Click="open_task">Open...</Hyperlink></TextBlock>
+                <TextBlock Padding="10,2,2,2" FontSize="15" Margin="4"><Hyperlink TextDecorations="None" Click="Help_About_Clk">About us</Hyperlink></TextBlock>
+                <TextBlock Padding="10,2,2,2" FontSize="15" Margin="4"><Hyperlink TextDecorations="None" Click="CloseWindow">Exit</Hyperlink></TextBlock>
+            </StackPanel>
+            <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" Background="LightGray" Height="1"></GridSplitter>
+            <StackPanel Grid.Row="4" Orientation="Vertical" Margin="4">
+                <TextBlock FontSize="20" Padding="10,2,2,2" Margin="4" FontFamily="MS Reference Sans Serif">Recent</TextBlock>
+                <ListView x:Name="recent_tasks" Background="Transparent" BorderThickness="0" FontFamily="Verdana" FontWeight="Medium" FontSize="14" SelectionMode="Single" Foreground="Black"
+                    		SelectionChanged="load_recent_task" HorizontalAlignment="Left" Width="500">
+                    <ListView.Resources>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </Style>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="ToolTip" Value="{Binding tpath}" />
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="images\recent_task.png" Width="20" Height="20"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding tname}" Width="250"/>
+                            <GridViewColumn CellTemplate="{StaticResource TimeSpanTemplate}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="right_grid0" Grid.Row="2" Grid.Column="2" Margin="10">
+            <TabControl>
+                <TabItem Header="Introduction">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" FontSize="20" FontWeight="Bold" Margin="10">Overview</TextBlock>
+                        <TextBlock Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="5">pFind Studio 3 is a search engine for automated identification and quantitation for peptides and proteins 
+                         based on the high resolution MS/MS data. It consists of two important tools, pFind and pBuild. Multiple database search tasks can be configured and performed in pFind, 
+                         and the results are shown in pBuild, including peptide and protein lists, as well as the summary information of the corresponding tasks.</TextBlock>
+                        <TextBlock Grid.Row="2" FontSize="20" FontWeight="Bold" Margin="10">System Requirements</TextBlock>
+                        <TextBlock Grid.Row="3" FontSize="14" TextWrapping="Wrap" Margin="5">• Operating System: Windows 7 or higher. Both 32- and 64-bit versions are supported.</TextBlock>
+                        <TextBlock Grid.Row="4" FontSize="14" TextWrapping="Wrap" Margin="5">• CPU: 2.0GHz or higher</TextBlock>
+                        <TextBlock Grid.Row="5" FontSize="14" TextWrapping="Wrap" Margin="5">• Memory: 2GB or higher recommended</TextBlock>
+                        <TextBlock Grid.Row="6" FontSize="14" TextWrapping="Wrap" Margin="5">• Hard Disk: ~ 40MB for the software storage and an extra disk space to store the results 
+                                and temporary files, the size of which depends on the actual MS/MS datasets.</TextBlock>
+                        <!--<TextBlock Grid.Row="7" FontSize="20" FontWeight="Bold" Margin="10">Activation</TextBlock>
+                        <TextBlock Grid.Row="8" FontSize="14" TextWrapping="Wrap" Margin="5">If you first run pFind, you can see the activation interface. So you can input basic information
+                        and send e-mail to <Underline><Bold>pfinder@ict.ac.cn</Bold></Underline> or <Underline><Bold>pfind@ict.ac.cn</Bold></Underline>. We will return you the license timely.</TextBlock>
+                        -->
+                    </Grid>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="New Features and User Guide">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" FontSize="20" FontWeight="Bold" Margin="10">New Features</TextBlock>
+                        <TextBlock Grid.Row="1" FontSize="14" Margin="5">• Higher identification rate.</TextBlock>
+                        <TextBlock Grid.Row="2" FontSize="14" Margin="5">• Higher speed.</TextBlock>
+                        <TextBlock Grid.Row="3" FontSize="14" Margin="5">• New identification and quantification module.</TextBlock>
+                        <TextBlock Grid.Row="4" FontSize="14" Margin="5">• Wizard-like interface for task creation and easy workflow setup.</TextBlock>
+                        <TextBlock Grid.Row="5" FontSize="14" Margin="5">• Multi-tasks supported.</TextBlock>
+                        <TextBlock Grid.Row="6" FontSize="20" FontWeight="Bold" Margin="10">User Guide</TextBlock>
+                        <TextBlock Grid.Row="7" FontSize="14" Margin="5" TextWrapping="Wrap">1. Create/Open a task,then you will see the home page which is mainly divided into four parts:
+                            the task view, the configuration interface, the information pane and the output pane.</TextBlock>
+                        <TextBlock Grid.Row="8" FontSize="14" Margin="5" TextWrapping="Wrap">2. First, add raw files or MGF files and set parameters for data refinement.</TextBlock>
+                        <TextBlock Grid.Row="9" FontSize="14" Margin="5" TextWrapping="Wrap">3. Next you can switch to Identification panel to set parameters for database search and result filter.</TextBlock>
+                        <TextBlock Grid.Row="10" FontSize="14" Margin="5" TextWrapping="Wrap">4. Then you can switch to Quantitation panel to set parameters for quantitation.</TextBlock>
+                        <TextBlock Grid.Row="11" FontSize="14" Margin="5" TextWrapping="Wrap">5. To take a look at the overall parameter configuration, turn to the Summay panel.</TextBlock>
+                        <TextBlock Grid.Row="12" FontSize="14" Margin="5" TextWrapping="Wrap">6. Finally, you can save or start the task.</TextBlock>
+                        <TextBlock Grid.Row="13" FontSize="14" Margin="5" TextWrapping="Wrap">7. You can see the output of the tasks in the output field and view the running states of the tasks in the information pane.</TextBlock>
+                    </Grid>
+                    </ScrollViewer>
+                </TabItem>
+                <!--<TabItem Header="pfinder group">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Width="800" Height="540" Source="images\pfinder_team.jpg" Margin="5" Stretch="UniformToFill"></Image>
+                            <TextBlock Grid.Row="1" FontSize="14" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Center">This is our team. If you want to get more information, you can visit this websit: 
+                                <Underline><Bold>http://pfind.ict.ac.cn/members.html</Bold></Underline></TextBlock>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>-->
+            </TabControl>
+        </Grid>
+        <Grid x:Name="left_grid1" Grid.Row="2" Grid.Column="0" MinWidth="150" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer x:Name="scrolls" Grid.Row="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Name="Tasks" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <TreeView Name="TaskTree" BorderThickness="0" SelectedItemChanged="Task_Switch">
+
+                        </TreeView>
+                    </StackPanel>
+           </ScrollViewer>
+           <GridSplitter Grid.Row="1" Background="AliceBlue" HorizontalAlignment="Stretch" Height="3" ResizeBehavior="PreviousAndNext" /> 
+           <GroupBox Name="taskInfo" Grid.Row="2" BorderBrush="DarkGray">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="images/icons/tasklist.png" Width="18" Height="18"></Image>
+                    <Label Style="{StaticResource LabelStyle}">Task Queue</Label>
+                </StackPanel>
+            </GroupBox.Header>
+                  <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <ToolBar Width="Auto" Height="28" ToolBarTray.IsLocked="True" Loaded="ToolBar_Loaded_1">
+                                <Button Click="Task_Top">
+                                <Button.ToolTip>                            
+                                    <ToolTip>Move to Top</ToolTip>
+                                </Button.ToolTip>
+                                    <Image Source="images/icons/top.png"/>
+                                </Button>
+                                <Button Click="Task_Up" Margin="5,0,0,0">
+                                    <Button.ToolTip>                           
+                                    <ToolTip>Move Up</ToolTip>                                                                                   
+                                    </Button.ToolTip>
+                                    <Image Source="images/icons/up.png"></Image>
+                                </Button>
+                                <Button Margin="5,0,0,0" Click="Task_Down">
+                                <Button.ToolTip>                                 
+                                    <ToolTip>Move Down</ToolTip>
+                                </Button.ToolTip>
+                                    <Image Source="images/icons/down.png"/>
+                                </Button>
+                                <Button  Margin="5,0,0,0" Click="Task_Bottom">
+                                <Button.ToolTip>
+                                    <ToolTip>Move to Bottom</ToolTip>
+                                </Button.ToolTip>
+                                    <Image Source="images/icons/bottom.png"></Image>
+                                </Button>
+                                <Button  Margin="5,0,0,0" Click="RemoveTask">
+                                <Button.ToolTip>                                
+                                    <ToolTip>Remove</ToolTip>
+                                </Button.ToolTip>
+                                    <Image Source="images/icons/remove1.png"></Image>
+                                </Button>
+                            </ToolBar>
+                            <ListView Name="runningtasks" Margin="0,5,0,0" ItemContainerStyle="{StaticResource TaskQueueStyle}"
+                                  Loaded="runningtasks_Loaded" SelectionMode="Single">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="100" Header="Task Name" DisplayMemberBinding="{Binding Taskname, Mode=TwoWay}"/>
+                                    <GridViewColumn Width="100" Header="Status" DisplayMemberBinding="{Binding Status,Mode=TwoWay}"/>
+                                    <GridViewColumn Width="120" Header="Progress" CellTemplate="{StaticResource ProgressCell}"/>
+                                    <GridViewColumn Width="100" Header="Start Time" DisplayMemberBinding="{Binding Start_time,Mode=TwoWay}"/>
+                                    <GridViewColumn Width="100" Header="Running Time" DisplayMemberBinding="{Binding Run_time,Mode=TwoWay}" />
+                                </GridView>
+                            </ListView.View> 
+                            <!--
+                            <ListView.ContextMenu>
+                                <ContextMenu x:Key="wait_cm">
+                                   <MenuItem Header="Remove"></MenuItem>
+                                   <MenuItem Header="Up"></MenuItem>
+                                   <MenuItem Header="Down"></MenuItem>
+                                </ContextMenu>
+                                <ContextMenu x:Key="run_cm">
+                                   <MenuItem Header="Stop"></MenuItem>                
+                                </ContextMenu>
+                                <ContextMenu x:Key="done_cm">
+                                   <MenuItem Header="Remove"></MenuItem>
+                                </ContextMenu>
+                            </ListView.ContextMenu>
+                            -->
+                        </ListView>
+                        <Button Name="RABtn" Width="80" Height="30" Margin="0,10,6,0" HorizontalAlignment="Right" 
+                                Click="RunTasks_Click" Style="{StaticResource ButtonStyle1}" Visibility="Collapsed">Start</Button>
+                        </StackPanel>
+                    </ScrollViewer>
+           </GroupBox>
+        </Grid>
+        <GridSplitter Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" Background="LightGray" VerticalAlignment="Stretch" Width="5" ResizeBehavior="PreviousAndNext" />
+        <Grid x:Name="right_grid1" Grid.Row="2" Grid.Column="2" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <TabControl Name="tab"  SelectionChanged="clk" Grid.Row="0" Template="{DynamicResource DTabControl1}">
+                <TabItem Header="MS Data" Background="#FFFFFF72" Name="FileTab" FocusVisualStyle="{x:Null}">                   
+                    <ScrollViewer Name="msdataScroll"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0, 10, 0, 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>                      
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions> 
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">               
+                    <TextBlock Margin="10,10,0,0" Width="110" HorizontalAlignment="Left" VerticalAlignment="Center">MS Instrument :</TextBlock>
+                                <ComboBox Name="InstrumentChoices" SelectedIndex="{Binding Path=Instrument_index}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,10,0,0" Width="120">                                                                                                                                                    
+                            <ComboBoxItem>HCD-FTMS</ComboBoxItem>
+                            <ComboBoxItem>HCD-ITMS</ComboBoxItem>
+                            <ComboBoxItem>CID-FTMS</ComboBoxItem>
+                            <ComboBoxItem>CID-ITMS</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel> 
+                    <Grid Grid.Row="2" Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>                                            
+                        </Grid.RowDefinitions>                     
+                    <TextBlock Grid.Row="0" Margin="10,10,10,0" >Data File List</TextBlock>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,10,0,0" Style="{StaticResource DFVisibility}">
+                      <TextBlock Name="dfnum" FontWeight="Bold" Text="0"></TextBlock>
+                      <TextBlock Text=" File(s), "/>
+                      <TextBlock Name="dfsize" FontWeight="Bold" Text="0.0"></TextBlock>
+                      <TextBlock Name="size_unit" Text=" GB"/>
+                    </StackPanel>
+                     <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                        <ListView x:Name="fileList"  Margin="10,10,0,0" Width="520" Height="150"                          
+                              ItemContainerStyle="{StaticResource ListViewItemContainerStyle}" HorizontalAlignment="Right" ItemsSource="{Binding Path=Data_file_list}">
+                                            <ListView.View>
+                                            <GridView>
+                                               <GridViewColumn Header="Files" DisplayMemberBinding="{Binding FilePath}" Width="410"/>
+                                               <GridViewColumn Width="110" Header="Size" CellTemplate="{StaticResource SizeTemplate}"/>
+                                               <!--<GridViewColumn Header="Size" DisplayMemberBinding="{Binding FileSize}" Width="110"/>-->
+                                            </GridView>
+                                       </ListView.View>                 
+                    </ListView>
+                    <StackPanel Margin="50,12,0,0">
+                          <Button Name="addRawBtn" Width="70" HorizontalAlignment="Left" Margin="10" Height="28"
+                                Click="Add_DataFiles">Add</Button>
+                          <Button Name="deleteRawBtn"  Margin="10" Width="70" HorizontalAlignment="Left" Height="28"
+                                Click="Delete_DataFile">Delete</Button>
+                          <Button Name="clearRawBtn"  Margin="10" Width="70" HorizontalAlignment="Left" Height="28"
+                                Click="Clear_DataFiles">Clear</Button>
+                    </StackPanel>
+                    </StackPanel>                   
+                   </Grid>                                 
+                    
+                    <Expander Name="pParseConfig" Grid.Row="3" Margin="10" Expanded="pParseConfig_Expanded" IsExpanded="False">
+                        <Expander.Header>
+                                  <Label VerticalAlignment="Center" >Data Extraction</Label>
+                        </Expander.Header>
+                           <Grid>
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                               </Grid.RowDefinitions>
+                               <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+                                   <Label VerticalAlignment="Center" Width="120">Place of Decimal</Label>
+                                   <Separator Height="1" Width="570" VerticalAlignment="Center" BorderBrush="Black"></Separator>                                 
+                               </StackPanel>
+                               <StackPanel Grid.Row="1" Orientation="Horizontal" Height="40" Margin="20,0,0,0">
+                                        <Label VerticalAlignment="Center" Width="56" ToolTip="This option specifies the decimal place of m/z ratio. Its value goes from 1 to 9, and the default value is 5.">
+                                           M/Z : 
+                                        </Label>
+                                        <ComboBox Name="mzDecimal" SelectedIndex="{Binding Path=Mz_decimal_index}" Width="75" VerticalAlignment="Center">
+                                           <ComboBoxItem>1</ComboBoxItem>
+                                           <ComboBoxItem>2</ComboBoxItem>
+                                           <ComboBoxItem>3</ComboBoxItem>
+                                           <ComboBoxItem>4</ComboBoxItem>
+                                           <ComboBoxItem>5</ComboBoxItem>
+                                           <ComboBoxItem>6</ComboBoxItem>
+                                           <ComboBoxItem>7</ComboBoxItem>
+                                           <ComboBoxItem>8</ComboBoxItem>
+                                           <ComboBoxItem>9</ComboBoxItem>
+                                       </ComboBox>
+                                        <Label VerticalAlignment="Center" Margin="80,0,0,0" Width="80" ToolTip="This option specifies the decimal place of intensity. Its value goes from 1 to 9, and the default value is 1.">
+                                           Intensity : 
+                                       </Label>
+                                        <ComboBox Name="IntensityDecimal" SelectedIndex="{Binding Path=Intensity_decimal_index}" Width="75" VerticalAlignment="Center">
+                                           <ComboBoxItem>1</ComboBoxItem>
+                                           <ComboBoxItem>2</ComboBoxItem>
+                                           <ComboBoxItem>3</ComboBoxItem>
+                                           <ComboBoxItem>4</ComboBoxItem>
+                                           <ComboBoxItem>5</ComboBoxItem>
+                                           <ComboBoxItem>6</ComboBoxItem>
+                                           <ComboBoxItem>7</ComboBoxItem>
+                                           <ComboBoxItem>8</ComboBoxItem>
+                                           <ComboBoxItem>9</ComboBoxItem>
+                                       </ComboBox>
+                                </StackPanel>                              
+                               <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+                                        <Label VerticalAlignment="Center" Width="120">Precursor Score</Label>
+                                        <Separator Height="1" Width="570" VerticalAlignment="Center" BorderBrush="Black"></Separator>
+                               </StackPanel>                             
+                               <StackPanel Grid.Row="3" Orientation="Horizontal" Height="45" Margin="20,0,0,0">
+                                        <Label VerticalAlignment="Center" Width="56">Model :</Label>
+                                        <ComboBox Name="model" Width="75" VerticalAlignment="Center" SelectedIndex="{Binding Path=ModelIndex}">
+                                            <ComboBoxItem>Normal</ComboBoxItem>
+                                            <ComboBoxItem>15N</ComboBoxItem>
+                                        </ComboBox>
+                                        <Label VerticalAlignment="Center" Margin="80,0,0,0" Width="80">Threshold :</Label>
+                                        <TextBox Name="threshhold" VerticalAlignment="Center" Width="75" 
+                                                 ToolTip="Threshold for MARS model should not be less than -1000 or larger than 1000.">
+                                            <TextBox.Text>
+                                                <Binding Path="Threshold" Mode="TwoWay">
+                                                    <Binding.ValidationRules>
+                                                        <DataErrorValidationRule />
+                                                        <ExceptionValidationRule />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                        </TextBox>
+                                        <StackPanel Name="MixSpec" Orientation="Horizontal" Margin="80,0,0,0">
+                                              <CheckBox Name="MixSpecCB" VerticalAlignment="Center" IsChecked="{Binding Path=Mix_spectra,Mode=OneWay}"></CheckBox>
+                                              <Label VerticalAlignment="Center">Mixture Spectra</Label>
+                                       </StackPanel>
+                             </StackPanel>
+
+                            <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label VerticalAlignment="Center" Width="120">Output Files</Label>
+                                <Separator Height="1" Width="570" VerticalAlignment="Center" BorderBrush="Black"></Separator>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Orientation="Horizontal" Height="45" Margin="20,0,0,0">
+                                <StackPanel Name="MSn" Orientation="Horizontal" Margin="5,0,0,0">
+                                    <CheckBox Name="MSnCB" VerticalAlignment="Center" IsChecked="{Binding Path=Pparse_advanced.Output_msn,Mode=TwoWay}"></CheckBox>
+                                    <Label VerticalAlignment="Center">MS1/MS2</Label>
+                                </StackPanel>
+                                <StackPanel Name="MGF" Orientation="Horizontal" Margin="80,0,0,0">
+                                    <CheckBox Name="MGFCB" VerticalAlignment="Center" IsChecked="{Binding Path=Pparse_advanced.Output_mgf,Mode=TwoWay}"></CheckBox>
+                                    <Label VerticalAlignment="Center">MGF</Label>
+                                </StackPanel>
+                                <!--<StackPanel Name="PFn" Orientation="Horizontal" Margin="80,0,0,0">
+                                    <CheckBox Name="PFnCB" VerticalAlignment="Center" IsChecked="{Binding Path=Pparse_advanced.Output_pf,Mode=TwoWay}"></CheckBox>
+                                    <Label VerticalAlignment="Center">PF1/PF2</Label>
+                                </StackPanel>-->
+                            </StackPanel>
+
+                        </Grid>
+                    </Expander>
+                  
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Margin="10,10,0,0" Width="110" HorizontalAlignment="Left" VerticalAlignment="Center">MS Data Format :</TextBlock>
+                    <ComboBox Name="FormatChoices" SelectedIndex="{Binding Path=File_format_index}" HorizontalAlignment="Left" Margin="15,10,0,0" 
+                              Width="120" VerticalAlignment="Center"  SelectionChanged="FormatChange">                       
+                                  <ComboBoxItem>MGF</ComboBoxItem>                                  
+                                  <ComboBoxItem>RAW</ComboBoxItem>
+                                  <ComboBoxItem>WIFF</ComboBoxItem>
+                                </ComboBox>
+                    </StackPanel>
+                </Grid>
+                </ScrollViewer>
+                </TabItem>
+                <TabItem Name="IdentificationTab" Header="Identification" FocusVisualStyle="{x:Null}">
+                <ScrollViewer Name="IdentScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,10,0,0">
+                  <Grid Name="gridIndentify">
+                      <Grid.RowDefinitions>
+                          <RowDefinition Height="Auto"></RowDefinition>
+                          <RowDefinition Height="Auto"></RowDefinition>
+                      </Grid.RowDefinitions>
+                      <Expander Name="search" Grid.Row="0" SnapsToDevicePixels="True" IsExpanded="True">
+                        <Expander.Header>
+                              <Label Style="{StaticResource LabelStyle}" VerticalAlignment="Center">Database Search</Label>
+                        </Expander.Header>
+                        <Grid Name="searchGrid" >
+                        <Grid.RowDefinitions>
+                           <RowDefinition Height="Auto" />
+                           <RowDefinition Height="45"/>
+                           <RowDefinition Height="Auto"/>
+                       </Grid.RowDefinitions>                  
+                       <Grid Grid.Row="0" Margin="0,5,0,0">
+                           <Grid.RowDefinitions>
+                               <RowDefinition Height="Auto"/>
+                               <RowDefinition Height="Auto"/>
+                               <RowDefinition Height="Auto" />                                              
+                           </Grid.RowDefinitions>
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="Auto"/>
+                               <ColumnDefinition Width="Auto"/>
+                               <ColumnDefinition Width="Auto"/>
+                           </Grid.ColumnDefinitions>
+                           <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                              <Label Width="86" VerticalAlignment="Center" HorizontalAlignment="Left">Database :</Label>
+                              <ComboBox Name="Database" Width="200" SelectedIndex="{Binding Path=Db_index, Mode=TwoWay}"  VerticalAlignment="Center" SelectionChanged="DatabaseChanged">                               
+                              </ComboBox>
+                              <TextBlock Name="dbtip" Margin="10,0,0,0" VerticalAlignment="Center" Foreground="Red" Style="{StaticResource DBtipStyle}">*</TextBlock>
+                           </StackPanel>
+                           <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Height="42">
+                                   <Label HorizontalAlignment="Left" VerticalAlignment="Center" Width="86">Enzyme :</Label>
+                                   <ComboBox Name="enzymeChoices" SelectedIndex="{Binding Path=Enzyme_index}" Width="200" VerticalAlignment="Center">
+                                   </ComboBox>
+                                            
+                           </StackPanel>                   
+                           <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Height="42" Margin="15,0,0,0">
+                              <ComboBox Name="enzymespecChoices" SelectedIndex="{Binding Path=Enzyme_Spec_index}" Width="110" VerticalAlignment="Center">
+                              </ComboBox>
+                              <TextBlock Text="Up to  " VerticalAlignment="Center" Margin="15,0,0,0"></TextBlock>
+                              <ComboBox Name="msChoices" SelectedIndex="{Binding Path=Cleavages}" Width="60" VerticalAlignment="Center">
+                                    <ComboBoxItem>0</ComboBoxItem>
+                                    <ComboBoxItem>1</ComboBoxItem>
+                                    <ComboBoxItem>2</ComboBoxItem>
+                                    <ComboBoxItem>3</ComboBoxItem>
+                                    <ComboBoxItem>4</ComboBoxItem>                           
+                              </ComboBox>
+                              <TextBlock Text=" missed cleavages" VerticalAlignment="Center"></TextBlock>
+                          </StackPanel>
+                          <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Height="42">
+                                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Width="125" Margin="5,0,0,0">Precursor Tolerance :</TextBlock>
+                                <Label VerticalAlignment="Center" HorizontalAlignment="Right" Width="20">±</Label>
+                                <TextBox Name="PreTol" Width="65" VerticalAlignment="Center" ToolTip="Hint: The value of the tolerance cannot be less than 0.">
+                                                <TextBox.Text>
+                                                    <Binding Mode="TwoWay" Path="Ptl.Tl_value">
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                </TextBox>
+                                            <ComboBox Name="ptolUnits" SelectedIndex="{Binding Path=Ptl.Isppm}" Width="60" VerticalAlignment="Center" Margin="10,10,0,10">
+                                                    <ComboBoxItem>Da</ComboBoxItem>
+                                                    <ComboBoxItem>ppm</ComboBoxItem>
+                                </ComboBox>
+                          </StackPanel>
+                          <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Height="42" Margin="15,0,0,0">
+                                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Width="125">Fragment Tolerance :</TextBlock>
+                                <Label VerticalAlignment="Center" HorizontalAlignment="Right" Width="20">±</Label>
+                                <TextBox Name="FraTol" Width="65" VerticalAlignment="Center" ToolTip="Hint: The value of the tolerance cannot be less than 0.">
+                                                <TextBox.Text>
+                                                    <Binding Path="Ftl.Tl_value" Mode="TwoWay">
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                </TextBox>
+                                            <ComboBox Name="ftolUnits" SelectedIndex="{Binding Path=Ftl.Isppm}" Width="60" VerticalAlignment="Center" Margin="10,0,0,0"> 
+                                                    <ComboBoxItem>Da</ComboBoxItem>
+                                                    <ComboBoxItem>ppm</ComboBoxItem>
+                                </ComboBox>
+                          </StackPanel>
+                       </Grid>
+
+                              <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" Height="45">
+                                    <CheckBox Name="openSearch" VerticalAlignment="Center" IsChecked="{Binding Path=Open_search}" Checked="enable_open_search" Unchecked="disable_open_search"></CheckBox>
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Open Search</TextBlock>
+                              </StackPanel>
+                              <GroupBox Name="ModConfig" Grid.Row="2" Grid.ColumnSpan="2" Header="Add Modification" >
+                              <Grid Margin="0,10,0,0">
+                                  <Grid.RowDefinitions>                                      
+                                      <RowDefinition Height="Auto"/>
+                                      <RowDefinition Height="Auto"/>
+                                      <RowDefinition Height="42" />
+                                  </Grid.RowDefinitions>
+                                  <Grid.ColumnDefinitions>
+                                      <ColumnDefinition Width="Auto"/>
+                                      <ColumnDefinition Width="Auto"/>
+                                      <ColumnDefinition Width="100"/>
+                                      <ColumnDefinition Width="Auto"/>
+                                  </Grid.ColumnDefinitions>
+                                  <TextBlock Grid.Row="0" Grid.Column="0" Margin="10,0,15,0"  Width="Auto"  VerticalAlignment="Center">Fixed </TextBlock>
+                                  <ListView Name="selectedFixMod" Grid.Row="0" Grid.Column="1" Width="180" Height="110" Margin="0,5,0,0"
+                                            Background="#eef6f6f6" SelectionMode="Extended" ItemsSource="{Binding Path=Fix_mods}">
+                                             
+                                  </ListView>
+                                  <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Center">
+                                      <Button Width="40" Height="25" Margin="10" Click="add_fix_mods">
+                                          <Image Stretch="Fill" Source="images/icons/arr_left.png" />
+                                      </Button>
+                                      <Button Width="40" Height="25" Margin="10" Click="remove_fix_mods">
+                                          <Image Stretch="Fill" Source="images/icons/arr_right.png"/>
+                                      </Button>
+                                  </StackPanel>
+                                  <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,0,15,0"  Width="Auto" VerticalAlignment="Center">Variable </TextBlock>
+                                  <ListView Name="selectedVarMod" Grid.Row="1" Grid.Column="1" Width="180" Height="110" Margin="0,10,0,0"
+                                            Background="#eef6f6f6" ItemsSource="{Binding Path=Var_mods}" SelectionMode="Extended">
+                                         
+                                  </ListView>
+                                  <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+                                      <Button Width="40" Height="25" Margin="10" Click="add_var_mods">
+                                          <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                      </Button>
+                                      <Button Width="40" Height="25" Margin="10" Click="remove_var_mods">
+                                          <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                      </Button>                                     
+                                  </StackPanel>
+                                  <ListView Name="Modifications" Grid.Row="0" Grid.RowSpan="2" Grid.Column="3" Width="280" Height="230" SelectionMode="Extended"
+                                           Background="#aaF6F6F6" BorderBrush="LightGray" ItemsSource="{Binding }" MouseDown="select_mods" Margin="0,5,0,0">
+                                      
+                                  </ListView>
+                                  
+                                  <StackPanel Grid.Row="2" Grid.Column="3" Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
+                                      <CheckBox Name="disAllMod" Checked="show_all_mods" Unchecked="show_com_mods" Width="25" VerticalAlignment="Center"></CheckBox>
+                                      <TextBlock VerticalAlignment="Center">Display All</TextBlock>
+                                      <Button Click="Config_Mods" VerticalAlignment="Center" Margin="100,0,0,0" Width="60" Height="25" FontStyle="Italic" Background="AliceBlue">
+                                                    Edit...
+                                      </Button>
+                                  </StackPanel>
+                          
+                              </Grid>
+                      </GroupBox>
+                                        <!--Style="{StaticResource CheckBoxStyle1}"-->
+                      </Grid>
+                      </Expander>
+                      <Expander Name="filter" Grid.Row="1" SnapsToDevicePixels="True" Expanded="filter_Expanded">
+                          <Expander.Header>
+                              <Label Style="{StaticResource LabelStyle}" VerticalAlignment="Center">Result Filter</Label>
+                          </Expander.Header>
+                           <Grid>
+                           <Grid.RowDefinitions>
+                               <RowDefinition Height="Auto"/>
+                               <RowDefinition Height="Auto"/>
+                               <RowDefinition Height="Auto"/>
+                               <RowDefinition Height="Auto"/>
+                               <RowDefinition Height="Auto"/>
+                           </Grid.RowDefinitions>
+                           <StackPanel Grid.Row="0" Orientation="Horizontal">
+                               <Label VerticalAlignment="Center" Width="175">Show Spectra or Peptides</Label>                              
+                               <Separator Height="1" Width="600" VerticalAlignment="Center" BorderBrush="Black"></Separator>                              
+                           </StackPanel>                         
+                           <Grid Grid.Row="1" Margin="20,0,0,0">
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="Auto" />
+                                   <RowDefinition Height="Auto"/>
+                                   <RowDefinition Height="Auto"/>
+                               </Grid.RowDefinitions>
+                               <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+                                   <Label Content="FDR ≤ " VerticalAlignment="Center" />
+                                   <TextBox Name="FDRValue" Width="70" ToolTip="Hint: The value of FDR must be between 0 and 100.">
+                                                <TextBox.Text>
+                                                    <Binding Path="Fdr.Fdr_value" Mode="TwoWay">
+                                                        <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                   </TextBox>
+                                   <Label Content=" %  " HorizontalAlignment="Left" Width="50" VerticalAlignment="Center" />
+
+                                   <ComboBox Name="speORpep" Width="80"  SelectionChanged="speORpepTooltip" SelectedIndex="{Binding Path=Fdr.IsPeptides}">
+                                          <ComboBoxItem ToolTip="At Spectra Level">Spectra</ComboBoxItem>
+                                          <ComboBoxItem ToolTip="At Peptides Level">Peptides</ComboBoxItem>
+                                   </ComboBox>
+                                   <!--
+                                   <Slider Name="FDRControl" HorizontalAlignment="Right" VerticalAlignment="Center"  
+                                          Value="{Binding ElementName=FDRValue,Path=Text}" Margin="90,0,0,0" Width="420"  Height="36" Maximum="100" Minimum="0"/>
+                                   -->
+                               </StackPanel>                                                                                                                                                                                                                  
+                               <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+                                            <TextBox Name="PepMassMin" Text="{Binding Path=Pep_mass_range.Left_value}" TextAlignment="Right" Width="70" VerticalAlignment="Center">                                   
+                                            </TextBox>
+                                            <TextBlock VerticalAlignment="Center" Text="  ≤ Peptide Mass ≤  ">  </TextBlock>
+                                            <TextBox Name="PepMassMax" Width="70" VerticalAlignment="Center">
+                                                <TextBox.Text>
+                                                    <Binding Path="Pep_mass_range.Right_value" Mode="TwoWay">
+                                                        <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+
+                                            <TextBox Name="PepLenMin" Text="{Binding Path=Pep_length_range.Left_value}" TextAlignment="Right" Width="70" Margin="100,0,0,0" VerticalAlignment="Center">                                           
+                                            </TextBox>
+                                            <TextBlock VerticalAlignment="Center" Text="  ≤ Peptide Length ≤  "> </TextBlock>
+                                            <TextBox Name="PepLenMax" Width="70" VerticalAlignment="Center">
+                                                <TextBox.Text>
+                                                    <Binding Path="Pep_length_range.Right_value" Mode="TwoWay">
+                                                        <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                        <Binding.ValidationRules>
+                                                            <DataErrorValidationRule />
+                                                            <ExceptionValidationRule />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </TextBox.Text>
+                                            </TextBox>
+                               </StackPanel>                           
+                           </Grid>                          
+                           
+                           <StackPanel Grid.Row="2" Orientation="Horizontal">
+                               <Label VerticalAlignment="Center" Width="100">Show Proteins</Label>                              
+                               <Separator Height="1" Width="675" VerticalAlignment="Center" BorderBrush="Black"></Separator>                              
+                           </StackPanel>                                                                                  
+                           <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="30,10,0,5">
+                                  <TextBlock Text="Number of Peptides ≥  " VerticalAlignment="Center"></TextBlock>
+                                  <TextBox Name="PepNumMin" Text="{Binding Path=Min_pep_num}" Width="60" VerticalAlignment="Center"></TextBox>
+                                  <Label Content="FDR ≤ " VerticalAlignment="Center" Margin="155,0,0,0"/>
+                                  <TextBox Name="ProteinFdr" Width="70" ToolTip="Hint: The value of FDR must be between 0 and 100.">
+                                            <TextBox.Text>
+                                                <Binding Path="Protein_Fdr" Mode="TwoWay">
+                                                    <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                    <Binding.ValidationRules>
+                                                        <DataErrorValidationRule />
+                                                        <ExceptionValidationRule />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </TextBox.Text>
+                                  </TextBox>
+                                  <Label Content=" %  " HorizontalAlignment="Left" Width="50" VerticalAlignment="Center" />
+                           </StackPanel>                                                 
+                        </Grid>                                                         
+                      </Expander>
+                   </Grid> 
+                </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Quantitation" Name="QuantTab" FocusVisualStyle="{x:Null}" PreviewMouseLeftButtonDown="None_Quantitation_Tip">           
+                <ScrollViewer Name="quantScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,10,0,0">
+                <Grid Name="QuantTabContent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" Name="V_MS1Quant">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="45"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="1" Name="Quant_Label">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <!--
+                     <StackPanel Name="maxLA" Grid.Row="1" Visibility="Collapsed"  Orientation="Horizontal">
+                         <Label Content="Max.  labeled A   "  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                         <TextBox Name="maxLabelA" Text="3" Width="205" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                  Margin="0,8" BorderBrush="DarkGray"></TextBox>                  
+                     </StackPanel>  
+                     -->
+                                        <Grid Name="multipLabels" Grid.Row="1" >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="30" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="110" />
+                                                <ColumnDefinition Width="180"/>
+                                                <ColumnDefinition Width="90"/>
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal">
+                                                <!--<Label VerticalAlignment="Bottom">Labels</Label>-->
+                                                <Button Click="Config_Labels" VerticalAlignment="Center" Margin="140,0,0,0" Width="60" Height="25" FontStyle="Italic" Background="AliceBlue">
+                                                    Labels...
+                                                </Button>
+                                            </StackPanel>
+                                            <Label Name="lightLabel" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Light Label :</Label>
+                                            <Label Name="mediumLabel" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Medium Label :</Label>
+                                            <Label Name="heavyLabel" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Heavy Label :</Label>
+                                            <ListBox Name="selectedLightLabels" Grid.Row="1" Grid.Column="1" Height="50" Width="150" 
+                                  HorizontalAlignment="Left" Background="#eeF6F6F6" ItemsSource="{Binding Path=Labeling.Light_label}">
+                                            </ListBox>
+                                            <ListBox Name="selectedMediumLabels" Grid.Row="2" Grid.Column="1" Height="50" Width="150" Margin="0,10,0,0"
+                                  HorizontalAlignment="Left" Background="#eeF6F6F6" ItemsSource="{Binding Path=Labeling.Medium_label}">
+                                            </ListBox>
+                                            <ListBox Name="selectedHeavyLabels" Grid.Row="3" Grid.Column="1" Height="50" Width="150" Margin="0,10,0,0"
+                                  HorizontalAlignment="Left" Background="#eeF6F6F6" ItemsSource="{Binding Path=Labeling.Heavy_label}">
+                                            </ListBox>
+                                            <ListBox Name="labellist" Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" Height="210" Width="200" 
+                                     Background="#efF6F6F6">
+
+                                            </ListBox>
+                                            <StackPanel Name="lightBtn" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+                                                <Button Width="32" Height="20" Margin="5" Click="add_light_labels" Style="{StaticResource AddLBtnStyle}">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                                </Button>
+                                                <Button Width="32" Height="20" Margin="5" Click="remove_light_labels" Style="{StaticResource RemoveLBtnStyle}">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                                </Button>
+                                            </StackPanel>
+                                            <StackPanel Name="mediumBtn" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
+                                                <Button Width="32" Height="20" Margin="5" Click="add_medium_labels" Style="{StaticResource AddMBtnStyle}">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                                </Button>
+                                                <Button Width="32" Height="20" Margin="5" Click="remove_medium_labels" Style="{StaticResource RemoveMBtnStyle}">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                                </Button>
+                                            </StackPanel>
+                                            <StackPanel Name="heavyBtn" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center">
+                                                <Button Width="32" Height="20" Margin="5" Click="add_heavy_labels" Style="{StaticResource AddHBtnStyle}">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_left.png"/>
+                                                </Button>
+                                                <Button Width="32" Height="20" Margin="5" Click="remove_heavy_labels" Style="{StaticResource RemoveHBtnStyle}">
+                                                    <Image Stretch="Fill" Source="images/icons/arr_right.png" />
+                                                </Button>
+                                            </StackPanel>
+                                        </Grid>
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="42">
+                                            <Label Content="Multiplicity :"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"/>
+                                            <ComboBox Name="MultiplicityType" SelectedIndex="{Binding Path=Labeling.Multiplicity_index}" Height="25" Width="145" VerticalAlignment="Center" 
+                                   SelectionChanged="select_multiplicity_type">
+                                                <ComboBoxItem Name="multiplicity1">1</ComboBoxItem>
+                                                <ComboBoxItem>2</ComboBoxItem>
+                                                <ComboBoxItem>3</ComboBoxItem>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Expander Grid.Row="2" Name="QuantAdvanced" Expanded="pQuant_Expanded" IsExpanded="False" Margin="0,10,0,0">
+                                        <Expander.Header>
+                                            <TextBlock VerticalAlignment="Center" >Advanced</TextBlock>
+                                        </Expander.Header>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,10,0,0" Height="32" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Width="220" >NUMBER_SCANS_HALF_CMTG :
+                                                    <TextBlock.ToolTip>
+                                                        <ToolTip Background="#ffe9ecef">
+                                                            <TextBox IsReadOnly="True" Width="220" TextWrapping="Wrap" Background="#ffe9ecef" BorderThickness="0">
+                                                                The number of MS1 scans along half of the chromatogram. Generally, it is 100 ~ 200.
+                                                            </TextBox>
+                                                        </ToolTip>
+                                                    </TextBlock.ToolTip>
+                                                </TextBlock>
+                                                <TextBox Name="number_scans_half_cmtg" VerticalAlignment="Center" Width="75" BorderBrush="DarkGray">
+                                                    <TextBox.Text>
+                                                    <Binding Path="Quant_advanced.Number_scans_half_cmtg" Mode="TwoWay">
+                                                        <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                    <TextBox.ToolTip>
+                                                        <ToolTip Background="#ffe9ecef">
+                                                            <TextBox IsReadOnly="True" TextWrapping="Wrap" Background="#ffe9ecef" BorderThickness="0">
+                                                                You can only input integer number between 100 and 10000.
+                                                            </TextBox>
+                                                        </ToolTip>
+                                                    </TextBox.ToolTip>
+                                                </TextBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,10,0,0" Height="32" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Width="220">PPM_FOR_CALIBRATION :
+                                                    <TextBlock.ToolTip>
+                                                        <ToolTip Background="#ffe9ecef">
+                                                            <TextBox IsReadOnly="True" Width="220" TextWrapping="Wrap" Background="#ffe9ecef" BorderThickness="0">
+                                                                The mass biases (ppm level) of the peaks in MS1 scans. If you calibrated your Mass Spec, it is 0.
+                                                            </TextBox>
+                                                        </ToolTip>
+                                                    </TextBlock.ToolTip>
+                                                </TextBlock>
+                                                <TextBox Name="ppm_for_calibration" VerticalAlignment="Center" Width="75" BorderBrush="DarkGray">
+                                                    <TextBox.Text>
+                                                    <Binding Path="Quant_advanced.Ppm_for_calibration" Mode="TwoWay">
+                                                        <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Margin="70,10,0,0" Height="32" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Width="220">PPM_HALF_WIN_ACCURACY_PEAK :
+                                                    <TextBlock.ToolTip>
+                                                        <ToolTip Background="#ffe9ecef">
+                                                            <TextBox IsReadOnly="True" TextWrapping="Wrap" Width="220" Background="#ffe9ecef" BorderThickness="0">
+                                                                Similar to precursor tolerance in the identification panel. 
+                                                     pQuant will find the experimental peaks in this window.
+                                                            </TextBox>
+                                                        </ToolTip>
+                                                    </TextBlock.ToolTip>
+                                                </TextBlock>
+                                                <TextBox Name="ppm_half_win_accuracy_peak" VerticalAlignment="Center" Width="75" BorderBrush="DarkGray">
+                                                    <TextBox.Text>
+                                                        <Binding Path="Quant_advanced.Ppm_half_win_accuracy_peak" Mode="TwoWay">
+                                                        <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="0" Grid.Column="1" Margin="70,10,0,0" Height="32" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Width="220">NUMBER_HOLE_IN_CMTG :
+                                                    <TextBlock.ToolTip>
+                                                        <ToolTip Background="#ffe9ecef">
+                                                            <TextBox IsReadOnly="True" TextWrapping="Wrap" Width="220" Background="#ffe9ecef" BorderThickness="0">
+                                                                In general, the parameter is set to 2. It is used when pQuant find the start and the end points of the chromatograms.
+                                                            </TextBox>
+                                                        </ToolTip>
+                                                    </TextBlock.ToolTip>
+                                                </TextBlock>
+                                                <ComboBox Name="number_hole_in_cmtg" SelectedIndex="{Binding Path=Quant_advanced.Number_hole_in_cmtg}" Width="75" VerticalAlignment="Center">
+                                                    <ComboBoxItem>1</ComboBoxItem>
+                                                    <ComboBoxItem>2</ComboBoxItem>
+                                                    <ComboBoxItem>3</ComboBoxItem>
+                                                    <ComboBoxItem>4</ComboBoxItem>
+                                                    <ComboBoxItem>5</ComboBoxItem>
+                                                    <ComboBoxItem>6</ComboBoxItem>
+                                                    <ComboBoxItem>7</ComboBoxItem>
+                                                    <ComboBoxItem>8</ComboBoxItem>
+                                                    <ComboBoxItem>9</ComboBoxItem>
+                                                    <ComboBoxItem>10</ComboBoxItem>
+                                                </ComboBox>
+                                            </StackPanel>
+                                            <StackPanel Name="sample_rate_sp" Grid.Row="2" Grid.Column="0" Height="32" Margin="10,10,0,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Width="310">TYPE_SAME_START_END_BETWEEN_EVIDENCE :
+                                                    <TextBlock.ToolTip>
+                                                        <ToolTip Background="#ffe9ecef">
+                                                            <TextBox IsReadOnly="True" TextWrapping="Wrap" Width="220" Background="#ffe9ecef" BorderThickness="0">
+                                                                The chromatograms of the light and heavy peptide have the dependent or the independent start and end points. 
+                                                   In general, the sample is 1:1 mixed.
+                                                            </TextBox>
+                                                        </ToolTip>
+                                                    </TextBlock.ToolTip>
+                                                </TextBlock>
+                                                <ComboBox Name="type_same_start_end_between_evidence" SelectedIndex="{Binding Path=Quant_advanced.Type_same_start_end_between_evidence}" Width="180" VerticalAlignment="Center">
+                                                    <ComboBoxItem>For 1:1 Mixed Samples</ComboBoxItem>
+                                                    <ComboBoxItem>For 10:1 or 1:10 Mixed Samples</ComboBoxItem>
+                                                    <ComboBoxItem>Independent</ComboBoxItem>
+                                                </ComboBox>
+                                            </StackPanel>
+                                            <StackPanel Name="calibriation_15N_sp" Grid.Row="2" Grid.Column="1" Height="32" Margin="70,10,0,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center">
+                                                ELEMENT_ENRICHMENT_CALIBRIATION :
+                                                </TextBlock>
+                                                <ComboBox Name="ll_element_enrichment_calibration" SelectedIndex="{Binding Path=Quant_advanced.Ll_element_enrichment_calibration}" Width="75" VerticalAlignment="Center">
+                                                    <ComboBoxItem ToolTip="It is not 15N quantitation">none</ComboBoxItem>
+                                                    <ComboBoxItem ToolTip="It is 15N quantitation, but the enrichment of 15N is fixed in element.ini.">15N</ComboBoxItem>
+                                                    <ComboBoxItem ToolTip="It is 15N quantitation, pQuant will calculate the atomic percent enrichment of 15N for every peptide.">13C</ComboBoxItem>
+                                                </ComboBox>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Expander>
+                                    <Grid Name="QLabelFree" Grid.Row="1" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                            <Label HorizontalAlignment="Center" VerticalAlignment="Center">Sample Number</Label>
+                                            <TextBox Name="sampleNum" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                                            <Label Margin="20,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">Raw Number</Label>
+                                            <TextBox Name="rawNum" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                                            <Button Margin="30,0,0,0" Width="75" Height="25">New</Button>
+                                        </StackPanel>
+                                        <Grid Name="LFTable" Grid.Row="1">
+
+                                        </Grid>
+                                    </Grid>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+                                        <Label Content="Type :"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"/>
+                                        <ComboBox Name="QuanType" SelectedIndex="{Binding Path=Quantitation_type}" Width="145" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="select_quantitation_type">
+                                            <ComboBoxItem>Labeling-None</ComboBoxItem>
+                                            <ComboBoxItem>Labeling-15N</ComboBoxItem>
+                                            <ComboBoxItem>Labeling-SILAC etc.</ComboBoxItem>
+                                        </ComboBox>
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Grid.Row="1" Name="V_MS2Quant" Margin="0,10,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="45" />
+                                    <RowDefinition Height="45" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="2" Name="V_ms2param" Visibility="Collapsed">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Name="V_reportIons_panel" Orientation="Horizontal">
+                                            <TextBlock Text="Reporter Ion MZ: " VerticalAlignment="Center"></TextBlock>
+                                            <ListBox Name="reportIonMZ" HorizontalAlignment="Left" ItemsSource="{Binding Path=ReporterIonMZ, Mode=TwoWay}" BorderThickness="0" Width="200">
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <TextBox Width="80" Text="{Binding Path=.}">
+                                                        </TextBox>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </StackPanel>
+                                        <StackPanel Name="V_pIDL_panel">
+                                            <StackPanel Orientation="Horizontal" Height="40">
+                                                <TextBlock Text="Nterm Modification: " VerticalAlignment="Center"></TextBlock>
+                                                <TextBox Margin="8,0,0,0" Name="v_nmod_textbox" VerticalAlignment="Center" Width="100" ></TextBox>
+                                                <TextBlock Text="Mass: " VerticalAlignment="Center" Margin="15,0,0,0"></TextBlock>
+                                                <TextBox Margin="8,0,0,0" Name="v_nmass_textbox" VerticalAlignment="Center" Width="80"></TextBox>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" Height="40">
+                                                <TextBlock Text="Cterm Modification: " VerticalAlignment="Center"></TextBlock>
+                                                <TextBox Margin="8,0,0,0" Name="v_cmod_textbox" VerticalAlignment="Center" Width="100" ></TextBox>
+                                                <TextBlock Text="Mass: " VerticalAlignment="Center" Margin="15,0,0,0"></TextBlock>
+                                                <TextBox Margin="8,0,0,0" Name="v_cmass_textbox" VerticalAlignment="Center" Width="80"></TextBox>
+                                                <Button Height="23" Name="add_pIDL_button" VerticalAlignment="Center" Margin="60,0,0,0" Width="60" Click="Add_pIDL_Item_Click">
+                                                    +
+                                                </Button>
+                                            </StackPanel>
+                                            <StackPanel Name="pIDL_ListView" Orientation="Horizontal" Margin="0,10,0,0" Style="{StaticResource pIDLVisibility}">
+                                                <ListView Name="V_pIDL_Info" HorizontalAlignment="Left" VerticalAlignment="Top" ItemsSource="{Binding Path=PIDL,Mode=TwoWay}">
+                                                    <ListView.View>
+                                                        <GridView>
+                                                            <GridViewColumn Header="Nterm-Modification" DisplayMemberBinding="{Binding Nterm_modmass.Name}" ></GridViewColumn>
+                                                            <GridViewColumn Header="Nterm-Mass" DisplayMemberBinding="{Binding Nterm_modmass.Mass}" ></GridViewColumn>
+                                                            <GridViewColumn Header="Cterm-Modification" DisplayMemberBinding="{Binding Cterm_modmass.Name}" ></GridViewColumn>
+                                                            <GridViewColumn Header="Cterm-Mass" DisplayMemberBinding="{Binding Cterm_modmass.Mass}" ></GridViewColumn>
+                                                        </GridView>
+                                                    </ListView.View>
+                                                </ListView>
+                                                <StackPanel VerticalAlignment="Center" Margin="32,0,0,0">
+                                                    <Button Height="23" Name="delete_pIDL_button" VerticalAlignment="Center"  Width="64" Click="Delete_pIDL_Item_Click">
+                                                        Delete
+                                                    </Button>
+                                                    <Button Height="23" Name="clear_pIDL_button" VerticalAlignment="Center" Margin="0,16,0,0" Width="64" Click="Clear_pIDL_Item_Click">
+                                                        Clear
+                                                    </Button>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Expander Grid.Column="1" Name="V_ms2_advanced" Expanded="ms2quant_Expanded" IsExpanded="True" Margin="0,10,0,0">
+                                        <Expander.Header>
+                                            <TextBlock VerticalAlignment="Center" >Advanced</TextBlock>
+                                        </Expander.Header>
+                                        <Grid Grid.Column="1" Margin="10,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <StackPanel Grid.Row="0" Orientation="Horizontal" Height="42">
+                                                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">Fragment Tolerance :</TextBlock>
+                                                <Label VerticalAlignment="Center" HorizontalAlignment="Right" Width="20">±</Label>
+                                                <TextBox Name="ms2_FrgTol" Width="65" VerticalAlignment="Center" ToolTip="Hint: The value of the tolerance cannot be less than 0.">
+                                                    <TextBox.Text>
+                                                        <Binding Mode="TwoWay" Path="MS2_Advanced.FTMS_Tolerance.Tl_value">
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                                <ComboBox Name="ms2_ftolUnits" SelectedIndex="{Binding Path=MS2_Advanced.FTMS_Tolerance.Isppm,Mode=TwoWay}" Width="60" VerticalAlignment="Center" Margin="10,10,0,10">
+                                                    <ComboBoxItem>Da</ComboBoxItem>
+                                                    <ComboBoxItem>ppm</ComboBoxItem>
+                                                </ComboBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Orientation="Horizontal" Height="42">
+                                                <TextBlock VerticalAlignment="Center" Text="Peak Range: "></TextBlock>
+                                                <TextBox Name="V_PeakRangeMin" Text="{Binding Path=MS2_Advanced.Peak_Range.Left_value,Mode=TwoWay}" TextAlignment="Right" Width="70" VerticalAlignment="Center">
+                                                </TextBox>
+                                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="  -  " Width="20"></TextBlock>
+                                                <TextBox Name="V_PeakRangeMax" Width="70" VerticalAlignment="Center">
+                                                    <TextBox.Text>
+                                                        <Binding Path="MS2_Advanced.Peak_Range.Right_value" Mode="TwoWay">
+                                                            <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="2" Orientation="Horizontal" Height="42">
+                                                <TextBlock Text="PIF ≥  " VerticalAlignment="Center"></TextBlock>
+                                                <TextBox Name="V_PIF" Text="{Binding Path=MS2_Advanced.Pif,Mode=TwoWay}" Width="60" VerticalAlignment="Center"></TextBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="3" Orientation="Horizontal" Height="42">
+                                                <TextBlock Text="PSM FDR ≤ " VerticalAlignment="Center"></TextBlock>
+                                                <TextBox Name="ms2_PSMFdr" Width="60" VerticalAlignment="Center" ToolTip="Hint: The value of FDR must be between 0 and 100.">
+                                                    <TextBox.Text>
+                                                        <Binding Path="MS2_Advanced.Psm_Fdr" Mode="TwoWay">
+                                                            <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                                <TextBlock Text=" %  " HorizontalAlignment="Left" Width="50" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="4" Orientation="Horizontal" Height="42">
+                                                <TextBlock Text="Protein FDR ≤ " VerticalAlignment="Center"></TextBlock>
+                                                <TextBox Name="ms2_ProteinFdr" Width="60" VerticalAlignment="Center" ToolTip="Hint: The value of FDR must be between 0 and 100.">
+                                                    <TextBox.Text>
+                                                        <Binding Path="MS2_Advanced.Protein_Fdr" Mode="TwoWay">
+                                                            <!--UpdateSourceTrigger="PropertyChanged"-->
+                                                            <Binding.ValidationRules>
+                                                                <DataErrorValidationRule />
+                                                                <ExceptionValidationRule />
+                                                            </Binding.ValidationRules>
+                                                        </Binding>
+                                                    </TextBox.Text>
+                                                </TextBox>
+                                                <TextBlock Text=" %  " HorizontalAlignment="Left" Width="50" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="5" Orientation="Horizontal" Height="42">
+                                                <CheckBox Name="V_correctMatrix" VerticalAlignment="Center" IsChecked="{Binding Path=MS2_Advanced.Correct}"></CheckBox>
+                                                <Label VerticalAlignment="Center">Correction Matrix</Label>
+                                                <CheckBox Name="V_runVSN" VerticalAlignment="Center" IsChecked="{Binding Path=MS2_Advanced.RunVSN}" Margin="20,0,0,0"></CheckBox>
+                                                <Label VerticalAlignment="Center">Run VSN</Label>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Expander>
+                                </Grid>
+                                <StackPanel Grid.Row="1" Orientation="Horizontal" Name="ms2_quant_method_panel" Visibility="Collapsed">
+                                    <TextBlock Text="Method : "  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    <ComboBox Name="ms2QuantMethod" SelectedIndex="{Binding Path=QuantitativeMethod, Mode=TwoWay}" Width="145" Margin="10,0,0,0" VerticalAlignment="Center" SelectionChanged="select_ms2quant_method">
+                                        <ComboBoxItem>iTRAQ-4plex</ComboBoxItem>
+                                        <ComboBoxItem>iTRAQ-8plex</ComboBoxItem>
+                                        <ComboBoxItem>TMT-6plex</ComboBoxItem>
+                                        <ComboBoxItem>TMT-10plex</ComboBoxItem>
+                                        <ComboBoxItem>pIDL</ComboBoxItem>
+                                    </ComboBox>
+                                </StackPanel>
+                                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                    <CheckBox Name="Is_ms2quant" VerticalAlignment="Center" IsChecked="{Binding Path=Enable_ms2quant,Mode=TwoWay}" Checked="enable_ms2quant" Unchecked="disable_ms2quant"></CheckBox>
+                                    <Label VerticalAlignment="Center">MS2 Quantitation</Label>
+                                </StackPanel>
+                            </Grid>
+              </Grid>
+            </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Summary" Name="SummaryTab" FocusVisualStyle="{x:Null}">
+                    <ScrollViewer Name="SumScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,0,0,0" SizeChanged="SumScrollChanged">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="28"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <ToolBar Grid.Row="0" Height="28" ToolBarTray.IsLocked="True" Loaded="ToolBar_Loaded_1">
+                                <Button Name="sumSave" Click="SaveConfiguration" Style="{StaticResource ButtonOpacity}">
+                                    <Button.ToolTip>
+                                        <!--Style="{StaticResource SimpleTip}"-->
+                                            <ToolTip>
+                                                Save the configuration
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <Image Source="images/icons/save.gif"/>
+                                    </Button>
+                                   <Button Name="sumRun" Margin="5,0,5,0" Click="StartSearch" Style="{StaticResource ButtonOpacity}">
+                                    <Button.ToolTip>
+                                        <!--Style="{StaticResource SimpleTip}"-->
+                                            <ToolTip>
+                                                Start to run
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <Image Source="images/icons/run.png"></Image>
+                                    </Button>
+                                    <Button Name="exp_pdf" Click="export_pdf">
+                                    <Button.ToolTip>
+                                        <!--Style="{StaticResource SimpleTip}"-->
+                                            <ToolTip>
+                                                Export this configuration to a pdf file
+                                            </ToolTip>
+                                        </Button.ToolTip>
+                                        <Image Source="images/icons/pdf_export.png" Width="18" Height="18"></Image>
+                                    </Button>
+                                </ToolBar>
+                                <!--<ScrollViewer Grid.Row="1" Name="SumScroll" MaxHeight="600" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">-->
+                                <Grid Grid.Row ="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="60"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid x:Name="all_summary" Grid.Row="0" >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Expander Name="FiRScroll" Grid.Row="0" Header="MS Data" IsExpanded="True">
+                                                <ListView Name="fileReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickMSData" ItemContainerStyle="{StaticResource SummaryListView}">
+                                                    <ListView.View>
+                                                        <GridView>
+                                                            <GridViewColumn Header="Property" Width="195" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                            <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                                            <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                </GridView>
+                                                    </ListView.View>
+                                                </ListView>
+                                            </Expander>
+                                            <Expander Name="SRScroll" Grid.Row="1" Header="Search" IsExpanded="True">
+                                        <ListView Name="searchReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickSearch" ItemContainerStyle="{StaticResource SummaryListView}">
+                                                    <ListView.View>
+                                                        <GridView>
+                                                            <GridViewColumn Header="Property" Width="195" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                            <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                                            <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                </GridView>
+                                                    </ListView.View>
+                                                </ListView>
+                                            </Expander>
+                                            <Expander Name="FRScroll" Grid.Row="2" Header="Filter" IsExpanded="True">
+                                        <ListView Name="filterReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickFilter" ItemContainerStyle="{StaticResource SummaryListView}">
+                                                    <ListView.View>
+                                                        <GridView>
+                                                            <GridViewColumn Header="Property" Width="195" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                            <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}"></GridViewColumn>
+                                                            <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                </GridView>
+                                                    </ListView.View>
+                                                </ListView>
+                                            </Expander>
+                                            <Expander Name="QRScroll" Grid.Row="3" Header="MS1 Quantitation" IsExpanded="True">
+                                                <ListView Name="quantitationReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickQuant" ItemContainerStyle="{StaticResource SummaryListView}" >
+                                                    <ListView.View>
+                                                        <GridView>
+                                                            <GridViewColumn Header="Property" Width="300" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                            <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}" ></GridViewColumn>
+                                                            <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                        </GridView>
+                                                    </ListView.View>
+                                                </ListView>
+                                            </Expander>
+                                    <Expander Name="MS2QRScroll" Grid.Row="4" Header="MS2 Quantitation" IsExpanded="True">
+                                        <ListView Name="ms2quantitationReport" Margin="20,0,0,0" MouseDoubleClick="DoubleClickQuant" ItemContainerStyle="{StaticResource SummaryListView}" >
+                                            <ListView.View>
+                                                <GridView>
+                                                    <GridViewColumn Header="Property" Width="300" DisplayMemberBinding="{Binding _property}"></GridViewColumn>
+                                                    <GridViewColumn Header="Value" DisplayMemberBinding="{Binding _value}" ></GridViewColumn>
+                                                    <GridViewColumn Header="Check" DisplayMemberBinding="{Binding _check}" Width="0"></GridViewColumn>
+                                                </GridView>
+                                            </ListView.View>
+                                        </ListView>
+                                    </Expander>
+                                </Grid>
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                                    <Button Name="saveBtn" Width="80" Height="30" Margin="0,0,20,0"
+                                            Click="SaveConfiguration" Style="{StaticResource ButtonStyle1}">Save</Button>
+                                    <Button Name="startBtn" Width="80" Height="30" HorizontalAlignment="Right" 
+                                            Click="StartSearch" Style="{StaticResource ButtonStyle1}">Start</Button>
+                                    <Button Name="dropdownBtn"  Click="dropDownButton_Click"  Style="{StaticResource ButtonStyle1}" VerticalAlignment="Center" Width="25" Height="30" Margin="0,0,20,0">
+                                        <Button.Content>
+                                            <!--<TextBlock FontWeight="ExtraBold" Foreground="White">∨</TextBlock>-->
+                                            <Image Source="images\icons\darr2.ico"></Image>
+                                        </Button.Content>
+                                        <Button.ContextMenu>
+                                            <ContextMenu x:Name="PopMenu" MenuItem.Click="DropDown_ContextMenu_Click" AllowDrop="True" Style="{DynamicResource ContextMenuStyle}" Foreground="White">
+                                                <MenuItem Header="from Data Extraction" />
+                                                <MenuItem Header="from Identification" />
+                                                <MenuItem Header="from Result Filter"></MenuItem>
+                                                <MenuItem Header="from Quantitation" />
+                                            </ContextMenu>
+                                        </Button.ContextMenu>
+                                    </Button>
+
+                                    <Button Name="stopBtn" Width="80" Height="30" HorizontalAlignment="Right" 
+                                            Click="StopTask" Style="{StaticResource ButtonStyle1}">Stop</Button>
+                                    </StackPanel>
+                                    </Grid>
+                            </Grid>
+                        </ScrollViewer>
+                </TabItem>
+        </TabControl>
+           <GridSplitter Grid.Row="1" Background="AliceBlue" HorizontalAlignment="Stretch" Height="3" ResizeBehavior="PreviousAndNext" />
+           <GroupBox Name="outputInfo" Grid.Row="2" BorderBrush="DarkGray" Height="Auto" VerticalAlignment="Stretch" SnapsToDevicePixels="True">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="images/icons/output.png"></Image>
+                    <Label Style="{StaticResource LabelStyle}">Output</Label>
+                </StackPanel>
+            </GroupBox.Header>
+            <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Height="28" Orientation="Horizontal">
+                        <Button Name="saveReportBtn" Click="Save_Output_Report" Width="85" Height="26" HorizontalAlignment="Left" FontStyle="Italic" Background="AliceBlue">
+                            Save Report                  
+                        </Button>
+                    </StackPanel>
+                    <TextBox Grid.Row="1" BorderBrush="White" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" Name="Output" TextWrapping="Wrap" IsReadOnly="True" FontFamily="Courier New" Background="White" Foreground="Black">
+                    
+                    </TextBox>
+            </Grid>
+            </GroupBox>
+        </Grid>
+       
+        <StatusBar Name="statusPanel" Background="#007acc" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Stretch" Height="25" Foreground="White">
+                <StackPanel Orientation="Horizontal" Background="#007acc">
+                    <TextBlock Name="status1">Ready</TextBlock>
+                </StackPanel>
+        </StatusBar>
+    </Grid>
+</Window>

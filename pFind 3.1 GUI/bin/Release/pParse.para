@@ -1,0 +1,38 @@
+# This is a standard pParse configure file
+# For help: mail to wulong@ict.ac.cn
+# Time: 2014/4/11 20:55:53
+
+[Basic Options]
+datanum=1
+datapath1=D:\pFind\data\5085_yeastTCL_tryp_12.raw
+
+[Advanced Options]
+co-elute=1
+# 0, output single precursor for single scan;
+# 1, output all co-eluted precursors.
+input_format=raw
+# raw / ms1
+isolation_width=2
+# 2 / 2.5 / 3 / 4
+mars_threshold=-0.68
+ipv_file=.\IPV.txt
+trainingset=.\TrainingSet.txt
+
+[Internal Switches]
+output_mars_y=0
+delete_msn=0
+output_mgf=1
+output_pf=1
+debug_mode=0
+check_activationcenter=1
+output_all_mars_y=0
+rewrite_files=0
+export_unchecked_mono=0
+cut_similiar_mono=1
+mars_model=0
+output_trainingdata=0
+
+########################################
+[About pXtract]
+m/z=5
+Intensity=1

@@ -1,0 +1,52 @@
+﻿<Window x:Class="pBuild.MS2_Quant_Config_Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MS2_Quant_Config_Dialog" Height="300" Width="400" Icon="pBuild.ico" ResizeMode="NoResize" Closed="closed_event"
+        Left="100" Top="100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="3">N-term1 Mass</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="n_term1_tbx" Margin="3"></TextBox>
+        <TextBlock Grid.Row="0" Grid.Column="2" Margin="3">AA</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="3" Margin="3" x:Name="n_term1_aa_tbx"></TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="3">N-term2 Mass</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="n_term2_tbx" Margin="3"></TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="2" Margin="3">AA</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="3" Margin="3" x:Name="n_term2_aa_tbx"></TextBox>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="3">C-term1 Mass</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="c_term1_tbx" Margin="3"></TextBox>
+        <TextBlock Grid.Row="2" Grid.Column="2" Margin="3">AA</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="3" Margin="3" x:Name="c_term1_aa_tbx"></TextBox>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="3">C-term2 Mass</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="c_term2_tbx" Margin="3"></TextBox>
+        <TextBlock Grid.Row="3" Grid.Column="2" Margin="3">AA</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="3" Margin="3" x:Name="c_term2_aa_tbx"></TextBox>
+        <TextBlock Grid.Row="4" Grid.Column="0">Mass Deviation</TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="mass_error_tbx" Margin="3,3,68,3"></TextBox>
+        <ComboBox Grid.Row="4" Grid.Column="1" Width="55" Margin="41,3,3,3" x:Name="mass_error_cb">
+            <ComboBoxItem IsSelected="True">ppm</ComboBoxItem>
+            <ComboBoxItem>Da</ComboBoxItem>
+        </ComboBox>
+        <TextBlock Grid.Row="5" Grid.Column="0" Margin="3">MZ Range</TextBlock>
+        <TextBox Grid.Row="5" Grid.Column="1" x:Name="mz1_tbx" Margin="3"></TextBox>
+        <TextBox Grid.Row="5" Grid.Column="3" Margin="3" x:Name="mz2_tbx"></TextBox>
+        <TextBlock Grid.Row="6" Grid.Column="0" Margin="3">Match Ion Type</TextBlock>
+        <TextBox Grid.Row="6" Grid.Column="1" Margin="3" x:Name="match_Ion_type_tbx">a1+</TextBox>
+        <Button Grid.Row="7" Grid.Column="2" Margin="27,6,77,0" Click="ok_btn" Grid.ColumnSpan="2">OK</Button>
+    </Grid>
+</Window>

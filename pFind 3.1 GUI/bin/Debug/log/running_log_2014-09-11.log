@@ -1,0 +1,30 @@
+[pFind] <GroupFilter> Initialize...
+[pFind] <Filter> TDA started...
+[pFind] <Filter> TDA completed.
+[pFind] <Scoring Proteins>: 100%
+[pFind] == == == Total Time elapsed of Filter: 1.3 seconds. == == ==
+
+[pQuant] <Version>: 1.5, liuchao1016@ict.ac.cn, May 2014.
+
+[pQuant] <Start Time>: Thu Sep 11 23:58:05 CST 2014.
+
+[pQuant] <Preprocess>: Starts...
+[pQuant] <Preprocess>: Reading config file: D:\workspace\Task1\param\pQuant.cfg
+[pQuant] <Preprocess>: Results are in the folder: D:\workspace\Task1\result\
+[pQuant] <Preprocess>: Creating index for F:\About pFind\data\cncp2012\std8_trypsin_denovo_20090729.pf1
+[pQuant] <Preprocess>: Reading identification results...
+
+[pQuant] <Quantify>: Starts...
+[pQuant] <Quantify>: The total number of PSMs: 1620
+
+[pQuant] <Quantify>: 100.00%
+
+[pQuant] <Infer>: Starts...
+[pQuant] <Infer>: The total number of proteins: 1189
+
+[pQuant] <Infer>: 100.00%
+
+[pQuant] <Finish Time>: Thu Sep 11 23:58:31 CST 2014.
+
+== == == == == Total Time Used for This Task: 00:00:31 == == == == ==
+

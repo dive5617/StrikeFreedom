@@ -1,0 +1,15 @@
+D:\工程\test1.txt
+D:\工程\test1.txt
+[pFind]	 #########################################
+[pFind]	 #                                       #
+[pFind]	 #  Welcome to use pFind search engine!  #
+[pFind]	 #                                       #
+[pFind]	 #                  version 3.0 Alpha1   #
+[pFind]	 #                                       #
+[pFind]	 #               http://pfind.ict.ac.cn  #
+[pFind]	 #                                       #
+[pFind]	 #########################################
+[pFind]	Fasta path: D:\2014.6\Merge_TTE.fasta
+[pFind]	MSMS path: G:\2012year\bgi-hcd-raw\HCD-TTE-65-1-03_HCDFT.pf2
+[pFind]	<Tag Search> Round: 1 / 1
+[pFind]	<Tag Search>: 0%[pFind]	<Tag Search>: 1%[pFind]	<Tag Search>: 1%[pFind]	<Tag Search>: 2%[pFind]	<Tag Search>: 3%[pFind]	<Tag Search>: 4%[pFind]	<Tag Search>: 4%[pFind]	<Tag Search>: 5%[pFind]	<Tag Search>: 6%[pFind]	<Tag Search>: 7%[pFind]	<Tag Search>: 7%[pFind]	<Tag Search>: 8%[pFind]	<Tag Search>: 9%[pFind]	<Tag Search>: 9%[pFind]	<Tag Search>: 10%[pFind]	<Tag Search>: 11%[pFind]	<Tag Search>: 12%[pFind]	<Tag Search>: 12%

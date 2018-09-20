@@ -1,0 +1,21 @@
+﻿<Window x:Class="pConfig.Database_Edit_Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Database Information" Height="266" Width="655" Icon="images\pConfig.ico" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Left" TextWrapping="Wrap" Padding="3" Foreground="Red" VerticalAlignment="Top" Height="42" Width="609" Margin="30,134,0,0" Grid.ColumnSpan="2"><Run Language="zh-cn" Text="Note: "/><Run Text="Please input a target-only database. pTop will generate the target-decoy database"/><Run Language="zh-cn" Text=" "/><Run Text="automatically."/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Left" TextWrapping="Wrap" Padding="3" Text="Name:" VerticalAlignment="Top" Height="24" Width="47" Margin="30,23,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Left" TextWrapping="Wrap" Padding="3" Text="Path:" VerticalAlignment="Top" Height="24" Width="42" Margin="30,75,0,0" RenderTransformOrigin="1.143,0.5"/>
+        <TextBox x:Name="Name_txt" HorizontalAlignment="Left" Height="25" Margin="125,22,0,0" Text="" VerticalAlignment="Top" Width="322"/>
+        <TextBox x:Name="Path_txt" HorizontalAlignment="Left" Height="25" Margin="125,74,0,0" Text="" VerticalAlignment="Top" Width="392" RenderTransformOrigin="0.372,2.531"/>
+        <Button Content="Open..." HorizontalAlignment="Left" Height="25" Margin="536,75,0,0" VerticalAlignment="Top" Width="53" Click="open_btn_clk"/>
+        <Button Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="187,191,0,0" Click="ok_btn_clk"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="372,191,0,0" Click="cancel_btn_clk"/>
+        <CheckBox x:Name="add_con_cbx" Content="Add contaminant" HorizontalAlignment="Left" Margin="125,104,0,0" VerticalAlignment="Top" Click="add_con_check_clk"/>
+
+    </Grid>
+</Window>

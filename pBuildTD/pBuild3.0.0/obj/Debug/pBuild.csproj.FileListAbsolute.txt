@@ -1,0 +1,560 @@
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\MainWindow.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\App.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild3.0.0_MarkupCompile.cache
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild3.0.0_MarkupCompile.lref
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\pBuild3.0.0.exe.config
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\pBuild3.0.0.exe
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\pBuild3.0.0.pdb
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\3DTools.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.WindowsForms.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Xps.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp-WPF.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp.Xps.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\Petzold.Media3D.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\XamlToys.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\DocumentFormat.OpenXml.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\MigraDoc.DocumentObjectModel.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\MigraDoc.Rendering.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\MigraDoc.RtfRendering.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp.Charting.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.pdb
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.pdb
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.pdb
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.pdb
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Xps.pdb
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\OxyPlot.Xps.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp-WPF.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp.Xps.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\MigraDoc.DocumentObjectModel.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\MigraDoc.Rendering.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\MigraDoc.RtfRendering.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\PdfSharp.Charting.xml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\de\PdfSharp.resources.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\de\MigraDoc.Rendering.resources.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\bin\Debug\de\PdfSharp.Charting.resources.dll
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\ColorPicker.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\DisplayPSM.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\Display_ms2_table.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\Ms2_advance.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\Ms2_setting.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\ColorDialog.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\ColorPicker.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\DisplayPSM.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\Display_ms2_table.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\Ms2_advance.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\Ms2_setting.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\ColorDialog.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\MainWindow.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild3.0.0.g.resources
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild3._0._0.Properties.Resources.resources
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild.csproj.GenerateResource.Cache
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild3.0.0.exe
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild3.0.0.pdb
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\StartPage.baml
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\StartPage.g.cs
+D:\WPF\pBuild3.0.0\pBuild3.0.0\obj\Debug\pBuild.csprojResolveAssemblyReference.cache
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\3DTools.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.WindowsForms.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Xps.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp-WPF.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Xps.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\Petzold.Media3D.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\XamlToys.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\DocumentFormat.OpenXml.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.DocumentObjectModel.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.Rendering.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.RtfRendering.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Charting.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.pdb
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.pdb
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.pdb
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.pdb
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Xps.pdb
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Xps.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp-WPF.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Xps.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.DocumentObjectModel.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.Rendering.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.RtfRendering.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Charting.xml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\PdfSharp.resources.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\MigraDoc.Rendering.resources.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\PdfSharp.Charting.resources.dll
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorPicker.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Display_ms2_table.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\StartPage.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_advance.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_setting.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorDialog.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorPicker.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Display_ms2_table.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\StartPage.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MainWindow.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_advance.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_setting.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\App.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorDialog.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MainWindow.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.csproj.GenerateResource.Cache
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\pBuild.exe.config
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\pBuild.exe
+D:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\pBuild.pdb
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.cache
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.lref
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.g.resources
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.exe
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.pdb
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Setting.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Setting.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Tmp_Window.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Tmp_Window.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Model_Window.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Model_Window.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.csprojResolveAssemblyReference.cache
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\About.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\About.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.Properties.Resources.resources
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\License_Dialog.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Advance.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Task_Compare_Tool.baml
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\License_Dialog.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Advance.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.g.cs
+D:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Task_Compare_Tool.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\pBuild.exe.config
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\pBuild.exe
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\pBuild.pdb
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\3DTools.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\Common.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\CrashReportManager.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.WindowsForms.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Xps.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp-WPF.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Xps.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\Petzold.Media3D.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\XamlToys.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\DocumentFormat.OpenXml.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.DocumentObjectModel.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.Rendering.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.RtfRendering.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Charting.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.pdb
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.pdb
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.OpenXml.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.pdb
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Pdf.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.pdb
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Wpf.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Xps.pdb
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\OxyPlot.Xps.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp-WPF.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Xps.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.DocumentObjectModel.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.Rendering.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\MigraDoc.RtfRendering.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\PdfSharp.Charting.xml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\PdfSharp.resources.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\MigraDoc.Rendering.resources.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\bin\Debug\de\PdfSharp.Charting.resources.dll
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.csprojResolveAssemblyReference.cache
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\About.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorPicker.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Config_Dialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Display_ms2_table.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\License_Dialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Model_Window.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Advance.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Setting.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_advance.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_setting.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Task_Compare_Tool.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\About.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorDialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorPicker.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Config_Dialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Display_ms2_table.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\License_Dialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Model_Window.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Advance.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS1_Setting.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MainWindow.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_advance.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Ms2_setting.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Task_Compare_Tool.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Tmp_Window.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\App.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.cache
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.lref
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\ColorDialog.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\MainWindow.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\Tmp_Window.baml
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.g.resources
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.Properties.Resources.resources
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.csproj.GenerateResource.Cache
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.exe
+E:\WPF\pBuild3.0.1\pBuild3.0.0\obj\Debug\pBuild.pdb
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\pBuild.exe.config
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\pBuild.exe
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\pBuild.pdb
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\Common.dll
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\CrashReportManager.dll
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\OxyPlot.dll
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\About.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorPicker.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Config_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_table.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\License_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Advance.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Setting.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_advance.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_setting.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\About.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorDialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorPicker.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Config_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_table.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\License_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Advance.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Setting.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MainWindow.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_advance.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_setting.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Tmp_Window.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\App.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild_Content.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.cache
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.lref
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorDialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Themes\Generic.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MainWindow.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Tmp_Window.baml
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.g.resources
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.Properties.Resources.resources
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.csproj.GenerateResource.Cache
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.exe
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.pdb
+L:\pFind studio\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.csprojResolveAssemblyReference.cache
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\pBuild.exe.config
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.exe
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.pdb
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\pBuild.exe
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\pBuild.pdb
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\Common.dll
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\CrashReportManager.dll
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\bin\Debug\OxyPlot.dll
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.csprojResolveAssemblyReference.cache
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\About.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorPicker.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Config_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_table.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\License_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Advance.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Setting.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_advance.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_setting.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\About.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorDialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorPicker.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Config_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Display_ms2_table.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\License_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Advance.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS1_Setting.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MainWindow.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_advance.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Ms2_setting.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Tmp_Window.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\App.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild_Content.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.cache
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.lref
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\ColorDialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Themes\Generic.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\MainWindow.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\Tmp_Window.baml
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.g.resources
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.Properties.Resources.resources
+E:\2016年上半年\其他事情\瑞敏\pBuild3.0.1_000_new\pBuild3.0.0\obj\Debug\pBuild.csproj.GenerateResource.Cache
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\bin\Debug\pBuild.exe.config
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild.exe
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild.pdb
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\bin\Debug\pBuild.exe
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\bin\Debug\pBuild.pdb
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\bin\Debug\Common.dll
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\bin\Debug\CrashReportManager.dll
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\bin\Debug\OxyPlot.dll
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild.csprojResolveAssemblyReference.cache
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\About.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\ColorPicker.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Config_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Display_ms2_table.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\License_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Model_Window.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS1_Advance.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS1_Setting.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Ms2_advance.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Ms2_setting.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Task_Compare_Tool.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\About.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\ColorDialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\ColorPicker.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Config_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Display_ms2_table.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\License_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Model_Window.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS1_Advance.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS1_Setting.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MainWindow.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Ms2_advance.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Ms2_setting.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Task_Compare_Tool.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Tmp_Window.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\App.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild_Content.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.cache
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.lref
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\ColorDialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Themes\Generic.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\MainWindow.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\Tmp_Window.baml
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild.g.resources
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild.Properties.Resources.resources
+L:\pFind studio\pBuild3.0.1_TD\pBuild3.0.0\obj\Debug\pBuild.csproj.GenerateResource.Cache
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\bin\Debug\pBuild.exe.config
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\bin\Debug\pBuild.exe
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\bin\Debug\pBuild.pdb
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\bin\Debug\Common.dll
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\bin\Debug\CrashReportManager.dll
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\bin\Debug\OxyPlot.dll
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild.csprojResolveAssemblyReference.cache
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\About.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\ColorPicker.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Config_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Display_ms2_table.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\License_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Model_Window.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS1_Advance.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS1_Setting.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Ms2_advance.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Ms2_setting.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Task_Compare_Tool.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\About.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\ColorDialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\ColorPicker.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Config_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Display_ms2_ratio_table.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Display_ms2_table.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MGF_PSM_Filter_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pLink\Ms2_advance.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\License_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Model_Window.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS1_Advance.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS1_Setting.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Denovol_Config.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Denovol_Setting.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MS2_Quant_Config_Dialog2.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MZ_Input_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Pnovol_Result_Window.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Protein_Adanvaced_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Protein_Filter_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\PSM_Filter_Dialog.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MainWindow.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Ms2_advance.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Ms2_setting.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Task_Compare_Tool.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Task_Compare_Tool2.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Tmp_Window.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Model_Window_DeNovo.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\App.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild_Content.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.cache
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild_MarkupCompile.lref
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\ColorDialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pLink\PSM_Filter_Dialog.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Themes\Generic.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\MainWindow.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\Tmp_Window.baml
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild.g.resources
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild.Properties.Resources.resources
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild.csproj.GenerateResource.Cache
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild.exe
+J:\pFind studio\pBuild3.0.1_TD_yh\pBuild3.0.0\obj\Debug\pBuild.pdb

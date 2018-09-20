@@ -1,0 +1,70 @@
+﻿<Window x:Class="pBuild.Protein_Filter_Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Protein_Filter_Dialog" Height="300" Width="300"  Icon="pBuild.ico" ResizeMode="NoResize" Closed="closed_event"
+        Left="100" Top="100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="3">AC</TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="protein_filter_AC_tb" Margin="3" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By AC SubString</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="3">DE</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="protein_filter_DE_tb" Margin="3" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By DE SubString</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="3">Group</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="protein_filter_Group_tb" Margin="3" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By Group SubString</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="3">Peptide Number</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="protein_peptide_number_tb" Margin="3" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By Peptide Number</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="3">Sq Number</TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="protein_sq_number_tb" Margin="3" KeyDown="enter_keyDown">
+            <TextBox.ToolTip>
+                <TextBlock>Filter By Sq Number</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBlock x:Name="target_tbk" Grid.Row="5" Grid.Column="0" Margin="3">Target:</TextBlock>
+        <ComboBox Grid.Row="5" Grid.Column="1" Margin="3" x:Name="target_comboBox" KeyDown="enter_keyDown">
+            <ComboBox.ToolTip>
+                <TextBlock>Filter by Target or Decoy</TextBlock>
+            </ComboBox.ToolTip>
+            <ComboBoxItem>
+                Show All
+            </ComboBoxItem>
+            <ComboBoxItem IsSelected="True">
+                Target
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Decoy
+            </ComboBoxItem>
+        </ComboBox>
+        <TextBlock Grid.Row="6" Grid.Column="0" Margin="3">Contaminants:</TextBlock>
+        <CheckBox x:Name="con_need_cbx" Grid.Row="6" Grid.Column="1" Margin="3" VerticalAlignment="Center"></CheckBox>
+        <Button Grid.Row="7" Grid.Column="1" Margin="3" Click="filter_btn_clk">Filter</Button>
+    </Grid>
+</Window>

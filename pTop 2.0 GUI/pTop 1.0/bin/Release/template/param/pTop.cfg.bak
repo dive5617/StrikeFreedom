@@ -1,0 +1,64 @@
+# This is a standard pTop configure file
+# For help: mail to luolan@ict.ac.cn
+# Time: 2015/7/28 星期二 16:28:13
+
+[Version]
+pTop_Version=EVA.1.0.0
+
+[spectrum]
+msmsnum=0
+msmspath1=
+
+input_format=raw
+# raw / mgf
+Activation=HCD
+# CID(b/y)/HCD(b/y)/ETD(c/z)/UVPD(abc/xyz)/EThcD(b/y,c/z)
+Precursor_Tolerance=3.2
+# Da
+Fragment_Tolerance=15
+# ppm
+
+[param]
+thread_num=2
+workflow=0
+# 0 tag flow, 1 ion flow
+output_top_k=10
+max_truncated_mass=20000
+# 终端截断的最大质量, default 20000
+second_search=1
+# 是否进行二次搜索 1|0
+
+[fixmodify]
+fixedModify_num=0
+fix_mod1=
+
+
+
+[modify]
+unexpected_mod=0
+Max_mod_num=3
+Max_mod_mass=500.000000
+Modify_num=0
+var_mod1=
+
+
+
+[filter]
+threshold=0.01
+# default 1%
+separate_filtering=1
+
+[file]
+Database=
+# Test.fasta
+pParseTD_cfg=
+pQuant_cfg=
+outputpath=
+#J:\pTop\Data\Yeast_HD\search_task_20170530224724\
+
+[quantify]
+quant=1|none
+# quant=2|none|M:Dimethyl[ProteinN-term]{H,2H}M:Dimethyl[K]{H,2H}
+
+[system]
+log=LOG_INFO

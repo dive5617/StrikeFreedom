@@ -1,0 +1,24 @@
+﻿18 O
+Arg10
+Arg6
+DimethLys0
+DimethLys2
+DimethLys4
+DimethLys6
+DimethLys8
+DimethNter0
+DimethNter2
+DimethNter4
+DimethNter6
+DimethNter8
+ICAT-0
+ICAT-9
+ICPL-Lys0
+ICPL-Lys4
+ICPL-Lys6
+ICPL-Lys10
+ICPL-Nter0
+ICPL-Nter4
+ICPL-Nter6
+ICPL-Nter10
+Ile7

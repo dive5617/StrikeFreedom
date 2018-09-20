@@ -1,0 +1,204 @@
+﻿<Window x:Class="pConfig.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:pConfig"
+        Title="pConfig" Height="614" Width="813" ResizeMode="CanMinimize" Icon="pConfig.ico" Closing="close_window">
+    <!--   -->
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.DoSave" Executed="save"></CommandBinding>
+    </Window.CommandBindings>
+    
+    <Window.InputBindings>
+        <KeyBinding Key="S" Modifiers="Control" Command="local:CustomCommands.DoSave"></KeyBinding>
+    </Window.InputBindings>
+   
+    <Window.Resources>
+        <Style TargetType="{x:Type DataGridCell}">
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="True"/>
+                        <Condition Binding="{Binding IsFocused, RelativeSource={RelativeSource Self}}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </MultiDataTrigger>
+
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="True"/>
+                        <Condition Binding="{Binding ContextMenu.IsOpen, RelativeSource={RelativeSource AncestorType=DataGrid}}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Tool">
+                <MenuItem Header="Restore the default Settings" Click="restore_ini_files"></MenuItem>
+                <MenuItem Header="N's Count" Click="N_count_clk"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+        <TabControl x:Name="tab_control" HorizontalAlignment="Left" Height="552" Margin="10,10,0,0" VerticalAlignment="Top" Width="774"
+                    SelectionChanged="TabControl_SelectionChanged_1">
+            <TabItem RenderTransformOrigin="-0.279,0.609">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Visibility="Collapsed"/>
+                        <TextBlock Text="Databases" Margin="0,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent" x:Name="db_listView" ItemsSource="{Binding databases}" HorizontalAlignment="Left" Height="448" Margin="10,10,0,0" VerticalAlignment="Top" Width="744"
+                               SelectionMode="Extended" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="db_clk">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding DB_Name}" />
+                            <DataGridTextColumn Header="Path" Binding="{Binding DB_Path}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="112,481,0,0" VerticalAlignment="Top" Width="75" Click="Add_Database_btn_clk"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="342,481,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Database_btn_clk"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="584,481,0,0" VerticalAlignment="Top" Width="75" Click="Save_Databse_btn_clk"/>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Visibility="Collapsed"/>
+                        <TextBlock Text="Modifications" Margin="0,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="226*"/>
+                            <ColumnDefinition Width="539*"/>
+                        </Grid.ColumnDefinitions>
+                        <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent" x:Name="mod_listView" ItemsSource="{Binding modifications}" HorizontalAlignment="Left" Height="413" Margin="10,45,0,0" VerticalAlignment="Top" Width="744" Grid.ColumnSpan="2"
+                              SelectionMode="Extended" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="mod_clk">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                            <DataGridTextColumn Header="Mass" Binding="{Binding Mod_mass}" Width="50"/>
+                            <DataGridTextColumn Header="Composition" Binding="{Binding Composition}" />
+                            <DataGridTextColumn Header="Position" Binding="{Binding Position_Display}" />
+                            <DataGridTextColumn Header="Sites" Binding="{Binding Mod_site}" Width="50" />
+                            <DataGridTextColumn Header="Neutral_Loss" Binding="{Binding Neutral_loss_str}" />
+                            <DataGridTextColumn Header="Common" Binding="{Binding Is_common}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="112,481,0,0" VerticalAlignment="Top" Width="75" Click="Add_Modification_btn_clk"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="116.018,481,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Modification_btn_clk" Grid.Column="1"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="358.018,481,0,0" VerticalAlignment="Top" Width="75" Click="Save_Modification_btn_clk" Grid.Column="1"/>
+                    <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" Text="Search..." VerticalAlignment="Top" Width="744"  Foreground="Gray"
+                             PreviewGotKeyboardFocus="txt_focus" PreviewLostKeyboardFocus="txt_lostFocus" PreviewKeyDown="txt_keyDown"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Visibility="Collapsed"/>
+                        <TextBlock Text="Quantifications" Margin="0,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent" x:Name="quant_listView" ItemsSource="{Binding quantifications}" HorizontalAlignment="Left" Height="448" Margin="10,10,0,0" VerticalAlignment="Top" Width="744" Grid.ColumnSpan="3"
+                              SelectionMode="Extended" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="quant_clk">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                            <DataGridTextColumn Header="Value" Binding="{Binding All_quant_str}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="112,481,0,0" VerticalAlignment="Top" Width="75" Click="Add_Quantification_btn_clk"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="342,481,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Quantification_btn_clk"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="584,481,0,0" VerticalAlignment="Top" Width="75" Click="Save_Quantification_btn_clk"/>
+                </Grid>
+            </TabItem>
+            <TabItem RenderTransformOrigin="-0.279,0.609" Visibility="Collapsed">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Visibility="Collapsed"/>
+                        <TextBlock Text="Enzymes" Margin="0,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="433*"/>
+                        <ColumnDefinition Width="331*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent" x:Name="enzyme_listView" ItemsSource="{Binding enzymes}" HorizontalAlignment="Left" Height="448" Margin="10,10,0,0" VerticalAlignment="Top" Width="744" Grid.ColumnSpan="2"
+                              SelectionMode="Extended" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="enzy_clk">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Cleave" Binding="{Binding Cleave_site}"/>
+                            <DataGridTextColumn Header="N/C Term" Binding="{Binding N_C}"/>
+                            <DataGridTextColumn Header="Ignore" Binding="{Binding Ignore_site}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="112,481,0,0" VerticalAlignment="Top" Width="75" Click="Add_Enzymes_btn_clk"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="342,481,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Enzymes_btn_clk"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="151,481,0,0" VerticalAlignment="Top" Width="75" Click="Save_Enzymes_btn_clk" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem RenderTransformOrigin="-0.279,0.609">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Visibility="Collapsed"/>
+                        <TextBlock Text="Amino Acids" Margin="0,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent" x:Name="aa_listView" ItemsSource="{Binding aas}" HorizontalAlignment="Left" Height="448" Margin="10,10,0,0" VerticalAlignment="Top" Width="744"
+                              SelectionMode="Extended" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="aa_clk">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Composition" Binding="{Binding Composition}"/>
+                            <DataGridTextColumn Header="Mass" Binding="{Binding Mass}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Edit" HorizontalAlignment="Left" Margin="112,481,0,0" VerticalAlignment="Top" Width="75" Click="Edit_Amino_Acid_btn_clk"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="584,481,0,0" VerticalAlignment="Top" Width="75" Click="Save_Amino_Acid_btn_clk"/>
+                </Grid>
+            </TabItem>
+            <TabItem RenderTransformOrigin="-0.279,0.609">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Visibility="Collapsed"/>
+                        <TextBlock Text="Elements" Margin="0,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent" x:Name="element_listView" ItemsSource="{Binding elements}" HorizontalAlignment="Left" Height="413" Margin="10,45,0,0" VerticalAlignment="Top" Width="744"
+                              SelectionMode="Extended" AutoGenerateColumns="False" IsReadOnly="True" Grid.ColumnSpan="4" MouseDoubleClick="ele_clk">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Mass" Binding="{Binding All_Mass_Str}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="112,481,0,0" VerticalAlignment="Top" Width="75" Click="Add_Element_btn_clk"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="342,481,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Element_btn_clk"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="584,481,0,0" VerticalAlignment="Top" Width="75" Click="Save_Element_btn_clk"/>
+                    <TextBox Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" Text="Search..." VerticalAlignment="Top" Width="744"  Foreground="Gray"
+                    	PreviewGotKeyboardFocus="txt_focus" PreviewLostKeyboardFocus="txt_lostFocus" PreviewKeyDown="txt_keyDown2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+    </Grid>
+</Window>

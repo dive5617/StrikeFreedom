@@ -1,0 +1,21 @@
+﻿<Window x:Class="pBuild.Task_Compare_Tool"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
+        Title="Task_Compare_Tool" Height="350" Width="300" Icon="pBuild.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*" MinHeight="200"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="all_tasks_lv" Grid.Row="0" Grid.Column="0" Margin="3"></ListView>
+        <Button Grid.Row="0" Grid.Column="1" Margin="3" Click="open_btn_clk" Height="25" Width="50" HorizontalAlignment="Right">Open</Button>
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="25" Width="70" HorizontalAlignment="Center" Margin="3" Click="compare_btn_clk">Compare</Button>
+        <StackPanel x:Name="compare_result_sp"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+# This is a standard pFind configure file
+# For help: mail to chihao@ict.ac.cn
+# Time: 2014/4/11 20:55:53
+
+[Version]
+pFind_Version=EVA.3.0.0.1.2014.07.05
+GUI_Version=LocalSearch.30.2014.07.05
+
+[param]
+thread=1
+mstol=1.5
+mstolppm=0
+msmstol=0.5
+msmstolppm=0
+temppepnum=100
+pepnum=10
+selectpeak=200
+maxprolen=20000000
+maxspec=1000000
+selectmod=
+fixmod=
+maxmod=3
+enzyme=Trypsin KR _ C
+max_clv_sites=2
+
+[engine]
+open_tag_len=6
+
+rest_tag_iteration=1
+rest_tag_len=4
+rest_mod_num=10
+
+salvo_iteration=1
+salvo_mod_num=5
+
+[file]
+modpath=modification.ini
+fastapath=D:\test\ipi.human.fasta
+contaminant=contaminant.fasta
+outputpath=D:\workspace\
+outputname=Task1
+
+[datalist]
+msmsnum=1
+msmspath1=D:\pFind\data\5085_yeastTCL_tryp_12.pf
+msmstype=PF2
+
+[system]
+log=LOG_INFO

@@ -1,0 +1,118 @@
+﻿<Window x:Class="pBuild.Ms2_advance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="adv_win" Title="MS2_advance" Height="450" Width="950" Icon="pBuild.ico" PreviewKeyDown="Window_Enter" Closed="closed_event"
+        Left="100" Top="100">
+    <!--  ResizeMode="NoResize"-->
+    <Window.Resources>
+        <Style x:Key="SingleClickEditing" TargetType="{x:Type DataGridCell}">
+            <EventSetter Event="PreviewMouseLeftButtonDown" Handler="DataGridCell_PreviewMouseLeftButtonDown"></EventSetter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380" MinWidth="380"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="0" Header="Main Configure" Grid.ColumnSpan="2">
+            <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="50"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0">Candidate Number</TextBlock>
+                    <ComboBox x:Name="cand_cb" Grid.Row="0" Grid.Column="1" Margin="10,0" SelectionChanged="cand_cb_clk">
+                        <ComboBoxItem IsSelected="True">1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                        <ComboBoxItem>9</ComboBoxItem>
+                        <ComboBoxItem>10</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">SEQ</TextBlock>
+                    <TextBox x:Name="seq" Grid.Row="1" Grid.Column="1" Width="200" Margin="10" LostFocus="lostFocus_seq" GotFocus="getFocus_seq" PreviewKeyDown="Seq_Enter">
+                        <!-- 
+                        <TextBox.ToolTip>
+                            <ToolTip x:Name="seq_tt" HasDropShadow="True">
+                                <TextBlock Foreground="Red">Error SQ</TextBlock>
+                            </ToolTip>
+                        </TextBox.ToolTip>
+                        -->
+                    </TextBox>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Margin="10">TOL</TextBlock>
+                    <TextBox Grid.Row="2" Grid.Column="1" x:Name="tol" Margin="10" Width="50" HorizontalAlignment="Left" LostFocus="lostFocus_tol" GotFocus="getFocus_tol"/>
+                    <ComboBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="70,10,10,10" Width="60" x:Name="ppm_chk">
+                        <ComboBoxItem IsSelected="True">ppm</ComboBoxItem>
+                        <ComboBoxItem>Da</ComboBoxItem>
+                    </ComboBox>
+                    <CheckBox x:Name="preprocess_cbx" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" Click="ms2_preprocess">Preprocess</CheckBox>
+                    <TextBlock Grid.Row="3" Grid.Column="1" Margin="70,10,10,10" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center">Label:</TextBlock>
+                    <ComboBox x:Name="aa_index_comboBox" Grid.Row="3" Grid.Column="1" Margin="95,10,10,10" Width="80"></ComboBox>
+                    <Button Grid.Row="3" Grid.Column="2" Margin="10" Click="update">Update</Button>
+                    <DataGrid HeadersVisibility="Column" HorizontalGridLinesBrush="Transparent" VerticalGridLinesBrush="Transparent"
+                        Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" ItemsSource="{Binding Path=Mod_Sites,ElementName=adv_win}" 
+                              AutoGenerateColumns="False" FrozenColumnCount="1" RowHeaderWidth="0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="#" Binding="{Binding Id}" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="AA" Binding="{Binding Aa}" IsReadOnly="True"/>
+                            <DataGridComboBoxColumn Header="Modification" Width="180" CellStyle="{StaticResource SingleClickEditing}">
+                                <DataGridComboBoxColumn.EditingElementStyle>
+                                    <Style TargetType="{x:Type ComboBox}">
+                                        <Setter Property="ItemsSource" Value="{Binding Path=Mods}" />
+                                        <Setter Property="SelectedValue" Value="{Binding Path=Mod, UpdateSourceTrigger=PropertyChanged}" />
+                                        <Setter Property="IsDropDownOpen" Value="True"></Setter>
+                                    </Style>
+                                </DataGridComboBoxColumn.EditingElementStyle>
+                                <DataGridComboBoxColumn.ElementStyle>
+                                    <Style TargetType="{x:Type ComboBox}">
+                                        <Setter Property="ItemsSource" Value="{Binding Path=Mods}" />
+                                        <Setter Property="SelectedValue" Value="{Binding Path=Mod}" />
+                                    </Style>
+                                </DataGridComboBoxColumn.ElementStyle>
+                            </DataGridComboBoxColumn>
+                            <DataGridComboBoxColumn Header="Mod_Flag" Width="80" CellStyle="{StaticResource SingleClickEditing}">
+                                <DataGridComboBoxColumn.EditingElementStyle>
+                                    <Style TargetType="ComboBox">
+                                        <Setter Property="ItemsSource" Value="{Binding Path=Mod_Flags}" />
+                                        <Setter Property="SelectedValue" Value="{Binding Path=Mod_Flag}" />
+                                        <Setter Property="IsDropDownOpen" Value="True"></Setter>
+                                    </Style>
+                                </DataGridComboBoxColumn.EditingElementStyle>
+                                <DataGridComboBoxColumn.ElementStyle>
+                                    <Style TargetType="ComboBox">
+                                        <Setter Property="ItemsSource" Value="{Binding Path=Mod_Flags}" />
+                                        <Setter Property="SelectedValue" Value="{Binding Path=Mod_Flag}" />
+                                    </Style>
+                                </DataGridComboBoxColumn.ElementStyle>
+                            </DataGridComboBoxColumn>
+                            <DataGridTextColumn Header="Mass" Binding="{Binding Mass}" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Element" Binding="{Binding Element}" IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </ScrollViewer>
+        </GroupBox>
+        <GridSplitter Grid.Column="1" Background="AliceBlue" VerticalAlignment="Stretch" Width="5" ResizeBehavior="PreviousAndNext" />
+        <GroupBox Grid.Column="2" Header="Ion Type Select">
+            <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <Grid x:Name="grid">
+                    
+                </Grid>
+            </ScrollViewer>
+        </GroupBox>
+    </Grid>
+</Window>

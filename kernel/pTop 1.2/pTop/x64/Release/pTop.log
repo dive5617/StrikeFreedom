@@ -1,0 +1,258 @@
+﻿  BasicTools.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+BasicTools.cpp(24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+BasicTools.cpp(77): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1465): note: 参见“vsprintf”的声明
+BasicTools.cpp(93): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1465): note: 参见“vsprintf”的声明
+BasicTools.cpp(109): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1465): note: 参见“vsprintf”的声明
+BasicTools.cpp(195): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(475): note: 参见“ctime”的声明
+BasicTools.cpp(204): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(475): note: 参见“ctime”的声明
+BasicTools.cpp(222): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  Configuration.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+Configuration.cpp(39): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+Configuration.cpp(92): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+Configuration.cpp(97): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+Configuration.cpp(101): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+Configuration.cpp(36): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+Configuration.cpp(189): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+Configuration.cpp(219): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+Configuration.cpp(237): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+Configuration.cpp(243): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+Configuration.cpp(293): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+Configuration.cpp(347): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+Configuration.cpp(355): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+Configuration.cpp(384): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\time.h(505): note: 参见“localtime”的声明
+Configuration.cpp(386): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+Configuration.cpp(481): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Configuration.cpp(472): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+Configuration.cpp(498): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+Configuration.cpp(518): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  Configuration.cpp(518): note: 请考虑在格式字符串中使用“%zd”
+Configuration.cpp(521): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  Configuration.cpp(521): note: 请考虑在格式字符串中使用“%zd”
+Configuration.cpp(525): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  Configuration.cpp(525): note: 请考虑在格式字符串中使用“%zd”
+Configuration.cpp(528): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  Configuration.cpp(528): note: 请考虑在格式字符串中使用“%zd”
+  CreateIndex.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+  main.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+  MainFlow.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+MainFlow.cpp(73): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+MainFlow.cpp(77): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+MainFlow.cpp(118): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(191): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(270): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+MainFlow.cpp(413): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“unsigned __int64”
+  MainFlow.cpp(413): note: 请考虑在格式字符串中使用“%zd”
+MainFlow.cpp(418): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“unsigned __int64”
+  MainFlow.cpp(418): note: 请考虑在格式字符串中使用“%zd”
+MainFlow.cpp(522): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  MainFlow.cpp(522): note: 请考虑在格式字符串中使用“%zd”
+MainFlow.cpp(607): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(628): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(538): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+MainFlow.cpp(555): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+MainFlow.cpp(735): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(662): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+MainFlow.cpp(678): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+MainFlow.cpp(764): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(767): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(769): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(757): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+MainFlow.cpp(926): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(997): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+MainFlow.cpp(895): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  MapAAMass.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+MapAAMass.cpp(62): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+MapAAMass.cpp(135): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+MapAAMass.cpp(212): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+MapAAMass.cpp(244): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  PrePTMForm.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+PrePTMForm.cpp(112): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+PrePTMForm.cpp(134): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+PrePTMForm.cpp(131): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+PrePTMForm.cpp(151): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(2254): note: 参见“sscanf”的声明
+PrePTMForm.cpp(179): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(2254): note: 参见“sscanf”的声明
+PrePTMForm.cpp(215): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+PrePTMForm.cpp(219): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+D:\vs2015\VC\include\utility(172): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  PrePTMForm.cpp(225): note: 参见对正在编译的函数 模板 实例化“std::pair<char,int>::pair<char&,size_t&,void,0>(_Other1,_Other2) noexcept”的引用
+          with
+          [
+              _Other1=char &,
+              _Other2=size_t &
+          ]
+  PrePTMForm.cpp(225): note: 参见对正在编译的函数 模板 实例化“std::pair<char,int>::pair<char&,size_t&,void,0>(_Other1,_Other2) noexcept”的引用
+          with
+          [
+              _Other1=char &,
+              _Other2=size_t &
+          ]
+  ResFilter.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+ResFilter.cpp(19): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(52): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(82): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+ResFilter.cpp(114): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(453): note: 参见“strtok”的声明
+ResFilter.cpp(118): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(453): note: 参见“strtok”的声明
+ResFilter.cpp(132): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(149): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(346): note: 参见“strncpy”的声明
+ResFilter.cpp(207): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(346): note: 参见“strncpy”的声明
+ResFilter.cpp(288): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+ResFilter.cpp(271): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+ResFilter.cpp(310): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+ResFilter.cpp(365): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(368): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(369): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(376): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(377): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+ResFilter.cpp(386): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  ResFilter.cpp(386): note: 请考虑在格式字符串中使用“%zd”
+ResFilter.cpp(396): warning C4477: “fprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“std::size_t”
+  ResFilter.cpp(396): note: 请考虑在格式字符串中使用“%zd”
+ResFilter.cpp(452): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\vs2015\VC\include\utility(172): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  ResFilter.cpp(183): note: 参见对正在编译的函数 模板 实例化“std::pair<std::string,int>::pair<std::string&,unsigned __int64,void,0>(_Other1,_Other2 &&) noexcept(false)”的引用
+          with
+          [
+              _Other1=std::string &,
+              _Other2=unsigned __int64
+          ]
+  ResFilter.cpp(183): note: 参见对正在编译的函数 模板 实例化“std::pair<std::string,int>::pair<std::string&,unsigned __int64,void,0>(_Other1,_Other2 &&) noexcept(false)”的引用
+          with
+          [
+              _Other1=std::string &,
+              _Other2=unsigned __int64
+          ]
+  SearchEngine.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+SearchEngine.cpp(103): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(137): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(207): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(473): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+SearchEngine.cpp(724): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1012): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1432): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1449): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1690): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1724): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1800): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1861): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1872): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1972): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(1996): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+SearchEngine.cpp(2065): warning C4267: “参数”: 从“size_t”转换到“const char”，可能丢失数据
+SearchEngine.cpp(2070): warning C4267: “初始化”: 从“size_t”转换到“char”，可能丢失数据
+SearchEngine.cpp(2085): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  TagFlow.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+TagFlow.cpp(106): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(140): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(179): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+TagFlow.cpp(233): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+TagFlow.cpp(300): warning C4267: “初始化”: 从“size_t”转换到“tag_val”，可能丢失数据
+TagFlow.cpp(324): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+TagFlow.cpp(329): warning C4267: “参数”: 从“size_t”转换到“const int”，可能丢失数据
+  TAGPriorityQueue.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+TAGPriorityQueue.cpp(163): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  TagSearcher.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+TagSearcher.cpp(294): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  test.cpp
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(110): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_io.h(439): note: 参见“access”的声明
+e:\个人文件整理\源程序\kernel\ptop 1.2\ptop\BasicTools.h(113): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _mkdir. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\direct.h(108): note: 参见“mkdir”的声明
+test.cpp(30): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+  正在生成代码
+  All 5387 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  pTop.vcxproj -> E:\个人文件整理\源程序\kernel\pTop 1.2\x64\Release\pTop.exe
+  pTop.vcxproj -> E:\个人文件整理\源程序\kernel\pTop 1.2\x64\Release\pTop.pdb (Full PDB)

@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (pParseTD2.0.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  MonoCandidates.cpp
+MonoCandidates.cpp(460): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码
+  53 of 2405 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    30 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  pParseTD.vcxproj -> E:\个人文件整理\源程序\kernel\pParseTD 2.0\x64\Release\pParseTD.exe
+  pParseTD.vcxproj -> E:\个人文件整理\源程序\kernel\pParseTD 2.0\x64\Release\pParseTD.pdb (Full PDB)

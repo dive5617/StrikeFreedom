@@ -1,0 +1,21 @@
+﻿<Window x:Class="pBuild.Config_Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Config_Dialog" Height="200" Width="300" Icon="pBuild.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="6,25,0,13" VerticalAlignment="Center">Ratio Index:</TextBlock>
+        <ComboBox x:Name="display_ratio_index_cb" Grid.Row="1" Grid.Column="1" Margin="3,25,3,12" VerticalAlignment="Center">
+            <ComboBoxItem IsSelected="True">1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+        </ComboBox>
+        <Button Grid.Row="1" Grid.Column="1" Margin="3,65,3,-58" VerticalAlignment="Center" Click="ok_clk">OK</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="pBuild.MS1_Advance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MS1_Advance" Height="300" Width="300" Icon="pBuild.ico" Closed="closed_event" Left="100" Top="100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Margin="10" Grid.Row="0" Grid.Column="0">Peak Intensity Threshold :</TextBlock>
+        <TextBox Margin="10" x:Name="intensity_t_tb" Grid.Row="0" Grid.Column="1" Width="100"></TextBox>
+        <TextBlock Margin="10" Grid.Row="1" Grid.Column="0">MS1 Mass Tolerance :</TextBlock>
+        <TextBox Margin="10" x:Name="mass_error_tb" Grid.Row="1" Grid.Column="1" Width="100"></TextBox>
+        <TextBlock Margin="10" Grid.Row="2" Grid.Column="0">MS1 Left Width :</TextBlock>
+        <TextBox Margin="10" x:Name="start_scan_tb" Grid.Row="2" Grid.Column="1" Width="100"></TextBox>
+        <TextBlock Margin="10" Grid.Row="3" Grid.Column="0">MS1 Right Width :</TextBlock>
+        <TextBox Margin="10" x:Name="end_scan_tb" Grid.Row="3" Grid.Column="1" Width="100"></TextBox>
+        <Button Margin="10" Grid.Row="4" Grid.Column="1" Click="update_clk">Update</Button>
+    </Grid>
+</Window>
