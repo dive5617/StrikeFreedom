@@ -53,8 +53,6 @@ J:\pTop\E\pTop\pTop\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.pdb
 \\10.29.0.108\rmwang\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.exe
 \\10.29.0.108\rmwang\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.pdb
 E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\bin\Release\pTop 2.0.exe.config
-E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.exe
-E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.pdb
 E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\bin\Release\pTop 2.0.exe
 E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\bin\Release\pTop 2.0.pdb
 E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.csprojResolveAssemblyReference.cache
@@ -80,3 +78,5 @@ E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\Style.baml
 E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.g.resources
 E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop.Properties.Resources.resources
 E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.csproj.GenerateResource.Cache
+E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.exe
+E:\个人文件整理\源程序\pTop 2.0 GUI\pTop 1.0\obj\Release\pTop 2.0.pdb

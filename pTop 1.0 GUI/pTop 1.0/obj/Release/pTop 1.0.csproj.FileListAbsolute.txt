@@ -153,3 +153,4 @@ E:\个人文件整理\源程序\pTop 1.0 GUI\pTop 1.0\obj\Release\pTop.Propertie
 E:\个人文件整理\源程序\pTop 1.0 GUI\pTop 1.0\obj\Release\pTop 1.0.csproj.GenerateResource.Cache
 E:\个人文件整理\源程序\pTop 1.0 GUI\pTop 1.0\obj\Release\pTop 1.2.exe
 E:\个人文件整理\源程序\pTop 1.0 GUI\pTop 1.0\obj\Release\pTop 1.2.pdb
+E:\个人文件整理\源程序\pTop 1.0 GUI\pTop 1.0\obj\Release\pTop 1.0.csprojResolveAssemblyReference.cache

@@ -13,14 +13,14 @@ namespace pTop
         public string time_last_path = "iqxdfnwsrwp.dat"; //记录每次的关闭时间
         public string dll_path = "PdfSharp.dll";
         public int days = 60; //设置使用限制是60天
-        public DateTime expiry_date = DateTime.Parse("2017-12-31");  // 有效期至年底
+        public DateTime expiry_date = DateTime.Parse("2018-12-31");  // 有效期至年底
 
         public Time_Help()
         {
             this.time_first_path = "hjwpqjx.dat";
             this.time_last_path = "iqxdfnwsrwp.dat";
             this.days = 30;
-            this.expiry_date = DateTime.Parse("2017-12-31");
+            this.expiry_date = DateTime.Parse("2018-12-31");
         }
         public Time_Help(int days)
         {

@@ -189,9 +189,9 @@ namespace pTop
                 welcome_timer.Stop();
                 welcome_timer = null;
             }
+            this.Loaded += new RoutedEventHandler(window_loaded);
             this.Show();
             InitializeComponent();
-            this.Loaded += new RoutedEventHandler(window_loaded);
         }
 
         private void window_loaded(object sender, RoutedEventArgs e)
